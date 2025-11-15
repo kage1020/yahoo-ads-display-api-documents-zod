@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { EstimatedUserSizeServicePage } from './EstimatedUserSizeServicePage';
+import { error } from '../../common/Error';
+import { estimatedUserSizeServicePage } from './EstimatedUserSizeServicePage';
 
-export const EstimatedUserSizeServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const estimatedUserSizeServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: EstimatedUserSizeServicePage
+  rval: estimatedUserSizeServicePage
 }).nullable();
 
-export type EstimatedUserSizeServiceGetResponse = z.infer<typeof EstimatedUserSizeServiceGetResponse>;
+export type EstimatedUserSizeServiceGetResponse = z.infer<typeof estimatedUserSizeServiceGetResponse>;

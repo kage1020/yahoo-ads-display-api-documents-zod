@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { VideoServiceQualityType } from './VideoServiceQualityType';
+import { videoServiceQualityType } from './VideoServiceQualityType';
 
-export const VideoServiceDownloadSelector = z.object({
+export const videoServiceDownloadSelector = z.object({
   accountId: z.number().int(),
   mediaId: z.number().int(),
-  qualityType: VideoServiceQualityType
+  qualityType: videoServiceQualityType
 }).nullable();
 
-export type VideoServiceDownloadSelector = z.infer<typeof VideoServiceDownloadSelector>;
+export type VideoServiceDownloadSelector = z.infer<typeof videoServiceDownloadSelector>;

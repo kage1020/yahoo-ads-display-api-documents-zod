@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { Video } from './Video';
+import { video } from './Video';
 
-export const VideoServiceOperation = z.object({
+export const videoServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(Video)
+  operand: z.array(video)
 }).nullable();
 
-export type VideoServiceOperation = z.infer<typeof VideoServiceOperation>;
+export type VideoServiceOperation = z.infer<typeof videoServiceOperation>;

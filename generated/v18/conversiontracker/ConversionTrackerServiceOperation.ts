@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTracker } from './ConversionTracker';
+import { conversionTracker } from './ConversionTracker';
 
-export const ConversionTrackerServiceOperation = z.object({
+export const conversionTrackerServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(ConversionTracker)
+  operand: z.array(conversionTracker)
 }).nullable();
 
-export type ConversionTrackerServiceOperation = z.infer<typeof ConversionTrackerServiceOperation>;
+export type ConversionTrackerServiceOperation = z.infer<typeof conversionTrackerServiceOperation>;

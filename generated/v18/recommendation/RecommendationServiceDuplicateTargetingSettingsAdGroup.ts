@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { RecommendationServiceAdGroup } from './RecommendationServiceAdGroup';
+import { recommendationServiceAdGroup } from './RecommendationServiceAdGroup';
 
-export const RecommendationServiceDuplicateTargetingSettingsAdGroup = z.object({
+export const recommendationServiceDuplicateTargetingSettingsAdGroup = z.object({
   recommendationId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
-  adGroupList: z.array(RecommendationServiceAdGroup).nullable()
+  adGroupList: z.array(recommendationServiceAdGroup).nullable()
 }).nullable();
 
-export type RecommendationServiceDuplicateTargetingSettingsAdGroup = z.infer<typeof RecommendationServiceDuplicateTargetingSettingsAdGroup>;
+export type RecommendationServiceDuplicateTargetingSettingsAdGroup = z.infer<typeof recommendationServiceDuplicateTargetingSettingsAdGroup>;

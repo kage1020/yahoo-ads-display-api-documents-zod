@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const GuaranteedCampaignServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const guaranteedCampaignServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type GuaranteedCampaignServiceUserStatus = z.infer<typeof GuaranteedCampaignServiceUserStatus>;
+export type GuaranteedCampaignServiceUserStatus = z.infer<typeof guaranteedCampaignServiceUserStatus>;

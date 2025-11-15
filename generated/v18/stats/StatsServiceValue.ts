@@ -1,29 +1,29 @@
 import { z } from 'zod';
 
-import { StatsServiceAdGroupStatsValue } from './StatsServiceAdGroupStatsValue';
-import { StatsServiceAdStatsValue } from './StatsServiceAdStatsValue';
-import { StatsServiceCampaignStatsValue } from './StatsServiceCampaignStatsValue';
-import { Error } from './Error';
-import { StatsServiceImageStatsValue } from './StatsServiceImageStatsValue';
-import { StatsServicePeriodCustomDate } from './StatsServicePeriodCustomDate';
-import { StatsServiceStatsPeriod } from './StatsServiceStatsPeriod';
-import { StatsServiceTargetStatsValue } from './StatsServiceTargetStatsValue';
-import { StatsServiceType } from './StatsServiceType';
-import { StatsServiceVideoStatsValue } from './StatsServiceVideoStatsValue';
+import { statsServiceAdGroupStatsValue } from './StatsServiceAdGroupStatsValue';
+import { statsServiceAdStatsValue } from './StatsServiceAdStatsValue';
+import { statsServiceCampaignStatsValue } from './StatsServiceCampaignStatsValue';
+import { error } from '../../common/Error';
+import { statsServiceImageStatsValue } from './StatsServiceImageStatsValue';
+import { statsServicePeriodCustomDate } from './StatsServicePeriodCustomDate';
+import { statsServiceStatsPeriod } from './StatsServiceStatsPeriod';
+import { statsServiceTargetStatsValue } from './StatsServiceTargetStatsValue';
+import { statsServiceType } from './StatsServiceType';
+import { statsServiceVideoStatsValue } from './StatsServiceVideoStatsValue';
 
-export const StatsServiceValue = z.object({
+export const statsServiceValue = z.object({
   accountId: z.number().int().nullable(),
-  adGroupStatsValue: StatsServiceAdGroupStatsValue,
-  adStatsValue: StatsServiceAdStatsValue,
-  campaignStatsValue: StatsServiceCampaignStatsValue,
-  errors: z.array(Error).nullable(),
-  imageStatsValue: StatsServiceImageStatsValue,
+  adGroupStatsValue: statsServiceAdGroupStatsValue,
+  adStatsValue: statsServiceAdStatsValue,
+  campaignStatsValue: statsServiceCampaignStatsValue,
+  errors: z.array(error).nullable(),
+  imageStatsValue: statsServiceImageStatsValue,
   operationSucceeded: z.boolean().nullable(),
-  periodCustomDate: StatsServicePeriodCustomDate,
-  statsPeriod: StatsServiceStatsPeriod,
-  targetStatsValue: StatsServiceTargetStatsValue,
-  type: StatsServiceType,
-  videoStatsValue: StatsServiceVideoStatsValue
+  periodCustomDate: statsServicePeriodCustomDate,
+  statsPeriod: statsServiceStatsPeriod,
+  targetStatsValue: statsServiceTargetStatsValue,
+  type: statsServiceType,
+  videoStatsValue: statsServiceVideoStatsValue
 }).nullable();
 
-export type StatsServiceValue = z.infer<typeof StatsServiceValue>;
+export type StatsServiceValue = z.infer<typeof statsServiceValue>;

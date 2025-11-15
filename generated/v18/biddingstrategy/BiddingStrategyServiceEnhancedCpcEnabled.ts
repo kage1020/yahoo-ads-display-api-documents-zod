@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const BiddingStrategyServiceEnhancedCpcEnabled = z.enum(["TRUE", "UNKNOWN"]).nullable();
+export const biddingStrategyServiceEnhancedCpcEnabled = z.enum(["TRUE", "UNKNOWN"]).nullable();
 
-export type BiddingStrategyServiceEnhancedCpcEnabled = z.infer<typeof BiddingStrategyServiceEnhancedCpcEnabled>;
+export type BiddingStrategyServiceEnhancedCpcEnabled = z.infer<typeof biddingStrategyServiceEnhancedCpcEnabled>;

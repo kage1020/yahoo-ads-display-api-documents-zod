@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { FeedFtpServiceScheduleWeek } from './FeedFtpServiceScheduleWeek';
+import { feedFtpServiceScheduleWeek } from './FeedFtpServiceScheduleWeek';
 
-export const FeedFtpServiceScheduleWeekly = z.object({
-  scheduleWeek: FeedFtpServiceScheduleWeek,
+export const feedFtpServiceScheduleWeekly = z.object({
+  scheduleWeek: feedFtpServiceScheduleWeek,
   time: z.number().int().nullable()
 }).nullable();
 
-export type FeedFtpServiceScheduleWeekly = z.infer<typeof FeedFtpServiceScheduleWeekly>;
+export type FeedFtpServiceScheduleWeekly = z.infer<typeof feedFtpServiceScheduleWeekly>;

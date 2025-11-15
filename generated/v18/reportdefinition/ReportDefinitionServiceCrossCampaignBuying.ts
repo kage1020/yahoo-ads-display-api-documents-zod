@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceCrossCampaignBuyingType } from './ReportDefinitionServiceCrossCampaignBuyingType';
+import { reportDefinitionServiceCrossCampaignBuyingType } from './ReportDefinitionServiceCrossCampaignBuyingType';
 
-export const ReportDefinitionServiceCrossCampaignBuying = z.object({
-  campaignBuyingType: ReportDefinitionServiceCrossCampaignBuyingType
+export const reportDefinitionServiceCrossCampaignBuying = z.object({
+  campaignBuyingType: reportDefinitionServiceCrossCampaignBuyingType
 }).nullable();
 
-export type ReportDefinitionServiceCrossCampaignBuying = z.infer<typeof ReportDefinitionServiceCrossCampaignBuying>;
+export type ReportDefinitionServiceCrossCampaignBuying = z.infer<typeof reportDefinitionServiceCrossCampaignBuying>;

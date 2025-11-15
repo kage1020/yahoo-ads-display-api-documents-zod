@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupTargetServiceDeviceAppType = z.enum(["APP", "WEB", "UNKNOWN"]).nullable();
+export const adGroupTargetServiceDeviceAppType = z.enum(["APP", "WEB", "UNKNOWN"]).nullable();
 
-export type AdGroupTargetServiceDeviceAppType = z.infer<typeof AdGroupTargetServiceDeviceAppType>;
+export type AdGroupTargetServiceDeviceAppType = z.infer<typeof adGroupTargetServiceDeviceAppType>;

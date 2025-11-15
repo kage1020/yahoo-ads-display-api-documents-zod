@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceAdvancedSegmentsAudienceRange = z.enum(["WIDE", "NARROW", "UNKNOWN"]).nullable();
+export const audienceListServiceAdvancedSegmentsAudienceRange = z.enum(["WIDE", "NARROW", "UNKNOWN"]).nullable();
 
-export type AudienceListServiceAdvancedSegmentsAudienceRange = z.infer<typeof AudienceListServiceAdvancedSegmentsAudienceRange>;
+export type AudienceListServiceAdvancedSegmentsAudienceRange = z.infer<typeof audienceListServiceAdvancedSegmentsAudienceRange>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { StatsServicePage } from './StatsServicePage';
+import { error } from '../../common/Error';
+import { statsServicePage } from './StatsServicePage';
 
-export const StatsServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const statsServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: StatsServicePage
+  rval: statsServicePage
 }).nullable();
 
-export type StatsServiceGetResponse = z.infer<typeof StatsServiceGetResponse>;
+export type StatsServiceGetResponse = z.infer<typeof statsServiceGetResponse>;

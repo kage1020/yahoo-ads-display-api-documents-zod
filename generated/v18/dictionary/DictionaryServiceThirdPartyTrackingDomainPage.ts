@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceThirdPartyTrackingDomainValue } from './DictionaryServiceThirdPartyTrackingDomainValue';
+import { dictionaryServiceThirdPartyTrackingDomainValue } from './DictionaryServiceThirdPartyTrackingDomainValue';
 
-export const DictionaryServiceThirdPartyTrackingDomainPage = z.object({
+export const dictionaryServiceThirdPartyTrackingDomainPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceThirdPartyTrackingDomainValue).nullable()
+  values: z.array(dictionaryServiceThirdPartyTrackingDomainValue).nullable()
 }).nullable();
 
-export type DictionaryServiceThirdPartyTrackingDomainPage = z.infer<typeof DictionaryServiceThirdPartyTrackingDomainPage>;
+export type DictionaryServiceThirdPartyTrackingDomainPage = z.infer<typeof dictionaryServiceThirdPartyTrackingDomainPage>;

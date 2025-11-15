@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RecommendationServiceTurnYourAccountOn = z.object({
+export const recommendationServiceTurnYourAccountOn = z.object({
   recommendationId: z.number().int().nullable()
 }).nullable();
 
-export type RecommendationServiceTurnYourAccountOn = z.infer<typeof RecommendationServiceTurnYourAccountOn>;
+export type RecommendationServiceTurnYourAccountOn = z.infer<typeof recommendationServiceTurnYourAccountOn>;

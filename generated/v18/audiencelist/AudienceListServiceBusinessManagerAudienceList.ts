@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { AudienceListServiceLineAudienceGroupType } from './AudienceListServiceLineAudienceGroupType';
-import { AudienceListServiceLineAudienceGroupOwnerType } from './AudienceListServiceLineAudienceGroupOwnerType';
-import { AudienceListServiceIsZeroOrCurrentlyTotaling } from './AudienceListServiceIsZeroOrCurrentlyTotaling';
+import { audienceListServiceLineAudienceGroupType } from './AudienceListServiceLineAudienceGroupType';
+import { audienceListServiceLineAudienceGroupOwnerType } from './AudienceListServiceLineAudienceGroupOwnerType';
+import { audienceListServiceIsZeroOrCurrentlyTotaling } from './AudienceListServiceIsZeroOrCurrentlyTotaling';
 
-export const AudienceListServiceBusinessManagerAudienceList = z.object({
+export const audienceListServiceBusinessManagerAudienceList = z.object({
   lineAudienceGroupId: z.number().int().nullable(),
-  lineAudienceGroupType: AudienceListServiceLineAudienceGroupType,
-  lineAudienceGroupOwnerType: AudienceListServiceLineAudienceGroupOwnerType,
-  isZeroOrCurrentlyTotaling: AudienceListServiceIsZeroOrCurrentlyTotaling
+  lineAudienceGroupType: audienceListServiceLineAudienceGroupType,
+  lineAudienceGroupOwnerType: audienceListServiceLineAudienceGroupOwnerType,
+  isZeroOrCurrentlyTotaling: audienceListServiceIsZeroOrCurrentlyTotaling
 }).nullable();
 
-export type AudienceListServiceBusinessManagerAudienceList = z.infer<typeof AudienceListServiceBusinessManagerAudienceList>;
+export type AudienceListServiceBusinessManagerAudienceList = z.infer<typeof audienceListServiceBusinessManagerAudienceList>;

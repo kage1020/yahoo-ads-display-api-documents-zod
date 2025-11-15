@@ -1,19 +1,19 @@
 import { z } from 'zod';
 
-import { VideoServiceApprovalStatus } from './VideoServiceApprovalStatus';
-import { VideoServiceProcessStatus } from './VideoServiceProcessStatus';
-import { VideoServiceUserStatus } from './VideoServiceUserStatus';
-import { VideoServiceCreatedDateRange } from './VideoServiceCreatedDateRange';
+import { videoServiceApprovalStatus } from './VideoServiceApprovalStatus';
+import { videoServiceProcessStatus } from './VideoServiceProcessStatus';
+import { videoServiceUserStatus } from './VideoServiceUserStatus';
+import { videoServiceCreatedDateRange } from './VideoServiceCreatedDateRange';
 
-export const VideoServiceSelector = z.object({
+export const videoServiceSelector = z.object({
   accountId: z.number().int(),
-  approvalStatuses: z.array(VideoServiceApprovalStatus).nullable(),
+  approvalStatuses: z.array(videoServiceApprovalStatus).nullable(),
   mediaIds: z.array(z.number().int().nullable()).nullable(),
-  processStatuses: z.array(VideoServiceProcessStatus).nullable(),
+  processStatuses: z.array(videoServiceProcessStatus).nullable(),
   numberResults: z.number().int().min(1).max(500).nullable(),
   startIndex: z.number().int().min(1).nullable(),
-  userStatuses: z.array(VideoServiceUserStatus).nullable(),
-  createdDateRange: VideoServiceCreatedDateRange
+  userStatuses: z.array(videoServiceUserStatus).nullable(),
+  createdDateRange: videoServiceCreatedDateRange
 }).nullable();
 
-export type VideoServiceSelector = z.infer<typeof VideoServiceSelector>;
+export type VideoServiceSelector = z.infer<typeof videoServiceSelector>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AudienceListServiceUnavailableUrl } from './AudienceListServiceUnavailableUrl';
+import { audienceListServiceUnavailableUrl } from './AudienceListServiceUnavailableUrl';
 
-export const AudienceListServiceAdvancedSegmentsUrl = z.object({
+export const audienceListServiceAdvancedSegmentsUrl = z.object({
   url: z.string().nullable(),
-  unavailableUrl: AudienceListServiceUnavailableUrl
+  unavailableUrl: audienceListServiceUnavailableUrl
 }).nullable();
 
-export type AudienceListServiceAdvancedSegmentsUrl = z.infer<typeof AudienceListServiceAdvancedSegmentsUrl>;
+export type AudienceListServiceAdvancedSegmentsUrl = z.infer<typeof audienceListServiceAdvancedSegmentsUrl>;

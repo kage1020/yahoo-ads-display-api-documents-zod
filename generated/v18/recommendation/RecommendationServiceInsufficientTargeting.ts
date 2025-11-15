@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceInsufficientTargetingCampaign } from './RecommendationServiceInsufficientTargetingCampaign';
+import { recommendationServiceInsufficientTargetingCampaign } from './RecommendationServiceInsufficientTargetingCampaign';
 
-export const RecommendationServiceInsufficientTargeting = z.object({
-  insufficientTargetingCampaignList: z.array(RecommendationServiceInsufficientTargetingCampaign).nullable()
+export const recommendationServiceInsufficientTargeting = z.object({
+  insufficientTargetingCampaignList: z.array(recommendationServiceInsufficientTargetingCampaign).nullable()
 }).nullable();
 
-export type RecommendationServiceInsufficientTargeting = z.infer<typeof RecommendationServiceInsufficientTargeting>;
+export type RecommendationServiceInsufficientTargeting = z.infer<typeof recommendationServiceInsufficientTargeting>;

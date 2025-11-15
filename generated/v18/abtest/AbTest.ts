@@ -1,24 +1,24 @@
 import { z } from 'zod';
 
-import { AbTestServiceCampaignUserStatus } from './AbTestServiceCampaignUserStatus';
-import { AbTestServiceIsRemoveFlg } from './AbTestServiceIsRemoveFlg';
-import { AbTestServiceStatus } from './AbTestServiceStatus';
+import { abTestServiceCampaignUserStatus } from './AbTestServiceCampaignUserStatus';
+import { abTestServiceIsRemoveFlg } from './AbTestServiceIsRemoveFlg';
+import { abTestServiceStatus } from './AbTestServiceStatus';
 
-export const AbTest = z.object({
+export const abTest = z.object({
   accountId: z.number().int().nullable(),
   abTestId: z.number().int().nullable(),
   abTestName: z.string().nullable(),
   description: z.string().nullable(),
   aCampaignId: z.number().int().nullable(),
   aCampaignName: z.string().nullable(),
-  aCampaignUserStatus: AbTestServiceCampaignUserStatus,
+  aCampaignUserStatus: abTestServiceCampaignUserStatus,
   bCampaignId: z.number().int().nullable(),
   bCampaignName: z.string().nullable(),
-  bCampaignUserStatus: AbTestServiceCampaignUserStatus,
+  bCampaignUserStatus: abTestServiceCampaignUserStatus,
   endDate: z.string().nullable(),
-  isRemoveDescription: AbTestServiceIsRemoveFlg,
+  isRemoveDescription: abTestServiceIsRemoveFlg,
   startDate: z.string().nullable(),
-  status: AbTestServiceStatus
+  status: abTestServiceStatus
 }).nullable();
 
-export type AbTest = z.infer<typeof AbTest>;
+export type AbTest = z.infer<typeof abTest>;

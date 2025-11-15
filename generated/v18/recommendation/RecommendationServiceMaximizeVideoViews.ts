@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceMaximizeVideoViewsCampaign } from './RecommendationServiceMaximizeVideoViewsCampaign';
+import { recommendationServiceMaximizeVideoViewsCampaign } from './RecommendationServiceMaximizeVideoViewsCampaign';
 
-export const RecommendationServiceMaximizeVideoViews = z.object({
-  maximizeVideoViewsCampaignList: z.array(RecommendationServiceMaximizeVideoViewsCampaign).nullable()
+export const recommendationServiceMaximizeVideoViews = z.object({
+  maximizeVideoViewsCampaignList: z.array(recommendationServiceMaximizeVideoViewsCampaign).nullable()
 }).nullable();
 
-export type RecommendationServiceMaximizeVideoViews = z.infer<typeof RecommendationServiceMaximizeVideoViews>;
+export type RecommendationServiceMaximizeVideoViews = z.infer<typeof recommendationServiceMaximizeVideoViews>;

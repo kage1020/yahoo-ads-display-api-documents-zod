@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { ContentsKeywordListServiceContentsKeyword } from './ContentsKeywordListServiceContentsKeyword';
-import { ContentsKeywordListServiceIsRemoveFlg } from './ContentsKeywordListServiceIsRemoveFlg';
+import { contentsKeywordListServiceContentsKeyword } from './ContentsKeywordListServiceContentsKeyword';
+import { contentsKeywordListServiceIsRemoveFlg } from './ContentsKeywordListServiceIsRemoveFlg';
 
-export const ContentsKeywordList = z.object({
+export const contentsKeywordList = z.object({
   accountId: z.number().int().nullable(),
-  contentsKeyword: z.array(ContentsKeywordListServiceContentsKeyword).nullable(),
+  contentsKeyword: z.array(contentsKeywordListServiceContentsKeyword).nullable(),
   contentsKeywordListDescription: z.string().nullable(),
-  isRemoveContentsKeywordListDescription: ContentsKeywordListServiceIsRemoveFlg,
+  isRemoveContentsKeywordListDescription: contentsKeywordListServiceIsRemoveFlg,
   contentsKeywordListId: z.number().int().nullable(),
   contentsKeywordListName: z.string().nullable(),
   brandSafetyDenyListFlg: z.boolean().nullable()
 }).nullable();
 
-export type ContentsKeywordList = z.infer<typeof ContentsKeywordList>;
+export type ContentsKeywordList = z.infer<typeof contentsKeywordList>;

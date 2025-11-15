@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceMediaAsset } from './AdGroupAdServiceMediaAsset';
-import { AdGroupAdServiceHeadlineAsset } from './AdGroupAdServiceHeadlineAsset';
-import { AdGroupAdServiceDescriptionAsset } from './AdGroupAdServiceDescriptionAsset';
+import { adGroupAdServiceMediaAsset } from './AdGroupAdServiceMediaAsset';
+import { adGroupAdServiceHeadlineAsset } from './AdGroupAdServiceHeadlineAsset';
+import { adGroupAdServiceDescriptionAsset } from './AdGroupAdServiceDescriptionAsset';
 
-export const AdGroupAdServiceAsset = z.object({
-  mediaAssets: z.array(AdGroupAdServiceMediaAsset).nullable(),
-  headlineAssets: z.array(AdGroupAdServiceHeadlineAsset).nullable(),
-  descriptionAssets: z.array(AdGroupAdServiceDescriptionAsset).nullable()
+export const adGroupAdServiceAsset = z.object({
+  mediaAssets: z.array(adGroupAdServiceMediaAsset).nullable(),
+  headlineAssets: z.array(adGroupAdServiceHeadlineAsset).nullable(),
+  descriptionAssets: z.array(adGroupAdServiceDescriptionAsset).nullable()
 }).nullable();
 
-export type AdGroupAdServiceAsset = z.infer<typeof AdGroupAdServiceAsset>;
+export type AdGroupAdServiceAsset = z.infer<typeof adGroupAdServiceAsset>;

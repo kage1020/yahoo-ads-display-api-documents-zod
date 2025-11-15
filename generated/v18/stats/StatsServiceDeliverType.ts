@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const StatsServiceDeliverType = z.enum(["INCLUDE", "EXCLUDE", "UNKNOWN"]).nullable();
+export const statsServiceDeliverType = z.enum(["INCLUDE", "EXCLUDE", "UNKNOWN"]).nullable();
 
-export type StatsServiceDeliverType = z.infer<typeof StatsServiceDeliverType>;
+export type StatsServiceDeliverType = z.infer<typeof statsServiceDeliverType>;

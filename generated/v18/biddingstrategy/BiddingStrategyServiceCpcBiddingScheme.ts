@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { BiddingStrategyServiceEnhancedCpcEnabled } from './BiddingStrategyServiceEnhancedCpcEnabled';
+import { biddingStrategyServiceEnhancedCpcEnabled } from './BiddingStrategyServiceEnhancedCpcEnabled';
 
-export const BiddingStrategyServiceCpcBiddingScheme = z.object({
+export const biddingStrategyServiceCpcBiddingScheme = z.object({
   cpc: z.number().int().nullable(),
-  enhancedCpcEnabled: BiddingStrategyServiceEnhancedCpcEnabled
+  enhancedCpcEnabled: biddingStrategyServiceEnhancedCpcEnabled
 }).nullable();
 
-export type BiddingStrategyServiceCpcBiddingScheme = z.infer<typeof BiddingStrategyServiceCpcBiddingScheme>;
+export type BiddingStrategyServiceCpcBiddingScheme = z.infer<typeof biddingStrategyServiceCpcBiddingScheme>;

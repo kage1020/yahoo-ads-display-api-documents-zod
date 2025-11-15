@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceConversionPathFilterType } from './ReportDefinitionServiceConversionPathFilterType';
-import { ReportDefinitionServiceConversionPathFilterOperator } from './ReportDefinitionServiceConversionPathFilterOperator';
+import { reportDefinitionServiceConversionPathFilterType } from './ReportDefinitionServiceConversionPathFilterType';
+import { reportDefinitionServiceConversionPathFilterOperator } from './ReportDefinitionServiceConversionPathFilterOperator';
 
-export const ReportDefinitionServiceConversionPathFilter = z.object({
-  conversionPathFilterType: ReportDefinitionServiceConversionPathFilterType,
-  conversionPathFilterOperator: ReportDefinitionServiceConversionPathFilterOperator,
+export const reportDefinitionServiceConversionPathFilter = z.object({
+  conversionPathFilterType: reportDefinitionServiceConversionPathFilterType,
+  conversionPathFilterOperator: reportDefinitionServiceConversionPathFilterOperator,
   values: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type ReportDefinitionServiceConversionPathFilter = z.infer<typeof ReportDefinitionServiceConversionPathFilter>;
+export type ReportDefinitionServiceConversionPathFilter = z.infer<typeof reportDefinitionServiceConversionPathFilter>;

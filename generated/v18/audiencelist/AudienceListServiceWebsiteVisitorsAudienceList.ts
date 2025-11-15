@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AudienceListServiceIsOpen } from './AudienceListServiceIsOpen';
-import { AudienceListServiceIsPreset } from './AudienceListServiceIsPreset';
-import { AudienceListServiceRule } from './AudienceListServiceRule';
+import { audienceListServiceIsOpen } from './AudienceListServiceIsOpen';
+import { audienceListServiceIsPreset } from './AudienceListServiceIsPreset';
+import { audienceListServiceRule } from './AudienceListServiceRule';
 
-export const AudienceListServiceWebsiteVisitorsAudienceList = z.object({
-  isOpen: AudienceListServiceIsOpen,
-  isPreset: AudienceListServiceIsPreset,
+export const audienceListServiceWebsiteVisitorsAudienceList = z.object({
+  isOpen: audienceListServiceIsOpen,
+  isPreset: audienceListServiceIsPreset,
   dataDuration: z.number().int().nullable(),
   retargetingTagId: z.string().nullable(),
-  rules: z.array(AudienceListServiceRule).nullable()
+  rules: z.array(audienceListServiceRule).nullable()
 }).nullable();
 
-export type AudienceListServiceWebsiteVisitorsAudienceList = z.infer<typeof AudienceListServiceWebsiteVisitorsAudienceList>;
+export type AudienceListServiceWebsiteVisitorsAudienceList = z.infer<typeof audienceListServiceWebsiteVisitorsAudienceList>;

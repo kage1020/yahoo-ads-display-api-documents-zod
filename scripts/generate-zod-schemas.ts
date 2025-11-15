@@ -104,7 +104,7 @@ class ZodSchemaGenerator {
         return
       }
 
-      const zodSchema = this.convertToZod(schemaContent, schemaName)
+      const zodSchema = this.convertToZod(schemaContent)
       const outputPath = this.getOutputPath(filePath, relativePath)
 
       this.writeSchemaFile(
@@ -125,7 +125,7 @@ class ZodSchemaGenerator {
     }
   }
 
-  private convertToZod(schema: any, name: string, depth: number = 0): string {
+  private convertToZod(schema: any, depth: number = 0): string {
     if (depth > 10) {
       return "z.unknown()"
     }
@@ -170,7 +170,7 @@ class ZodSchemaGenerator {
 
     const properties = Object.entries(schema.properties)
       .map(([key, value]: [string, any]) => {
-        const zodType = this.convertToZod(value, key, depth + 1)
+        const zodType = this.convertToZod(value, depth + 1)
         return `  ${key}: ${zodType}`
       })
       .join(",\n")
@@ -183,7 +183,7 @@ class ZodSchemaGenerator {
       return "z.array(z.unknown())"
     }
 
-    const itemType = this.convertToZod(schema.items, "item", depth + 1)
+    const itemType = this.convertToZod(schema.items, depth + 1)
     return `z.array(${itemType})`
   }
 
@@ -221,11 +221,13 @@ class ZodSchemaGenerator {
     }
 
     const [, fileName, schemaName] = match
-    const importName = schemaName
+    // Use lowercase first letter for schema variable name
+    const schemaVarName =
+      schemaName.charAt(0).toLowerCase() + schemaName.slice(1)
 
     this.processedRefs.add(fileName)
 
-    return importName
+    return schemaVarName
   }
 
   private getOutputPath(inputPath: string, relativePath: string): string {
@@ -263,15 +265,62 @@ class ZodSchemaGenerator {
     const schema = yaml.load(content) as YamlSchema
     const imports = new Map<string, string>()
 
+    const currentDir = path.dirname(filePath)
+
     const collectRefs = (obj: any): void => {
       if (!obj || typeof obj !== "object") return
 
       if (obj.$ref) {
         const match = obj.$ref.match(/(.+\.yaml)#\/(.+)/)
         if (match) {
-          const [, fileName, schemaName] = match
-          const refFileName = path.basename(fileName, ".yaml")
-          imports.set(schemaName, `./${refFileName}`)
+          const [, refPath, schemaName] = match
+
+          // Resolve the absolute path of the referenced file
+          const refAbsolutePath = path.resolve(currentDir, refPath)
+
+          // Determine the output path for the referenced file
+          let refOutputPath: string
+
+          // Check if it's a common schema (in design/ directory root)
+          const refRelativeToDesign = path.relative(
+            this.sourceDir,
+            refAbsolutePath
+          )
+          if (
+            !refRelativeToDesign.includes(path.sep) ||
+            refRelativeToDesign.startsWith("..")
+          ) {
+            // It's a common schema
+            refOutputPath = path.join(
+              this.outputDir,
+              "common",
+              path.basename(refPath, ".yaml") + ".ts"
+            )
+          } else {
+            // It's a version-specific schema
+            const refRelativePath = path.relative(
+              path.join(this.sourceDir, "v18"),
+              refAbsolutePath
+            )
+            refOutputPath = path.join(
+              this.outputDir,
+              "v18",
+              refRelativePath.replace(".yaml", ".ts")
+            )
+          }
+
+          // Calculate the relative import path from current file to referenced file
+          const currentOutputPath = this.getOutputPath(filePath, relativePath)
+          const currentOutputDir = path.dirname(currentOutputPath)
+          let importPath = path.relative(currentOutputDir, refOutputPath)
+
+          // Remove .ts extension and ensure it starts with ./
+          importPath = importPath.replace(/\.ts$/, "")
+          if (!importPath.startsWith(".")) {
+            importPath = "./" + importPath
+          }
+
+          imports.set(schemaName, importPath)
         }
       }
 
@@ -296,14 +345,21 @@ class ZodSchemaGenerator {
     if (imports.size > 0) {
       content += "\n"
       for (const [importName, importPath] of imports) {
-        content += `import { ${importName} } from '${importPath}';\n`
+        // Import only the schema variable (lowercase)
+        const importVarName =
+          importName.charAt(0).toLowerCase() + importName.slice(1)
+        content += `import { ${importVarName} } from '${importPath}';\n`
       }
     }
 
+    // Schema variable name with lowercase first letter
+    const schemaVarName =
+      schemaName.charAt(0).toLowerCase() + schemaName.slice(1)
+
     content += `\n`
-    content += `export const ${schemaName} = ${zodSchema};\n`
+    content += `export const ${schemaVarName} = ${zodSchema};\n`
     content += `\n`
-    content += `export type ${schemaName} = z.infer<typeof ${schemaName}>;\n`
+    content += `export type ${schemaName} = z.infer<typeof ${schemaVarName}>;\n`
 
     return content
   }

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AudienceListServiceCompareOperator } from './AudienceListServiceCompareOperator';
-import { AudienceListServiceRuleType } from './AudienceListServiceRuleType';
+import { audienceListServiceCompareOperator } from './AudienceListServiceCompareOperator';
+import { audienceListServiceRuleType } from './AudienceListServiceRuleType';
 
-export const AudienceListServiceRuleCondition = z.object({
-  compareOperator: AudienceListServiceCompareOperator,
-  ruleType: AudienceListServiceRuleType,
+export const audienceListServiceRuleCondition = z.object({
+  compareOperator: audienceListServiceCompareOperator,
+  ruleType: audienceListServiceRuleType,
   value: z.string().nullable()
 }).nullable();
 
-export type AudienceListServiceRuleCondition = z.infer<typeof AudienceListServiceRuleCondition>;
+export type AudienceListServiceRuleCondition = z.infer<typeof audienceListServiceRuleCondition>;

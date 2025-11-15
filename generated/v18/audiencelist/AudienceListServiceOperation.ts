@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AudienceList } from './AudienceList';
+import { audienceList } from './AudienceList';
 
-export const AudienceListServiceOperation = z.object({
+export const audienceListServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AudienceList)
+  operand: z.array(audienceList)
 }).nullable();
 
-export type AudienceListServiceOperation = z.infer<typeof AudienceListServiceOperation>;
+export type AudienceListServiceOperation = z.infer<typeof audienceListServiceOperation>;

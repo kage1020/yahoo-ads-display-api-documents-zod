@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceBrandPanelTopCover = z.object({
+export const guaranteedAdGroupAdServiceBrandPanelTopCover = z.object({
   fixedPositionBannerMediaId: z.number().int().nullable(),
   displayUrl: z.string().nullable(),
   thumbnailMediaId: z.number().int().nullable(),
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   trackingUrl: z.string().nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -20,4 +20,4 @@ export const GuaranteedAdGroupAdServiceBrandPanelTopCover = z.object({
   videoStartBeaconUrls: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceBrandPanelTopCover = z.infer<typeof GuaranteedAdGroupAdServiceBrandPanelTopCover>;
+export type GuaranteedAdGroupAdServiceBrandPanelTopCover = z.infer<typeof guaranteedAdGroupAdServiceBrandPanelTopCover>;

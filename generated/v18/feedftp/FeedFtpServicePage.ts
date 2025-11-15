@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { FeedFtpServiceValue } from './FeedFtpServiceValue';
+import { feedFtpServiceValue } from './FeedFtpServiceValue';
 
-export const FeedFtpServicePage = z.object({
+export const feedFtpServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(FeedFtpServiceValue).nullable()
+  values: z.array(feedFtpServiceValue).nullable()
 }).nullable();
 
-export type FeedFtpServicePage = z.infer<typeof FeedFtpServicePage>;
+export type FeedFtpServicePage = z.infer<typeof feedFtpServicePage>;

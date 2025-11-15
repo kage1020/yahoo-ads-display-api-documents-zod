@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServicePositionType } from './AdGroupTargetServicePositionType';
+import { adGroupTargetServicePositionType } from './AdGroupTargetServicePositionType';
 
-export const AdGroupTargetServicePositionTarget = z.object({
-  positionType: AdGroupTargetServicePositionType
+export const adGroupTargetServicePositionTarget = z.object({
+  positionType: adGroupTargetServicePositionType
 }).nullable();
 
-export type AdGroupTargetServicePositionTarget = z.infer<typeof AdGroupTargetServicePositionTarget>;
+export type AdGroupTargetServicePositionTarget = z.infer<typeof adGroupTargetServicePositionTarget>;

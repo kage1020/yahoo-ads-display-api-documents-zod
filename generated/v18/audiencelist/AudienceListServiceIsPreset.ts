@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceIsPreset = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const audienceListServiceIsPreset = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type AudienceListServiceIsPreset = z.infer<typeof AudienceListServiceIsPreset>;
+export type AudienceListServiceIsPreset = z.infer<typeof audienceListServiceIsPreset>;

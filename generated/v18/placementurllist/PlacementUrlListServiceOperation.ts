@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { PlacementUrlList } from './PlacementUrlList';
+import { placementUrlList } from './PlacementUrlList';
 
-export const PlacementUrlListServiceOperation = z.object({
+export const placementUrlListServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(PlacementUrlList)
+  operand: z.array(placementUrlList)
 }).nullable();
 
-export type PlacementUrlListServiceOperation = z.infer<typeof PlacementUrlListServiceOperation>;
+export type PlacementUrlListServiceOperation = z.infer<typeof placementUrlListServiceOperation>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceOsVersionValue } from './DictionaryServiceOsVersionValue';
+import { dictionaryServiceOsVersionValue } from './DictionaryServiceOsVersionValue';
 
-export const DictionaryServiceOsVersionPage = z.object({
+export const dictionaryServiceOsVersionPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceOsVersionValue).nullable()
+  values: z.array(dictionaryServiceOsVersionValue).nullable()
 }).nullable();
 
-export type DictionaryServiceOsVersionPage = z.infer<typeof DictionaryServiceOsVersionPage>;
+export type DictionaryServiceOsVersionPage = z.infer<typeof dictionaryServiceOsVersionPage>;

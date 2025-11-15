@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-export const RecommendationServiceDailyBudgetSmallCampaign = z.object({
+export const recommendationServiceDailyBudgetSmallCampaign = z.object({
   recommendationId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
   currentAmount: z.number().int().nullable()
 }).nullable();
 
-export type RecommendationServiceDailyBudgetSmallCampaign = z.infer<typeof RecommendationServiceDailyBudgetSmallCampaign>;
+export type RecommendationServiceDailyBudgetSmallCampaign = z.infer<typeof recommendationServiceDailyBudgetSmallCampaign>;

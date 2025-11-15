@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AudienceListServiceType } from './AudienceListServiceType';
-import { AudienceListServiceSharingStatusFilterType } from './AudienceListServiceSharingStatusFilterType';
+import { audienceListServiceType } from './AudienceListServiceType';
+import { audienceListServiceSharingStatusFilterType } from './AudienceListServiceSharingStatusFilterType';
 
-export const AudienceListServiceSelector = z.object({
+export const audienceListServiceSelector = z.object({
   accountId: z.number().int(),
   numberResults: z.number().int().min(1).max(1000).nullable(),
   startIndex: z.number().int().min(1).nullable(),
   audienceListIds: z.array(z.number().int().nullable()).nullable(),
-  audienceListTypes: z.array(AudienceListServiceType).nullable(),
-  sharingStatusFilterType: AudienceListServiceSharingStatusFilterType
+  audienceListTypes: z.array(audienceListServiceType).nullable(),
+  sharingStatusFilterType: audienceListServiceSharingStatusFilterType
 }).nullable();
 
-export type AudienceListServiceSelector = z.infer<typeof AudienceListServiceSelector>;
+export type AudienceListServiceSelector = z.infer<typeof audienceListServiceSelector>;

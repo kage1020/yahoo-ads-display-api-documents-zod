@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const RetargetingTagServiceApprovalStatus = z.enum(["AVAILABLE", "DISAPPROVED", "DISAPPROVED_WITH_REVIEW", "UNKNOWN"]).nullable();
+export const retargetingTagServiceApprovalStatus = z.enum(["AVAILABLE", "DISAPPROVED", "DISAPPROVED_WITH_REVIEW", "UNKNOWN"]).nullable();
 
-export type RetargetingTagServiceApprovalStatus = z.infer<typeof RetargetingTagServiceApprovalStatus>;
+export type RetargetingTagServiceApprovalStatus = z.infer<typeof retargetingTagServiceApprovalStatus>;

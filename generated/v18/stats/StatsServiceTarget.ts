@@ -1,36 +1,36 @@
 import { z } from 'zod';
 
-import { StatsServiceAdScheduleTarget } from './StatsServiceAdScheduleTarget';
-import { StatsServiceAgeTarget } from './StatsServiceAgeTarget';
-import { StatsServiceAppTarget } from './StatsServiceAppTarget';
-import { StatsServiceDeviceTarget } from './StatsServiceDeviceTarget';
-import { StatsServiceGenderTarget } from './StatsServiceGenderTarget';
-import { StatsServiceGeoTarget } from './StatsServiceGeoTarget';
-import { StatsServiceOsTarget } from './StatsServiceOsTarget';
-import { StatsServiceOsVersionTarget } from './StatsServiceOsVersionTarget';
-import { StatsServicePlacementTarget } from './StatsServicePlacementTarget';
-import { StatsServiceAudienceListTarget } from './StatsServiceAudienceListTarget';
-import { StatsServicePlacementCategoryDetailTarget } from './StatsServicePlacementCategoryDetailTarget';
-import { StatsServiceContentsTarget } from './StatsServiceContentsTarget';
-import { StatsServiceTargetSetting } from './StatsServiceTargetSetting';
-import { StatsServiceTargetType } from './StatsServiceTargetType';
+import { statsServiceAdScheduleTarget } from './StatsServiceAdScheduleTarget';
+import { statsServiceAgeTarget } from './StatsServiceAgeTarget';
+import { statsServiceAppTarget } from './StatsServiceAppTarget';
+import { statsServiceDeviceTarget } from './StatsServiceDeviceTarget';
+import { statsServiceGenderTarget } from './StatsServiceGenderTarget';
+import { statsServiceGeoTarget } from './StatsServiceGeoTarget';
+import { statsServiceOsTarget } from './StatsServiceOsTarget';
+import { statsServiceOsVersionTarget } from './StatsServiceOsVersionTarget';
+import { statsServicePlacementTarget } from './StatsServicePlacementTarget';
+import { statsServiceAudienceListTarget } from './StatsServiceAudienceListTarget';
+import { statsServicePlacementCategoryDetailTarget } from './StatsServicePlacementCategoryDetailTarget';
+import { statsServiceContentsTarget } from './StatsServiceContentsTarget';
+import { statsServiceTargetSetting } from './StatsServiceTargetSetting';
+import { statsServiceTargetType } from './StatsServiceTargetType';
 
-export const StatsServiceTarget = z.object({
-  adScheduleTarget: StatsServiceAdScheduleTarget,
-  ageTarget: StatsServiceAgeTarget,
-  appTarget: StatsServiceAppTarget,
-  deviceTarget: StatsServiceDeviceTarget,
-  genderTarget: StatsServiceGenderTarget,
-  geoTarget: StatsServiceGeoTarget,
-  osTarget: StatsServiceOsTarget,
-  osVersionTarget: StatsServiceOsVersionTarget,
-  placementTarget: StatsServicePlacementTarget,
-  audienceListTarget: StatsServiceAudienceListTarget,
-  placementCategoryDetailTarget: StatsServicePlacementCategoryDetailTarget,
-  contentsTarget: StatsServiceContentsTarget,
+export const statsServiceTarget = z.object({
+  adScheduleTarget: statsServiceAdScheduleTarget,
+  ageTarget: statsServiceAgeTarget,
+  appTarget: statsServiceAppTarget,
+  deviceTarget: statsServiceDeviceTarget,
+  genderTarget: statsServiceGenderTarget,
+  geoTarget: statsServiceGeoTarget,
+  osTarget: statsServiceOsTarget,
+  osVersionTarget: statsServiceOsVersionTarget,
+  placementTarget: statsServicePlacementTarget,
+  audienceListTarget: statsServiceAudienceListTarget,
+  placementCategoryDetailTarget: statsServicePlacementCategoryDetailTarget,
+  contentsTarget: statsServiceContentsTarget,
   targetId: z.string().nullable(),
-  targetSetting: StatsServiceTargetSetting,
-  targetType: StatsServiceTargetType
+  targetSetting: statsServiceTargetSetting,
+  targetType: statsServiceTargetType
 }).nullable();
 
-export type StatsServiceTarget = z.infer<typeof StatsServiceTarget>;
+export type StatsServiceTarget = z.infer<typeof statsServiceTarget>;

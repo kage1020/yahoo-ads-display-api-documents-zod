@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const AdGroupTargetServiceOsVersionTarget = z.object({
+export const adGroupTargetServiceOsVersionTarget = z.object({
   osVersion: z.string().nullable()
 }).nullable();
 
-export type AdGroupTargetServiceOsVersionTarget = z.infer<typeof AdGroupTargetServiceOsVersionTarget>;
+export type AdGroupTargetServiceOsVersionTarget = z.infer<typeof adGroupTargetServiceOsVersionTarget>;

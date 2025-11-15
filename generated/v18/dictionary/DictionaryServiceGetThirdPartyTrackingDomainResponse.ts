@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceThirdPartyTrackingDomainPage } from './DictionaryServiceThirdPartyTrackingDomainPage';
+import { error } from '../../common/Error';
+import { dictionaryServiceThirdPartyTrackingDomainPage } from './DictionaryServiceThirdPartyTrackingDomainPage';
 
-export const DictionaryServiceGetThirdPartyTrackingDomainResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceGetThirdPartyTrackingDomainResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: DictionaryServiceThirdPartyTrackingDomainPage
+  rval: dictionaryServiceThirdPartyTrackingDomainPage
 }).nullable();
 
-export type DictionaryServiceGetThirdPartyTrackingDomainResponse = z.infer<typeof DictionaryServiceGetThirdPartyTrackingDomainResponse>;
+export type DictionaryServiceGetThirdPartyTrackingDomainResponse = z.infer<typeof dictionaryServiceGetThirdPartyTrackingDomainResponse>;

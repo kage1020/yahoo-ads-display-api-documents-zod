@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { Recommendation } from './Recommendation';
+import { error } from '../../common/Error';
+import { recommendation } from './Recommendation';
 
-export const RecommendationServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  recommendation: Recommendation,
+export const recommendationServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  recommendation: recommendation,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type RecommendationServiceValue = z.infer<typeof RecommendationServiceValue>;
+export type RecommendationServiceValue = z.infer<typeof recommendationServiceValue>;

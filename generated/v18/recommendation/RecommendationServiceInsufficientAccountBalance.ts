@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RecommendationServiceInsufficientAccountBalance = z.object({
+export const recommendationServiceInsufficientAccountBalance = z.object({
   recommendationId: z.number().int().nullable()
 }).nullable();
 
-export type RecommendationServiceInsufficientAccountBalance = z.infer<typeof RecommendationServiceInsufficientAccountBalance>;
+export type RecommendationServiceInsufficientAccountBalance = z.infer<typeof recommendationServiceInsufficientAccountBalance>;

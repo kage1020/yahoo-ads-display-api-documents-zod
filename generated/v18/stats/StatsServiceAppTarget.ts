@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { StatsServiceDeviceAppType } from './StatsServiceDeviceAppType';
+import { statsServiceDeviceAppType } from './StatsServiceDeviceAppType';
 
-export const StatsServiceAppTarget = z.object({
-  deviceAppType: StatsServiceDeviceAppType
+export const statsServiceAppTarget = z.object({
+  deviceAppType: statsServiceDeviceAppType
 }).nullable();
 
-export type StatsServiceAppTarget = z.infer<typeof StatsServiceAppTarget>;
+export type StatsServiceAppTarget = z.infer<typeof statsServiceAppTarget>;

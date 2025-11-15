@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { DictionaryServiceLang } from './DictionaryServiceLang';
+import { dictionaryServiceLang } from './DictionaryServiceLang';
 
-export const DictionaryServiceFeedItemGoogleProductCategorySelector = z.object({
-  lang: DictionaryServiceLang
+export const dictionaryServiceFeedItemGoogleProductCategorySelector = z.object({
+  lang: dictionaryServiceLang
 }).nullable();
 
-export type DictionaryServiceFeedItemGoogleProductCategorySelector = z.infer<typeof DictionaryServiceFeedItemGoogleProductCategorySelector>;
+export type DictionaryServiceFeedItemGoogleProductCategorySelector = z.infer<typeof dictionaryServiceFeedItemGoogleProductCategorySelector>;

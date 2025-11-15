@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServicePlacementCategoryPage } from './DictionaryServicePlacementCategoryPage';
+import { error } from '../../common/Error';
+import { dictionaryServicePlacementCategoryPage } from './DictionaryServicePlacementCategoryPage';
 
-export const DictionaryServiceGetPlacementCategoryResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceGetPlacementCategoryResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: DictionaryServicePlacementCategoryPage
+  rval: dictionaryServicePlacementCategoryPage
 }).nullable();
 
-export type DictionaryServiceGetPlacementCategoryResponse = z.infer<typeof DictionaryServiceGetPlacementCategoryResponse>;
+export type DictionaryServiceGetPlacementCategoryResponse = z.infer<typeof dictionaryServiceGetPlacementCategoryResponse>;

@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceTalkHeadViewAd = z.object({
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
+export const guaranteedAdGroupAdServiceTalkHeadViewAd = z.object({
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
   displayUrl: z.string().nullable(),
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   trackingUrl: z.string().nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceTalkHeadViewAd = z.infer<typeof GuaranteedAdGroupAdServiceTalkHeadViewAd>;
+export type GuaranteedAdGroupAdServiceTalkHeadViewAd = z.infer<typeof guaranteedAdGroupAdServiceTalkHeadViewAd>;

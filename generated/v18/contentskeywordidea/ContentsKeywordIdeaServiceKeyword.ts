@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ContentsKeywordIdeaServiceMatchType } from './ContentsKeywordIdeaServiceMatchType';
+import { contentsKeywordIdeaServiceMatchType } from './ContentsKeywordIdeaServiceMatchType';
 
-export const ContentsKeywordIdeaServiceKeyword = z.object({
+export const contentsKeywordIdeaServiceKeyword = z.object({
   keywords: z.array(z.string().nullable()).nullable(),
-  matchType: ContentsKeywordIdeaServiceMatchType
+  matchType: contentsKeywordIdeaServiceMatchType
 }).nullable();
 
-export type ContentsKeywordIdeaServiceKeyword = z.infer<typeof ContentsKeywordIdeaServiceKeyword>;
+export type ContentsKeywordIdeaServiceKeyword = z.infer<typeof contentsKeywordIdeaServiceKeyword>;

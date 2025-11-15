@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { DictionaryServiceGeographicLocation } from './DictionaryServiceGeographicLocation';
+import { dictionaryServiceGeographicLocation } from './DictionaryServiceGeographicLocation';
 
-export const DictionaryServiceGeographicLocation = z.object({
-  child: z.array(DictionaryServiceGeographicLocation).nullable(),
+export const dictionaryServiceGeographicLocation = z.object({
+  child: z.array(dictionaryServiceGeographicLocation).nullable(),
   code: z.string().nullable(),
   fullName: z.string().nullable(),
   name: z.string().nullable(),
@@ -11,4 +11,4 @@ export const DictionaryServiceGeographicLocation = z.object({
   parent: z.string().nullable()
 }).nullable();
 
-export type DictionaryServiceGeographicLocation = z.infer<typeof DictionaryServiceGeographicLocation>;
+export type DictionaryServiceGeographicLocation = z.infer<typeof dictionaryServiceGeographicLocation>;

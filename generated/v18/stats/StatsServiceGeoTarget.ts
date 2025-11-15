@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { StatsServiceAreaSearchType } from './StatsServiceAreaSearchType';
+import { statsServiceAreaSearchType } from './StatsServiceAreaSearchType';
 
-export const StatsServiceGeoTarget = z.object({
-  areaSearchType: StatsServiceAreaSearchType,
+export const statsServiceGeoTarget = z.object({
+  areaSearchType: statsServiceAreaSearchType,
   latitudeInMicroDegrees: z.number().int().nullable(),
   longitudeInMicroDegrees: z.number().int().nullable(),
   radius: z.number().int().nullable(),
@@ -12,4 +12,4 @@ export const StatsServiceGeoTarget = z.object({
   geoNameJa: z.string().nullable()
 }).nullable();
 
-export type StatsServiceGeoTarget = z.infer<typeof StatsServiceGeoTarget>;
+export type StatsServiceGeoTarget = z.infer<typeof statsServiceGeoTarget>;

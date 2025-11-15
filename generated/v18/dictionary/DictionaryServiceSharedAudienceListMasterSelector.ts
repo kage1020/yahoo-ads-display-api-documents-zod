@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { DictionaryServiceLang } from './DictionaryServiceLang';
+import { dictionaryServiceLang } from './DictionaryServiceLang';
 
-export const DictionaryServiceSharedAudienceListMasterSelector = z.object({
-  lang: DictionaryServiceLang
+export const dictionaryServiceSharedAudienceListMasterSelector = z.object({
+  lang: dictionaryServiceLang
 }).nullable();
 
-export type DictionaryServiceSharedAudienceListMasterSelector = z.infer<typeof DictionaryServiceSharedAudienceListMasterSelector>;
+export type DictionaryServiceSharedAudienceListMasterSelector = z.infer<typeof dictionaryServiceSharedAudienceListMasterSelector>;

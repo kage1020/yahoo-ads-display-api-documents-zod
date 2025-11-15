@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { FeedDataServiceUploadReturnValue } from './FeedDataServiceUploadReturnValue';
+import { error } from '../../common/Error';
+import { feedDataServiceUploadReturnValue } from './FeedDataServiceUploadReturnValue';
 
-export const FeedDataServiceUploadResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const feedDataServiceUploadResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: FeedDataServiceUploadReturnValue
+  rval: feedDataServiceUploadReturnValue
 }).nullable();
 
-export type FeedDataServiceUploadResponse = z.infer<typeof FeedDataServiceUploadResponse>;
+export type FeedDataServiceUploadResponse = z.infer<typeof feedDataServiceUploadResponse>;

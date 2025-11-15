@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceIncludeViewInteractionFlg } from './ReportDefinitionServiceIncludeViewInteractionFlg';
-import { ReportDefinitionServiceConversionPathFilter } from './ReportDefinitionServiceConversionPathFilter';
+import { reportDefinitionServiceIncludeViewInteractionFlg } from './ReportDefinitionServiceIncludeViewInteractionFlg';
+import { reportDefinitionServiceConversionPathFilter } from './ReportDefinitionServiceConversionPathFilter';
 
-export const ReportDefinitionServiceConversionPathReportCondition = z.object({
+export const reportDefinitionServiceConversionPathReportCondition = z.object({
   lookbackWindow: z.number().int().nullable(),
-  includeViewInteraction: ReportDefinitionServiceIncludeViewInteractionFlg,
-  conversionPathFilters: z.array(ReportDefinitionServiceConversionPathFilter).nullable()
+  includeViewInteraction: reportDefinitionServiceIncludeViewInteractionFlg,
+  conversionPathFilters: z.array(reportDefinitionServiceConversionPathFilter).nullable()
 }).nullable();
 
-export type ReportDefinitionServiceConversionPathReportCondition = z.infer<typeof ReportDefinitionServiceConversionPathReportCondition>;
+export type ReportDefinitionServiceConversionPathReportCondition = z.infer<typeof reportDefinitionServiceConversionPathReportCondition>;

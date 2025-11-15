@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServiceDeliverType } from './AdGroupTargetServiceDeliverType';
-import { AdGroupTargetServiceAudienceListType } from './AdGroupTargetServiceAudienceListType';
+import { adGroupTargetServiceDeliverType } from './AdGroupTargetServiceDeliverType';
+import { adGroupTargetServiceAudienceListType } from './AdGroupTargetServiceAudienceListType';
 
-export const AdGroupTargetServiceAudienceListTarget = z.object({
-  deliverType: AdGroupTargetServiceDeliverType,
+export const adGroupTargetServiceAudienceListTarget = z.object({
+  deliverType: adGroupTargetServiceDeliverType,
   audienceListName: z.string().nullable(),
   audienceListNameEn: z.string().nullable(),
-  audienceListType: AdGroupTargetServiceAudienceListType
+  audienceListType: adGroupTargetServiceAudienceListType
 }).nullable();
 
-export type AdGroupTargetServiceAudienceListTarget = z.infer<typeof AdGroupTargetServiceAudienceListTarget>;
+export type AdGroupTargetServiceAudienceListTarget = z.infer<typeof adGroupTargetServiceAudienceListTarget>;

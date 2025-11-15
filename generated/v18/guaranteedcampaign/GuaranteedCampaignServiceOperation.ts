@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { GuaranteedCampaign } from './GuaranteedCampaign';
+import { guaranteedCampaign } from './GuaranteedCampaign';
 
-export const GuaranteedCampaignServiceOperation = z.object({
+export const guaranteedCampaignServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(GuaranteedCampaign)
+  operand: z.array(guaranteedCampaign)
 }).nullable();
 
-export type GuaranteedCampaignServiceOperation = z.infer<typeof GuaranteedCampaignServiceOperation>;
+export type GuaranteedCampaignServiceOperation = z.infer<typeof guaranteedCampaignServiceOperation>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceAdGroupsForAddingAdsList } from './RecommendationServiceAdGroupsForAddingAdsList';
+import { recommendationServiceAdGroupsForAddingAdsList } from './RecommendationServiceAdGroupsForAddingAdsList';
 
-export const RecommendationServiceAdGroupsForAddingAds = z.object({
-  adGroupsForAddingAdsList: z.array(RecommendationServiceAdGroupsForAddingAdsList).nullable()
+export const recommendationServiceAdGroupsForAddingAds = z.object({
+  adGroupsForAddingAdsList: z.array(recommendationServiceAdGroupsForAddingAdsList).nullable()
 }).nullable();
 
-export type RecommendationServiceAdGroupsForAddingAds = z.infer<typeof RecommendationServiceAdGroupsForAddingAds>;
+export type RecommendationServiceAdGroupsForAddingAds = z.infer<typeof recommendationServiceAdGroupsForAddingAds>;

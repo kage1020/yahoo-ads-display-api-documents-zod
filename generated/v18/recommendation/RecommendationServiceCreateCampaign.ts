@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RecommendationServiceCreateCampaign = z.object({
+export const recommendationServiceCreateCampaign = z.object({
   recommendationId: z.number().int().nullable()
 }).nullable();
 
-export type RecommendationServiceCreateCampaign = z.infer<typeof RecommendationServiceCreateCampaign>;
+export type RecommendationServiceCreateCampaign = z.infer<typeof recommendationServiceCreateCampaign>;

@@ -1,36 +1,36 @@
 import { z } from 'zod';
 
-import { AdGroupServiceBiddingStrategyConfiguration } from './AdGroupServiceBiddingStrategyConfiguration';
-import { AdGroupServiceCustomParameters } from './AdGroupServiceCustomParameters';
-import { AdGroupServiceDeviceType } from './AdGroupServiceDeviceType';
-import { AdGroupServiceDeviceAppType } from './AdGroupServiceDeviceAppType';
-import { AdGroupServiceDeviceOsType } from './AdGroupServiceDeviceOsType';
-import { AdGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
-import { AdGroupServiceLabel } from './AdGroupServiceLabel';
-import { AdGroupServiceSmartTargetingEnabled } from './AdGroupServiceSmartTargetingEnabled';
-import { AdGroupServiceUserStatus } from './AdGroupServiceUserStatus';
+import { adGroupServiceBiddingStrategyConfiguration } from './AdGroupServiceBiddingStrategyConfiguration';
+import { adGroupServiceCustomParameters } from './AdGroupServiceCustomParameters';
+import { adGroupServiceDeviceType } from './AdGroupServiceDeviceType';
+import { adGroupServiceDeviceAppType } from './AdGroupServiceDeviceAppType';
+import { adGroupServiceDeviceOsType } from './AdGroupServiceDeviceOsType';
+import { adGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
+import { adGroupServiceLabel } from './AdGroupServiceLabel';
+import { adGroupServiceSmartTargetingEnabled } from './AdGroupServiceSmartTargetingEnabled';
+import { adGroupServiceUserStatus } from './AdGroupServiceUserStatus';
 
-export const AdGroup = z.object({
+export const adGroup = z.object({
   accountId: z.number().int().nullable(),
-  biddingStrategyConfiguration: AdGroupServiceBiddingStrategyConfiguration,
+  biddingStrategyConfiguration: adGroupServiceBiddingStrategyConfiguration,
   adGroupId: z.number().int().nullable(),
   adGroupName: z.string().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
-  customParameters: AdGroupServiceCustomParameters,
-  device: z.array(AdGroupServiceDeviceType).nullable(),
-  deviceApp: z.array(AdGroupServiceDeviceAppType).nullable(),
-  deviceOs: z.array(AdGroupServiceDeviceOsType).nullable(),
+  customParameters: adGroupServiceCustomParameters,
+  device: z.array(adGroupServiceDeviceType).nullable(),
+  deviceApp: z.array(adGroupServiceDeviceAppType).nullable(),
+  deviceOs: z.array(adGroupServiceDeviceOsType).nullable(),
   deviceOsVersion: z.string().nullable(),
   feedSetId: z.number().int().nullable(),
   excludeLineOaFriendAudienceListId: z.number().int().nullable(),
-  isRemoveTrackingUrl: AdGroupServiceIsRemoveFlg,
-  labels: z.array(AdGroupServiceLabel).nullable(),
-  smartTargetingEnabled: AdGroupServiceSmartTargetingEnabled,
+  isRemoveTrackingUrl: adGroupServiceIsRemoveFlg,
+  labels: z.array(adGroupServiceLabel).nullable(),
+  smartTargetingEnabled: adGroupServiceSmartTargetingEnabled,
   trackingUrl: z.string().nullable(),
-  userStatus: AdGroupServiceUserStatus,
+  userStatus: adGroupServiceUserStatus,
   createdDate: z.string().nullable(),
   updatedDate: z.string().nullable()
 }).nullable();
 
-export type AdGroup = z.infer<typeof AdGroup>;
+export type AdGroup = z.infer<typeof adGroup>;

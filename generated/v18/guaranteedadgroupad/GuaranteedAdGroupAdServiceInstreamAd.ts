@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceInstreamAd = z.object({
+export const guaranteedAdGroupAdServiceInstreamAd = z.object({
   displayUrl: z.string().nullable(),
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   smartphoneFinalUrl: z.string().nullable(),
   trackingUrl: z.string().nullable(),
@@ -19,4 +19,4 @@ export const GuaranteedAdGroupAdServiceInstreamAd = z.object({
   actionAfterAdClicks: z.boolean().nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceInstreamAd = z.infer<typeof GuaranteedAdGroupAdServiceInstreamAd>;
+export type GuaranteedAdGroupAdServiceInstreamAd = z.infer<typeof guaranteedAdGroupAdServiceInstreamAd>;

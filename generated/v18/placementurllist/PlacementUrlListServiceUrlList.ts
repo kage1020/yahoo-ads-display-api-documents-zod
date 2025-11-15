@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { PlacementUrlListServiceUrlActiveFlg } from './PlacementUrlListServiceUrlActiveFlg';
+import { placementUrlListServiceUrlActiveFlg } from './PlacementUrlListServiceUrlActiveFlg';
 
-export const PlacementUrlListServiceUrlList = z.object({
+export const placementUrlListServiceUrlList = z.object({
   placementUrl: z.string().nullable(),
-  urlActiveFlg: PlacementUrlListServiceUrlActiveFlg
+  urlActiveFlg: placementUrlListServiceUrlActiveFlg
 }).nullable();
 
-export type PlacementUrlListServiceUrlList = z.infer<typeof PlacementUrlListServiceUrlList>;
+export type PlacementUrlListServiceUrlList = z.infer<typeof placementUrlListServiceUrlList>;

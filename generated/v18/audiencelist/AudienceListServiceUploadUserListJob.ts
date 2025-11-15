@@ -1,17 +1,17 @@
 import { z } from 'zod';
 
-import { AudienceListServiceUploadUserListUploadType } from './AudienceListServiceUploadUserListUploadType';
-import { AudienceListServiceJobStatus } from './AudienceListServiceJobStatus';
-import { AudienceListServiceUploadUserListUploadSource } from './AudienceListServiceUploadUserListUploadSource';
+import { audienceListServiceUploadUserListUploadType } from './AudienceListServiceUploadUserListUploadType';
+import { audienceListServiceJobStatus } from './AudienceListServiceJobStatus';
+import { audienceListServiceUploadUserListUploadSource } from './AudienceListServiceUploadUserListUploadSource';
 
-export const AudienceListServiceUploadUserListJob = z.object({
+export const audienceListServiceUploadUserListJob = z.object({
   uploadJobId: z.string().nullable(),
   audienceListId: z.number().int().nullable(),
-  uploadType: AudienceListServiceUploadUserListUploadType,
+  uploadType: audienceListServiceUploadUserListUploadType,
   uploadSubmitDate: z.string().nullable(),
   receivedDate: z.string().nullable(),
-  jobStatus: AudienceListServiceJobStatus,
-  uploadSource: AudienceListServiceUploadUserListUploadSource
+  jobStatus: audienceListServiceJobStatus,
+  uploadSource: audienceListServiceUploadUserListUploadSource
 }).nullable();
 
-export type AudienceListServiceUploadUserListJob = z.infer<typeof AudienceListServiceUploadUserListJob>;
+export type AudienceListServiceUploadUserListJob = z.infer<typeof audienceListServiceUploadUserListJob>;

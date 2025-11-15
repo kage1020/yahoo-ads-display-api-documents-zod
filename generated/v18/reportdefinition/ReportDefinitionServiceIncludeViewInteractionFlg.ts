@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceIncludeViewInteractionFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const reportDefinitionServiceIncludeViewInteractionFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type ReportDefinitionServiceIncludeViewInteractionFlg = z.infer<typeof ReportDefinitionServiceIncludeViewInteractionFlg>;
+export type ReportDefinitionServiceIncludeViewInteractionFlg = z.infer<typeof reportDefinitionServiceIncludeViewInteractionFlg>;

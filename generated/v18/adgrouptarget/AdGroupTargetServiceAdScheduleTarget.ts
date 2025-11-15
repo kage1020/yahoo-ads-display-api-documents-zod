@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServiceDayOfWeek } from './AdGroupTargetServiceDayOfWeek';
+import { adGroupTargetServiceDayOfWeek } from './AdGroupTargetServiceDayOfWeek';
 
-export const AdGroupTargetServiceAdScheduleTarget = z.object({
-  dayOfWeek: AdGroupTargetServiceDayOfWeek,
+export const adGroupTargetServiceAdScheduleTarget = z.object({
+  dayOfWeek: adGroupTargetServiceDayOfWeek,
   endHour: z.number().int().nullable(),
   startHour: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupTargetServiceAdScheduleTarget = z.infer<typeof AdGroupTargetServiceAdScheduleTarget>;
+export type AdGroupTargetServiceAdScheduleTarget = z.infer<typeof adGroupTargetServiceAdScheduleTarget>;

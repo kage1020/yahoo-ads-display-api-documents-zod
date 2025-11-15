@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ContentsKeywordIdea } from './ContentsKeywordIdea';
+import { error } from '../../common/Error';
+import { contentsKeywordIdea } from './ContentsKeywordIdea';
 
-export const ContentsKeywordIdeaServiceValue = z.object({
-  errors: z.array(Error).nullable(),
+export const contentsKeywordIdeaServiceValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  contentsKeywordIdea: ContentsKeywordIdea
+  contentsKeywordIdea: contentsKeywordIdea
 }).nullable();
 
-export type ContentsKeywordIdeaServiceValue = z.infer<typeof ContentsKeywordIdeaServiceValue>;
+export type ContentsKeywordIdeaServiceValue = z.infer<typeof contentsKeywordIdeaServiceValue>;

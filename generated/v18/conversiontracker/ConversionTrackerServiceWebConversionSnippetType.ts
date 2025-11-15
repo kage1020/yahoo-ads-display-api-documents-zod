@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ConversionTrackerServiceWebConversionSnippetType = z.enum(["IMG", "JS", "UNKNOWN"]).nullable();
+export const conversionTrackerServiceWebConversionSnippetType = z.enum(["IMG", "JS", "UNKNOWN"]).nullable();
 
-export type ConversionTrackerServiceWebConversionSnippetType = z.infer<typeof ConversionTrackerServiceWebConversionSnippetType>;
+export type ConversionTrackerServiceWebConversionSnippetType = z.infer<typeof conversionTrackerServiceWebConversionSnippetType>;

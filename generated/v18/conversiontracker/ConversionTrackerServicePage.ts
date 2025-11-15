@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServicePeriod } from './ConversionTrackerServicePeriod';
-import { ConversionTrackerServiceValue } from './ConversionTrackerServiceValue';
+import { conversionTrackerServicePeriod } from './ConversionTrackerServicePeriod';
+import { conversionTrackerServiceValue } from './ConversionTrackerServiceValue';
 
-export const ConversionTrackerServicePage = z.object({
-  period: ConversionTrackerServicePeriod,
+export const conversionTrackerServicePage = z.object({
+  period: conversionTrackerServicePeriod,
   totalAllConversionValue: z.string().nullable(),
   totalAllConversions: z.number().int().nullable(),
   totalConversionValue: z.string().nullable(),
@@ -13,7 +13,7 @@ export const ConversionTrackerServicePage = z.object({
   totalConversionsViaAdClick: z.number().int().nullable(),
   totalCrossDeviceConversions: z.number().int().nullable(),
   totalNumEntries: z.number().int(),
-  values: z.array(ConversionTrackerServiceValue).nullable()
+  values: z.array(conversionTrackerServiceValue).nullable()
 }).nullable();
 
-export type ConversionTrackerServicePage = z.infer<typeof ConversionTrackerServicePage>;
+export type ConversionTrackerServicePage = z.infer<typeof conversionTrackerServicePage>;

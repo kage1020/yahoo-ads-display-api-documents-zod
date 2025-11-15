@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { StatsServicePlacementUrlListType } from './StatsServicePlacementUrlListType';
+import { statsServicePlacementUrlListType } from './StatsServicePlacementUrlListType';
 
-export const StatsServicePlacementTarget = z.object({
+export const statsServicePlacementTarget = z.object({
   placementUrlListName: z.string().nullable(),
-  placementUrlListType: StatsServicePlacementUrlListType
+  placementUrlListType: statsServicePlacementUrlListType
 }).nullable();
 
-export type StatsServicePlacementTarget = z.infer<typeof StatsServicePlacementTarget>;
+export type StatsServicePlacementTarget = z.infer<typeof statsServicePlacementTarget>;

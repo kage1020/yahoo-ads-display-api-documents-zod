@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceUpdateAdCreativeList } from './RecommendationServiceUpdateAdCreativeList';
+import { recommendationServiceUpdateAdCreativeList } from './RecommendationServiceUpdateAdCreativeList';
 
-export const RecommendationServiceUpdateAdCreative = z.object({
-  updateAdCreativeList: z.array(RecommendationServiceUpdateAdCreativeList).nullable()
+export const recommendationServiceUpdateAdCreative = z.object({
+  updateAdCreativeList: z.array(recommendationServiceUpdateAdCreativeList).nullable()
 }).nullable();
 
-export type RecommendationServiceUpdateAdCreative = z.infer<typeof RecommendationServiceUpdateAdCreative>;
+export type RecommendationServiceUpdateAdCreative = z.infer<typeof recommendationServiceUpdateAdCreative>;

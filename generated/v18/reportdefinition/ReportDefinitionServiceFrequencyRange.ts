@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceFrequencyRange = z.enum(["DAILY", "WEEKLY", "MONTHLY", "GUARANTEED_CAMPAIGN_PERIOD", "UNKNOWN"]).nullable();
+export const reportDefinitionServiceFrequencyRange = z.enum(["DAILY", "WEEKLY", "MONTHLY", "GUARANTEED_CAMPAIGN_PERIOD", "UNKNOWN"]).nullable();
 
-export type ReportDefinitionServiceFrequencyRange = z.infer<typeof ReportDefinitionServiceFrequencyRange>;
+export type ReportDefinitionServiceFrequencyRange = z.infer<typeof reportDefinitionServiceFrequencyRange>;

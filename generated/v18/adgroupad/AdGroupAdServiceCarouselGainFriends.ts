@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceCarouselGainFriends = z.object({
+export const adGroupAdServiceCarouselGainFriends = z.object({
   displayOrder: z.number().int().nullable(),
   mediaId: z.number().int().nullable(),
   headline: z.string().nullable(),
@@ -8,4 +8,4 @@ export const AdGroupAdServiceCarouselGainFriends = z.object({
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupAdServiceCarouselGainFriends = z.infer<typeof AdGroupAdServiceCarouselGainFriends>;
+export type AdGroupAdServiceCarouselGainFriends = z.infer<typeof adGroupAdServiceCarouselGainFriends>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const BudgetOrderDeliveryStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const budgetOrderDeliveryStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type BudgetOrderDeliveryStatus = z.infer<typeof BudgetOrderDeliveryStatus>;
+export type BudgetOrderDeliveryStatus = z.infer<typeof budgetOrderDeliveryStatus>;

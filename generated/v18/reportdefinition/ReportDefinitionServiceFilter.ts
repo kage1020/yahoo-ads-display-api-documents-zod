@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceFilterOperator } from './ReportDefinitionServiceFilterOperator';
+import { reportDefinitionServiceFilterOperator } from './ReportDefinitionServiceFilterOperator';
 
-export const ReportDefinitionServiceFilter = z.object({
+export const reportDefinitionServiceFilter = z.object({
   field: z.string().nullable(),
-  filterOperator: ReportDefinitionServiceFilterOperator,
+  filterOperator: reportDefinitionServiceFilterOperator,
   values: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type ReportDefinitionServiceFilter = z.infer<typeof ReportDefinitionServiceFilter>;
+export type ReportDefinitionServiceFilter = z.infer<typeof reportDefinitionServiceFilter>;

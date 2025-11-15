@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServiceAge } from './AdGroupTargetServiceAge';
+import { adGroupTargetServiceAge } from './AdGroupTargetServiceAge';
 
-export const AdGroupTargetServiceAgeTarget = z.object({
-  age: AdGroupTargetServiceAge
+export const adGroupTargetServiceAgeTarget = z.object({
+  age: adGroupTargetServiceAge
 }).nullable();
 
-export type AdGroupTargetServiceAgeTarget = z.infer<typeof AdGroupTargetServiceAgeTarget>;
+export type AdGroupTargetServiceAgeTarget = z.infer<typeof adGroupTargetServiceAgeTarget>;

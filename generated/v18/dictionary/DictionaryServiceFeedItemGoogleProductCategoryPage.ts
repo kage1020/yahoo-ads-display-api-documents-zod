@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceFeedItemGoogleProductCategoryValue } from './DictionaryServiceFeedItemGoogleProductCategoryValue';
+import { dictionaryServiceFeedItemGoogleProductCategoryValue } from './DictionaryServiceFeedItemGoogleProductCategoryValue';
 
-export const DictionaryServiceFeedItemGoogleProductCategoryPage = z.object({
+export const dictionaryServiceFeedItemGoogleProductCategoryPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceFeedItemGoogleProductCategoryValue).nullable()
+  values: z.array(dictionaryServiceFeedItemGoogleProductCategoryValue).nullable()
 }).nullable();
 
-export type DictionaryServiceFeedItemGoogleProductCategoryPage = z.infer<typeof DictionaryServiceFeedItemGoogleProductCategoryPage>;
+export type DictionaryServiceFeedItemGoogleProductCategoryPage = z.infer<typeof dictionaryServiceFeedItemGoogleProductCategoryPage>;

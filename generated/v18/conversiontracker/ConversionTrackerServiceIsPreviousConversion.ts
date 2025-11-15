@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ConversionTrackerServiceIsPreviousConversion = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const conversionTrackerServiceIsPreviousConversion = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type ConversionTrackerServiceIsPreviousConversion = z.infer<typeof ConversionTrackerServiceIsPreviousConversion>;
+export type ConversionTrackerServiceIsPreviousConversion = z.infer<typeof conversionTrackerServiceIsPreviousConversion>;

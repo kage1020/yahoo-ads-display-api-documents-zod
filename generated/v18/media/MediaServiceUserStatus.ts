@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const MediaServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const mediaServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type MediaServiceUserStatus = z.infer<typeof MediaServiceUserStatus>;
+export type MediaServiceUserStatus = z.infer<typeof mediaServiceUserStatus>;

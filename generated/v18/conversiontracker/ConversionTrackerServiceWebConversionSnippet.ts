@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceWebConversionSnippetType } from './ConversionTrackerServiceWebConversionSnippetType';
+import { conversionTrackerServiceWebConversionSnippetType } from './ConversionTrackerServiceWebConversionSnippetType';
 
-export const ConversionTrackerServiceWebConversionSnippet = z.object({
+export const conversionTrackerServiceWebConversionSnippet = z.object({
   advancedTag: z.string().nullable(),
-  webConversionSnippetType: ConversionTrackerServiceWebConversionSnippetType
+  webConversionSnippetType: conversionTrackerServiceWebConversionSnippetType
 }).nullable();
 
-export type ConversionTrackerServiceWebConversionSnippet = z.infer<typeof ConversionTrackerServiceWebConversionSnippet>;
+export type ConversionTrackerServiceWebConversionSnippet = z.infer<typeof conversionTrackerServiceWebConversionSnippet>;

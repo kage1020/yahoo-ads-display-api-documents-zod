@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ContentsKeywordListServiceValue } from './ContentsKeywordListServiceValue';
+import { contentsKeywordListServiceValue } from './ContentsKeywordListServiceValue';
 
-export const ContentsKeywordListServiceReturnValue = z.object({
-  values: z.array(ContentsKeywordListServiceValue).nullable()
+export const contentsKeywordListServiceReturnValue = z.object({
+  values: z.array(contentsKeywordListServiceValue).nullable()
 }).nullable();
 
-export type ContentsKeywordListServiceReturnValue = z.infer<typeof ContentsKeywordListServiceReturnValue>;
+export type ContentsKeywordListServiceReturnValue = z.infer<typeof contentsKeywordListServiceReturnValue>;

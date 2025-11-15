@@ -1,25 +1,25 @@
 import { z } from 'zod';
 
-import { AudienceListServiceDeliveryStatus } from './AudienceListServiceDeliveryStatus';
-import { AudienceListServiceIsRemoveFlg } from './AudienceListServiceIsRemoveFlg';
-import { AudienceListServiceContent } from './AudienceListServiceContent';
-import { AudienceListServiceSourceType } from './AudienceListServiceSourceType';
-import { AudienceListServiceDataConnectionStopped } from './AudienceListServiceDataConnectionStopped';
+import { audienceListServiceDeliveryStatus } from './AudienceListServiceDeliveryStatus';
+import { audienceListServiceIsRemoveFlg } from './AudienceListServiceIsRemoveFlg';
+import { audienceListServiceContent } from './AudienceListServiceContent';
+import { audienceListServiceSourceType } from './AudienceListServiceSourceType';
+import { audienceListServiceDataConnectionStopped } from './AudienceListServiceDataConnectionStopped';
 
-export const AudienceList = z.object({
+export const audienceList = z.object({
   accountId: z.number().int().nullable(),
-  deliveryStatus: AudienceListServiceDeliveryStatus,
+  deliveryStatus: audienceListServiceDeliveryStatus,
   description: z.string().nullable(),
-  isRemoveDescription: AudienceListServiceIsRemoveFlg,
+  isRemoveDescription: audienceListServiceIsRemoveFlg,
   reach: z.number().int().nullable(),
-  audienceListContent: AudienceListServiceContent,
+  audienceListContent: audienceListServiceContent,
   audienceListId: z.number().int().nullable(),
   audienceListName: z.string().nullable(),
   sourceAccountId: z.number().int().nullable(),
   sourceAccountName: z.string().nullable(),
-  sourceType: AudienceListServiceSourceType,
+  sourceType: audienceListServiceSourceType,
   isShared: z.boolean().nullable(),
-  dataConnectionStopped: AudienceListServiceDataConnectionStopped
+  dataConnectionStopped: audienceListServiceDataConnectionStopped
 }).nullable();
 
-export type AudienceList = z.infer<typeof AudienceList>;
+export type AudienceList = z.infer<typeof audienceList>;

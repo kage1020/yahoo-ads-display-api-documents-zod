@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const PlacementUrlIdeaServiceSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
+export const placementUrlIdeaServiceSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
 
-export type PlacementUrlIdeaServiceSortType = z.infer<typeof PlacementUrlIdeaServiceSortType>;
+export type PlacementUrlIdeaServiceSortType = z.infer<typeof placementUrlIdeaServiceSortType>;

@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { Stats } from './Stats';
-import { StatsServiceTarget } from './StatsServiceTarget';
+import { stats } from './Stats';
+import { statsServiceTarget } from './StatsServiceTarget';
 
-export const StatsServiceTargetStatsValue = z.object({
+export const statsServiceTargetStatsValue = z.object({
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
   adGroupId: z.number().int().nullable(),
   adGroupName: z.string().nullable(),
-  stats: Stats,
-  target: StatsServiceTarget
+  stats: stats,
+  target: statsServiceTarget
 }).nullable();
 
-export type StatsServiceTargetStatsValue = z.infer<typeof StatsServiceTargetStatsValue>;
+export type StatsServiceTargetStatsValue = z.infer<typeof statsServiceTargetStatsValue>;

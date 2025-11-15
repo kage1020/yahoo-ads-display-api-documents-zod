@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RecommendationServiceAudienceListNotAccumulated = z.object({
+export const recommendationServiceAudienceListNotAccumulated = z.object({
   recommendationId: z.number().int().nullable()
 }).nullable();
 
-export type RecommendationServiceAudienceListNotAccumulated = z.infer<typeof RecommendationServiceAudienceListNotAccumulated>;
+export type RecommendationServiceAudienceListNotAccumulated = z.infer<typeof recommendationServiceAudienceListNotAccumulated>;

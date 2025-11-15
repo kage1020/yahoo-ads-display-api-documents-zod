@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const CampaignServiceMaximizeGainingFriendsBiddingScheme = z.object({
+export const campaignServiceMaximizeGainingFriendsBiddingScheme = z.object({
   targetCpf: z.number().int().nullable()
 }).nullable();
 
-export type CampaignServiceMaximizeGainingFriendsBiddingScheme = z.infer<typeof CampaignServiceMaximizeGainingFriendsBiddingScheme>;
+export type CampaignServiceMaximizeGainingFriendsBiddingScheme = z.infer<typeof campaignServiceMaximizeGainingFriendsBiddingScheme>;

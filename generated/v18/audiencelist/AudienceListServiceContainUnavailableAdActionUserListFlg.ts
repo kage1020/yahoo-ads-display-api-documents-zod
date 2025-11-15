@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceContainUnavailableAdActionUserListFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const audienceListServiceContainUnavailableAdActionUserListFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type AudienceListServiceContainUnavailableAdActionUserListFlg = z.infer<typeof AudienceListServiceContainUnavailableAdActionUserListFlg>;
+export type AudienceListServiceContainUnavailableAdActionUserListFlg = z.infer<typeof audienceListServiceContainUnavailableAdActionUserListFlg>;

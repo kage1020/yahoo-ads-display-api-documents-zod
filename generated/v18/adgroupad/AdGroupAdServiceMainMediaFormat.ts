@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceMainMediaFormat = z.enum(["IMAGE", "VIDEO", "NONE", "UNKNOWN"]).nullable();
+export const adGroupAdServiceMainMediaFormat = z.enum(["IMAGE", "VIDEO", "NONE", "UNKNOWN"]).nullable();
 
-export type AdGroupAdServiceMainMediaFormat = z.infer<typeof AdGroupAdServiceMainMediaFormat>;
+export type AdGroupAdServiceMainMediaFormat = z.infer<typeof adGroupAdServiceMainMediaFormat>;

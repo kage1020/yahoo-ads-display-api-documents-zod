@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { Stats } from './Stats';
+import { stats } from './Stats';
 
-export const StatsServiceCampaignStatsValue = z.object({
+export const statsServiceCampaignStatsValue = z.object({
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
-  stats: Stats
+  stats: stats
 }).nullable();
 
-export type StatsServiceCampaignStatsValue = z.infer<typeof StatsServiceCampaignStatsValue>;
+export type StatsServiceCampaignStatsValue = z.infer<typeof statsServiceCampaignStatsValue>;

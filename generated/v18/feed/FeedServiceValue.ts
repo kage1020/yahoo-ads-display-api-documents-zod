@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { Feed } from './Feed';
-import { FeedServiceUploadLimit } from './FeedServiceUploadLimit';
-import { Error } from './Error';
+import { feed } from './Feed';
+import { feedServiceUploadLimit } from './FeedServiceUploadLimit';
+import { error } from '../../common/Error';
 
-export const FeedServiceValue = z.object({
-  feed: Feed,
-  uploadLimits: z.array(FeedServiceUploadLimit).nullable(),
-  errors: z.array(Error).nullable(),
+export const feedServiceValue = z.object({
+  feed: feed,
+  uploadLimits: z.array(feedServiceUploadLimit).nullable(),
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type FeedServiceValue = z.infer<typeof FeedServiceValue>;
+export type FeedServiceValue = z.infer<typeof feedServiceValue>;

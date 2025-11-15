@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AudienceListServiceIsZeroOrCurrentlyTotaling } from './AudienceListServiceIsZeroOrCurrentlyTotaling';
+import { audienceListServiceIsZeroOrCurrentlyTotaling } from './AudienceListServiceIsZeroOrCurrentlyTotaling';
 
-export const AudienceListServiceLineOaFriendAudienceList = z.object({
-  isZeroOrCurrentlyTotaling: AudienceListServiceIsZeroOrCurrentlyTotaling
+export const audienceListServiceLineOaFriendAudienceList = z.object({
+  isZeroOrCurrentlyTotaling: audienceListServiceIsZeroOrCurrentlyTotaling
 }).nullable();
 
-export type AudienceListServiceLineOaFriendAudienceList = z.infer<typeof AudienceListServiceLineOaFriendAudienceList>;
+export type AudienceListServiceLineOaFriendAudienceList = z.infer<typeof audienceListServiceLineOaFriendAudienceList>;

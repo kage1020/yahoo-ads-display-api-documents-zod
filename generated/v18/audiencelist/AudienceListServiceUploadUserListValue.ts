@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AudienceListServiceUploadUserListJob } from './AudienceListServiceUploadUserListJob';
+import { error } from '../../common/Error';
+import { audienceListServiceUploadUserListJob } from './AudienceListServiceUploadUserListJob';
 
-export const AudienceListServiceUploadUserListValue = z.object({
-  errors: z.array(Error).nullable(),
+export const audienceListServiceUploadUserListValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  uploadJob: AudienceListServiceUploadUserListJob
+  uploadJob: audienceListServiceUploadUserListJob
 }).nullable();
 
-export type AudienceListServiceUploadUserListValue = z.infer<typeof AudienceListServiceUploadUserListValue>;
+export type AudienceListServiceUploadUserListValue = z.infer<typeof audienceListServiceUploadUserListValue>;

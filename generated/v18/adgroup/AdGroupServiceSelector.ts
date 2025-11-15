@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupServiceUserStatus } from './AdGroupServiceUserStatus';
-import { AdGroupServiceCreatedDateRange } from './AdGroupServiceCreatedDateRange';
-import { AdGroupServiceUpdatedDateRange } from './AdGroupServiceUpdatedDateRange';
-import { AdGroupServiceBiddingValueCpcRange } from './AdGroupServiceBiddingValueCpcRange';
+import { adGroupServiceUserStatus } from './AdGroupServiceUserStatus';
+import { adGroupServiceCreatedDateRange } from './AdGroupServiceCreatedDateRange';
+import { adGroupServiceUpdatedDateRange } from './AdGroupServiceUpdatedDateRange';
+import { adGroupServiceBiddingValueCpcRange } from './AdGroupServiceBiddingValueCpcRange';
 
-export const AdGroupServiceSelector = z.object({
+export const adGroupServiceSelector = z.object({
   accountId: z.number().int().nullable(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
@@ -14,10 +14,10 @@ export const AdGroupServiceSelector = z.object({
   labelIds: z.array(z.number().int().nullable()).nullable(),
   numberResults: z.number().int().min(1).max(10000).nullable(),
   startIndex: z.number().int().min(1).nullable(),
-  userStatuses: z.array(AdGroupServiceUserStatus).nullable(),
-  createdDateRange: AdGroupServiceCreatedDateRange,
-  updatedDateRange: AdGroupServiceUpdatedDateRange,
-  biddingValueCpcRange: AdGroupServiceBiddingValueCpcRange
+  userStatuses: z.array(adGroupServiceUserStatus).nullable(),
+  createdDateRange: adGroupServiceCreatedDateRange,
+  updatedDateRange: adGroupServiceUpdatedDateRange,
+  biddingValueCpcRange: adGroupServiceBiddingValueCpcRange
 }).nullable();
 
-export type AdGroupServiceSelector = z.infer<typeof AdGroupServiceSelector>;
+export type AdGroupServiceSelector = z.infer<typeof adGroupServiceSelector>;

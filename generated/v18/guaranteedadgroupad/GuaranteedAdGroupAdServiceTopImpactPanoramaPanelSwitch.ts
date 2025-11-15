@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch = z.object({
+export const guaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch = z.object({
   displayOrder: z.number().int().nullable(),
   finalUrl: z.string().nullable(),
   mediaId: z.number().int().nullable(),
@@ -9,4 +9,4 @@ export const GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch = z.object({
   adRightSideMediaId: z.number().int().nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch = z.infer<typeof GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch>;
+export type GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch = z.infer<typeof guaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch>;

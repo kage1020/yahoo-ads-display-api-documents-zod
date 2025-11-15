@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceSharedAudienceListMasterValue } from './DictionaryServiceSharedAudienceListMasterValue';
+import { dictionaryServiceSharedAudienceListMasterValue } from './DictionaryServiceSharedAudienceListMasterValue';
 
-export const DictionaryServiceSharedAudienceListMasterPage = z.object({
+export const dictionaryServiceSharedAudienceListMasterPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceSharedAudienceListMasterValue).nullable()
+  values: z.array(dictionaryServiceSharedAudienceListMasterValue).nullable()
 }).nullable();
 
-export type DictionaryServiceSharedAudienceListMasterPage = z.infer<typeof DictionaryServiceSharedAudienceListMasterPage>;
+export type DictionaryServiceSharedAudienceListMasterPage = z.infer<typeof dictionaryServiceSharedAudienceListMasterPage>;

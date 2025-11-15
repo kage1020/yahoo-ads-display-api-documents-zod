@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch = z.object({
+export const guaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch = z.object({
   displayUrl: z.string().nullable(),
   thumbnailMediaId: z.number().int().nullable(),
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   trackingUrl: z.string().nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -24,4 +24,4 @@ export const GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch = z.object({
   adShrinkMainMediaId: z.number().int().nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch = z.infer<typeof GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch>;
+export type GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch = z.infer<typeof guaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch>;

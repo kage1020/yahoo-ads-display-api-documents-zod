@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { GuaranteedCampaignServiceIsRemoveFlg } from './GuaranteedCampaignServiceIsRemoveFlg';
+import { guaranteedCampaignServiceIsRemoveFlg } from './GuaranteedCampaignServiceIsRemoveFlg';
 
-export const GuaranteedCampaignServiceConversionTracker = z.object({
+export const guaranteedCampaignServiceConversionTracker = z.object({
   conversionGroupId: z.number().int().nullable(),
   conversionTrackerId: z.number().int().nullable(),
-  isRemoveConversionGroupId: GuaranteedCampaignServiceIsRemoveFlg,
-  isRemoveConversionTrackerId: GuaranteedCampaignServiceIsRemoveFlg
+  isRemoveConversionGroupId: guaranteedCampaignServiceIsRemoveFlg,
+  isRemoveConversionTrackerId: guaranteedCampaignServiceIsRemoveFlg
 }).nullable();
 
-export type GuaranteedCampaignServiceConversionTracker = z.infer<typeof GuaranteedCampaignServiceConversionTracker>;
+export type GuaranteedCampaignServiceConversionTracker = z.infer<typeof guaranteedCampaignServiceConversionTracker>;

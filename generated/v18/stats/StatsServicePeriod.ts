@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { StatsServicePeriodDatetime } from './StatsServicePeriodDatetime';
+import { statsServicePeriodDatetime } from './StatsServicePeriodDatetime';
 
-export const StatsServicePeriod = z.object({
-  periodEndDate: StatsServicePeriodDatetime,
-  periodStartDate: StatsServicePeriodDatetime
+export const statsServicePeriod = z.object({
+  periodEndDate: statsServicePeriodDatetime,
+  periodStartDate: statsServicePeriodDatetime
 }).nullable();
 
-export type StatsServicePeriod = z.infer<typeof StatsServicePeriod>;
+export type StatsServicePeriod = z.infer<typeof statsServicePeriod>;

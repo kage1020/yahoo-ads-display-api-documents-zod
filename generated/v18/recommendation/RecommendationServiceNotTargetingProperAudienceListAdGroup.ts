@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceNotTargetingProperAudienceListAdGroupList } from './RecommendationServiceNotTargetingProperAudienceListAdGroupList';
+import { recommendationServiceNotTargetingProperAudienceListAdGroupList } from './RecommendationServiceNotTargetingProperAudienceListAdGroupList';
 
-export const RecommendationServiceNotTargetingProperAudienceListAdGroup = z.object({
-  adGroupList: z.array(RecommendationServiceNotTargetingProperAudienceListAdGroupList).nullable()
+export const recommendationServiceNotTargetingProperAudienceListAdGroup = z.object({
+  adGroupList: z.array(recommendationServiceNotTargetingProperAudienceListAdGroupList).nullable()
 }).nullable();
 
-export type RecommendationServiceNotTargetingProperAudienceListAdGroup = z.infer<typeof RecommendationServiceNotTargetingProperAudienceListAdGroup>;
+export type RecommendationServiceNotTargetingProperAudienceListAdGroup = z.infer<typeof recommendationServiceNotTargetingProperAudienceListAdGroup>;

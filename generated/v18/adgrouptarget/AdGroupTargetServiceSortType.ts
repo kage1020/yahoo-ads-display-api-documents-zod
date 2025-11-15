@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupTargetServiceSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
+export const adGroupTargetServiceSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
 
-export type AdGroupTargetServiceSortType = z.infer<typeof AdGroupTargetServiceSortType>;
+export type AdGroupTargetServiceSortType = z.infer<typeof adGroupTargetServiceSortType>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { BalanceServiceAvailableBalancePage } from './BalanceServiceAvailableBalancePage';
+import { error } from '../../common/Error';
+import { balanceServiceAvailableBalancePage } from './BalanceServiceAvailableBalancePage';
 
-export const BalanceServiceGetAvailableBalanceResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const balanceServiceGetAvailableBalanceResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: BalanceServiceAvailableBalancePage
+  rval: balanceServiceAvailableBalancePage
 }).nullable();
 
-export type BalanceServiceGetAvailableBalanceResponse = z.infer<typeof BalanceServiceGetAvailableBalanceResponse>;
+export type BalanceServiceGetAvailableBalanceResponse = z.infer<typeof balanceServiceGetAvailableBalanceResponse>;

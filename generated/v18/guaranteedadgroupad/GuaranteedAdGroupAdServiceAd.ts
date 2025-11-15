@@ -1,45 +1,45 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceAdType } from './GuaranteedAdGroupAdServiceAdType';
-import { GuaranteedAdGroupAdServiceMainMediaFormat } from './GuaranteedAdGroupAdServiceMainMediaFormat';
-import { GuaranteedAdGroupAdServiceBannerAd } from './GuaranteedAdGroupAdServiceBannerAd';
-import { GuaranteedAdGroupAdServiceCarouselAd } from './GuaranteedAdGroupAdServiceCarouselAd';
-import { GuaranteedAdGroupAdServiceInstreamAd } from './GuaranteedAdGroupAdServiceInstreamAd';
-import { GuaranteedAdGroupAdServiceBrandPanelQuintie } from './GuaranteedAdGroupAdServiceBrandPanelQuintie';
-import { GuaranteedAdGroupAdServiceBrandPanelPanorama } from './GuaranteedAdGroupAdServiceBrandPanelPanorama';
-import { GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd } from './GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd';
-import { GuaranteedAdGroupAdServiceBrandPanelTopCover } from './GuaranteedAdGroupAdServiceBrandPanelTopCover';
-import { GuaranteedAdGroupAdServiceTopImpactSquare } from './GuaranteedAdGroupAdServiceTopImpactSquare';
-import { GuaranteedAdGroupAdServiceTopImpactQuintie } from './GuaranteedAdGroupAdServiceTopImpactQuintie';
-import { GuaranteedAdGroupAdServiceTopImpactTheater } from './GuaranteedAdGroupAdServiceTopImpactTheater';
-import { GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble } from './GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble';
-import { GuaranteedAdGroupAdServiceTopImpactPanorama } from './GuaranteedAdGroupAdServiceTopImpactPanorama';
-import { GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision } from './GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision';
-import { GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch } from './GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch';
-import { GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd } from './GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd';
-import { GuaranteedAdGroupAdServiceTopPageTopicsPRAd } from './GuaranteedAdGroupAdServiceTopPageTopicsPRAd';
-import { GuaranteedAdGroupAdServiceTalkHeadViewAd } from './GuaranteedAdGroupAdServiceTalkHeadViewAd';
+import { guaranteedAdGroupAdServiceAdType } from './GuaranteedAdGroupAdServiceAdType';
+import { guaranteedAdGroupAdServiceMainMediaFormat } from './GuaranteedAdGroupAdServiceMainMediaFormat';
+import { guaranteedAdGroupAdServiceBannerAd } from './GuaranteedAdGroupAdServiceBannerAd';
+import { guaranteedAdGroupAdServiceCarouselAd } from './GuaranteedAdGroupAdServiceCarouselAd';
+import { guaranteedAdGroupAdServiceInstreamAd } from './GuaranteedAdGroupAdServiceInstreamAd';
+import { guaranteedAdGroupAdServiceBrandPanelQuintie } from './GuaranteedAdGroupAdServiceBrandPanelQuintie';
+import { guaranteedAdGroupAdServiceBrandPanelPanorama } from './GuaranteedAdGroupAdServiceBrandPanelPanorama';
+import { guaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd } from './GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd';
+import { guaranteedAdGroupAdServiceBrandPanelTopCover } from './GuaranteedAdGroupAdServiceBrandPanelTopCover';
+import { guaranteedAdGroupAdServiceTopImpactSquare } from './GuaranteedAdGroupAdServiceTopImpactSquare';
+import { guaranteedAdGroupAdServiceTopImpactQuintie } from './GuaranteedAdGroupAdServiceTopImpactQuintie';
+import { guaranteedAdGroupAdServiceTopImpactTheater } from './GuaranteedAdGroupAdServiceTopImpactTheater';
+import { guaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble } from './GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble';
+import { guaranteedAdGroupAdServiceTopImpactPanorama } from './GuaranteedAdGroupAdServiceTopImpactPanorama';
+import { guaranteedAdGroupAdServiceTopImpactPanoramaSideVision } from './GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision';
+import { guaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch } from './GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch';
+import { guaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd } from './GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd';
+import { guaranteedAdGroupAdServiceTopPageTopicsPRAd } from './GuaranteedAdGroupAdServiceTopPageTopicsPRAd';
+import { guaranteedAdGroupAdServiceTalkHeadViewAd } from './GuaranteedAdGroupAdServiceTalkHeadViewAd';
 
-export const GuaranteedAdGroupAdServiceAd = z.object({
-  adType: GuaranteedAdGroupAdServiceAdType,
-  mainMediaFormat: GuaranteedAdGroupAdServiceMainMediaFormat,
-  bannerAd: GuaranteedAdGroupAdServiceBannerAd,
-  carouselAd: GuaranteedAdGroupAdServiceCarouselAd,
-  instreamAd: GuaranteedAdGroupAdServiceInstreamAd,
-  brandPanelQuintie: GuaranteedAdGroupAdServiceBrandPanelQuintie,
-  brandPanelPanorama: GuaranteedAdGroupAdServiceBrandPanelPanorama,
-  brandPanelPanoramaPanelSwitch: GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd,
-  brandPanelTopCover: GuaranteedAdGroupAdServiceBrandPanelTopCover,
-  topImpactSquare: GuaranteedAdGroupAdServiceTopImpactSquare,
-  topImpactQuintie: GuaranteedAdGroupAdServiceTopImpactQuintie,
-  topImpactTheater: GuaranteedAdGroupAdServiceTopImpactTheater,
-  topImpactPrimeDisplayDouble: GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble,
-  topImpactPanorama: GuaranteedAdGroupAdServiceTopImpactPanorama,
-  topImpactPanoramaSideVision: GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision,
-  topImpactPanoramaSideSwitch: GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch,
-  topImpactPanoramaPanelSwitch: GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd,
-  topPageTopicsPR: GuaranteedAdGroupAdServiceTopPageTopicsPRAd,
-  talkHeadView: GuaranteedAdGroupAdServiceTalkHeadViewAd
+export const guaranteedAdGroupAdServiceAd = z.object({
+  adType: guaranteedAdGroupAdServiceAdType,
+  mainMediaFormat: guaranteedAdGroupAdServiceMainMediaFormat,
+  bannerAd: guaranteedAdGroupAdServiceBannerAd,
+  carouselAd: guaranteedAdGroupAdServiceCarouselAd,
+  instreamAd: guaranteedAdGroupAdServiceInstreamAd,
+  brandPanelQuintie: guaranteedAdGroupAdServiceBrandPanelQuintie,
+  brandPanelPanorama: guaranteedAdGroupAdServiceBrandPanelPanorama,
+  brandPanelPanoramaPanelSwitch: guaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd,
+  brandPanelTopCover: guaranteedAdGroupAdServiceBrandPanelTopCover,
+  topImpactSquare: guaranteedAdGroupAdServiceTopImpactSquare,
+  topImpactQuintie: guaranteedAdGroupAdServiceTopImpactQuintie,
+  topImpactTheater: guaranteedAdGroupAdServiceTopImpactTheater,
+  topImpactPrimeDisplayDouble: guaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble,
+  topImpactPanorama: guaranteedAdGroupAdServiceTopImpactPanorama,
+  topImpactPanoramaSideVision: guaranteedAdGroupAdServiceTopImpactPanoramaSideVision,
+  topImpactPanoramaSideSwitch: guaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch,
+  topImpactPanoramaPanelSwitch: guaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd,
+  topPageTopicsPR: guaranteedAdGroupAdServiceTopPageTopicsPRAd,
+  talkHeadView: guaranteedAdGroupAdServiceTalkHeadViewAd
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceAd = z.infer<typeof GuaranteedAdGroupAdServiceAd>;
+export type GuaranteedAdGroupAdServiceAd = z.infer<typeof guaranteedAdGroupAdServiceAd>;

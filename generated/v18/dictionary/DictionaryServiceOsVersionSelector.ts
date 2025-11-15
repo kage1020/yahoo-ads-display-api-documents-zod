@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { DictionaryServiceDeviceOsType } from './DictionaryServiceDeviceOsType';
+import { dictionaryServiceDeviceOsType } from './DictionaryServiceDeviceOsType';
 
-export const DictionaryServiceOsVersionSelector = z.object({
-  deviceOsType: DictionaryServiceDeviceOsType
+export const dictionaryServiceOsVersionSelector = z.object({
+  deviceOsType: dictionaryServiceDeviceOsType
 }).nullable();
 
-export type DictionaryServiceOsVersionSelector = z.infer<typeof DictionaryServiceOsVersionSelector>;
+export type DictionaryServiceOsVersionSelector = z.infer<typeof dictionaryServiceOsVersionSelector>;

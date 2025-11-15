@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServiceAreaSearchType } from './AdGroupTargetServiceAreaSearchType';
+import { adGroupTargetServiceAreaSearchType } from './AdGroupTargetServiceAreaSearchType';
 
-export const AdGroupTargetServiceGeoTarget = z.object({
-  areaSearchType: AdGroupTargetServiceAreaSearchType,
+export const adGroupTargetServiceGeoTarget = z.object({
+  areaSearchType: adGroupTargetServiceAreaSearchType,
   latitudeInMicroDegrees: z.number().int().nullable(),
   longitudeInMicroDegrees: z.number().int().nullable(),
   radius: z.number().int().nullable(),
@@ -12,4 +12,4 @@ export const AdGroupTargetServiceGeoTarget = z.object({
   geoNameJa: z.string().nullable()
 }).nullable();
 
-export type AdGroupTargetServiceGeoTarget = z.infer<typeof AdGroupTargetServiceGeoTarget>;
+export type AdGroupTargetServiceGeoTarget = z.infer<typeof adGroupTargetServiceGeoTarget>;

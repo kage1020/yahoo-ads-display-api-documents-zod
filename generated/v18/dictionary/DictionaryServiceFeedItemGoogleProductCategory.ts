@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { DictionaryServiceFeedItemGoogleProductCategory } from './DictionaryServiceFeedItemGoogleProductCategory';
+import { dictionaryServiceFeedItemGoogleProductCategory } from './DictionaryServiceFeedItemGoogleProductCategory';
 
-export const DictionaryServiceFeedItemGoogleProductCategory = z.object({
-  child: z.array(DictionaryServiceFeedItemGoogleProductCategory).nullable(),
+export const dictionaryServiceFeedItemGoogleProductCategory = z.object({
+  child: z.array(dictionaryServiceFeedItemGoogleProductCategory).nullable(),
   fullName: z.string().nullable(),
   id: z.string().nullable(),
   name: z.string().nullable(),
@@ -11,4 +11,4 @@ export const DictionaryServiceFeedItemGoogleProductCategory = z.object({
   parent: z.string().nullable()
 }).nullable();
 
-export type DictionaryServiceFeedItemGoogleProductCategory = z.infer<typeof DictionaryServiceFeedItemGoogleProductCategory>;
+export type DictionaryServiceFeedItemGoogleProductCategory = z.infer<typeof dictionaryServiceFeedItemGoogleProductCategory>;

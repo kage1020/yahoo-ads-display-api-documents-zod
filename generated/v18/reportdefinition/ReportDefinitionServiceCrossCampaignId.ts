@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceCrossCampaignId = z.object({
+export const reportDefinitionServiceCrossCampaignId = z.object({
   campaignId: z.number().int().nullable()
 }).nullable();
 
-export type ReportDefinitionServiceCrossCampaignId = z.infer<typeof ReportDefinitionServiceCrossCampaignId>;
+export type ReportDefinitionServiceCrossCampaignId = z.infer<typeof reportDefinitionServiceCrossCampaignId>;

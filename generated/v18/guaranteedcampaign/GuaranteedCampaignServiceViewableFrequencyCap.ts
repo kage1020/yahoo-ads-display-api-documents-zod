@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { GuaranteedCampaignServiceFrequencyLevel } from './GuaranteedCampaignServiceFrequencyLevel';
-import { GuaranteedCampaignServiceFrequencyTimeUnit } from './GuaranteedCampaignServiceFrequencyTimeUnit';
+import { guaranteedCampaignServiceFrequencyLevel } from './GuaranteedCampaignServiceFrequencyLevel';
+import { guaranteedCampaignServiceFrequencyTimeUnit } from './GuaranteedCampaignServiceFrequencyTimeUnit';
 
-export const GuaranteedCampaignServiceViewableFrequencyCap = z.object({
-  frequencyLevel: GuaranteedCampaignServiceFrequencyLevel,
-  frequencyTimeUnit: GuaranteedCampaignServiceFrequencyTimeUnit,
+export const guaranteedCampaignServiceViewableFrequencyCap = z.object({
+  frequencyLevel: guaranteedCampaignServiceFrequencyLevel,
+  frequencyTimeUnit: guaranteedCampaignServiceFrequencyTimeUnit,
   vImps: z.number().int().nullable()
 }).nullable();
 
-export type GuaranteedCampaignServiceViewableFrequencyCap = z.infer<typeof GuaranteedCampaignServiceViewableFrequencyCap>;
+export type GuaranteedCampaignServiceViewableFrequencyCap = z.infer<typeof guaranteedCampaignServiceViewableFrequencyCap>;

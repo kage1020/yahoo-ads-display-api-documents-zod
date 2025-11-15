@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ContentsKeywordListServiceReturnValue } from './ContentsKeywordListServiceReturnValue';
+import { error } from '../../common/Error';
+import { contentsKeywordListServiceReturnValue } from './ContentsKeywordListServiceReturnValue';
 
-export const ContentsKeywordListServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const contentsKeywordListServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: ContentsKeywordListServiceReturnValue
+  rval: contentsKeywordListServiceReturnValue
 }).nullable();
 
-export type ContentsKeywordListServiceMutateResponse = z.infer<typeof ContentsKeywordListServiceMutateResponse>;
+export type ContentsKeywordListServiceMutateResponse = z.infer<typeof contentsKeywordListServiceMutateResponse>;

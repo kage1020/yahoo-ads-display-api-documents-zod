@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceBrandPanelQuintie = z.object({
+export const guaranteedAdGroupAdServiceBrandPanelQuintie = z.object({
   displayUrl: z.string().nullable(),
   thumbnailMediaId: z.number().int().nullable(),
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   trackingUrl: z.string().nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -19,4 +19,4 @@ export const GuaranteedAdGroupAdServiceBrandPanelQuintie = z.object({
   videoStartBeaconUrls: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceBrandPanelQuintie = z.infer<typeof GuaranteedAdGroupAdServiceBrandPanelQuintie>;
+export type GuaranteedAdGroupAdServiceBrandPanelQuintie = z.infer<typeof guaranteedAdGroupAdServiceBrandPanelQuintie>;

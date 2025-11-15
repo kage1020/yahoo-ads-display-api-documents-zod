@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AuditLogServiceJob } from './AuditLogServiceJob';
-import { Error } from './Error';
+import { auditLogServiceJob } from './AuditLogServiceJob';
+import { error } from '../../common/Error';
 
-export const AuditLogServiceValue = z.object({
-  auditLogJob: AuditLogServiceJob,
-  errors: z.array(Error).nullable(),
+export const auditLogServiceValue = z.object({
+  auditLogJob: auditLogServiceJob,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AuditLogServiceValue = z.infer<typeof AuditLogServiceValue>;
+export type AuditLogServiceValue = z.infer<typeof auditLogServiceValue>;

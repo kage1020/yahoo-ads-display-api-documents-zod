@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceFrequencyRange } from './ReportDefinitionServiceFrequencyRange';
+import { reportDefinitionServiceFrequencyRange } from './ReportDefinitionServiceFrequencyRange';
 
-export const ReportDefinitionServiceReachReportCondition = z.object({
-  frequencyRange: ReportDefinitionServiceFrequencyRange
+export const reportDefinitionServiceReachReportCondition = z.object({
+  frequencyRange: reportDefinitionServiceFrequencyRange
 }).nullable();
 
-export type ReportDefinitionServiceReachReportCondition = z.infer<typeof ReportDefinitionServiceReachReportCondition>;
+export type ReportDefinitionServiceReachReportCondition = z.infer<typeof reportDefinitionServiceReachReportCondition>;

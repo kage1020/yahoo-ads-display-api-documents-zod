@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AudienceListServiceUploadUserListPage } from './AudienceListServiceUploadUserListPage';
+import { error } from '../../common/Error';
+import { audienceListServiceUploadUserListPage } from './AudienceListServiceUploadUserListPage';
 
-export const AudienceListServiceGetUploadUserListResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const audienceListServiceGetUploadUserListResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AudienceListServiceUploadUserListPage
+  rval: audienceListServiceUploadUserListPage
 }).nullable();
 
-export type AudienceListServiceGetUploadUserListResponse = z.infer<typeof AudienceListServiceGetUploadUserListResponse>;
+export type AudienceListServiceGetUploadUserListResponse = z.infer<typeof audienceListServiceGetUploadUserListResponse>;

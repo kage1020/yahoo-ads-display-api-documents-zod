@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AuditLogServiceDateRange } from './AuditLogServiceDateRange';
-import { AuditLogServiceEncoding } from './AuditLogServiceEncoding';
-import { AuditLogServiceJobStatus } from './AuditLogServiceJobStatus';
-import { AuditLogServiceLang } from './AuditLogServiceLang';
-import { AuditLogServiceOutput } from './AuditLogServiceOutput';
-import { AuditLogServiceSourceType } from './AuditLogServiceSourceType';
+import { auditLogServiceDateRange } from './AuditLogServiceDateRange';
+import { auditLogServiceEncoding } from './AuditLogServiceEncoding';
+import { auditLogServiceJobStatus } from './AuditLogServiceJobStatus';
+import { auditLogServiceLang } from './AuditLogServiceLang';
+import { auditLogServiceOutput } from './AuditLogServiceOutput';
+import { auditLogServiceSourceType } from './AuditLogServiceSourceType';
 
-export const AuditLogServiceJob = z.object({
+export const auditLogServiceJob = z.object({
   accountId: z.number().int().nullable(),
   auditLogJobEndDate: z.string().nullable(),
   auditLogJobId: z.number().int().nullable(),
@@ -15,13 +15,13 @@ export const AuditLogServiceJob = z.object({
   auditLogJobStartDate: z.string().nullable(),
   auditLogJobUserName: z.string().nullable(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
-  dateRange: AuditLogServiceDateRange,
-  encoding: AuditLogServiceEncoding,
-  jobStatus: AuditLogServiceJobStatus,
-  lang: AuditLogServiceLang,
-  output: AuditLogServiceOutput,
+  dateRange: auditLogServiceDateRange,
+  encoding: auditLogServiceEncoding,
+  jobStatus: auditLogServiceJobStatus,
+  lang: auditLogServiceLang,
+  output: auditLogServiceOutput,
   progress: z.number().int().nullable(),
-  sourceType: AuditLogServiceSourceType
+  sourceType: auditLogServiceSourceType
 }).nullable();
 
-export type AuditLogServiceJob = z.infer<typeof AuditLogServiceJob>;
+export type AuditLogServiceJob = z.infer<typeof auditLogServiceJob>;

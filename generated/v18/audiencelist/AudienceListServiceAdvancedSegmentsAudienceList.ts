@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AudienceListServiceAdvancedSegmentsKeyword } from './AudienceListServiceAdvancedSegmentsKeyword';
-import { AudienceListServiceAdvancedSegmentsUrl } from './AudienceListServiceAdvancedSegmentsUrl';
-import { AudienceListServiceAdvancedSegmentsAudienceRange } from './AudienceListServiceAdvancedSegmentsAudienceRange';
-import { AudienceListServiceIsCurrentlyTotaling } from './AudienceListServiceIsCurrentlyTotaling';
+import { audienceListServiceAdvancedSegmentsKeyword } from './AudienceListServiceAdvancedSegmentsKeyword';
+import { audienceListServiceAdvancedSegmentsUrl } from './AudienceListServiceAdvancedSegmentsUrl';
+import { audienceListServiceAdvancedSegmentsAudienceRange } from './AudienceListServiceAdvancedSegmentsAudienceRange';
+import { audienceListServiceIsCurrentlyTotaling } from './AudienceListServiceIsCurrentlyTotaling';
 
-export const AudienceListServiceAdvancedSegmentsAudienceList = z.object({
-  keywords: z.array(AudienceListServiceAdvancedSegmentsKeyword).nullable(),
-  urls: z.array(AudienceListServiceAdvancedSegmentsUrl).nullable(),
-  audienceRange: AudienceListServiceAdvancedSegmentsAudienceRange,
-  isCurrentlyTotaling: AudienceListServiceIsCurrentlyTotaling
+export const audienceListServiceAdvancedSegmentsAudienceList = z.object({
+  keywords: z.array(audienceListServiceAdvancedSegmentsKeyword).nullable(),
+  urls: z.array(audienceListServiceAdvancedSegmentsUrl).nullable(),
+  audienceRange: audienceListServiceAdvancedSegmentsAudienceRange,
+  isCurrentlyTotaling: audienceListServiceIsCurrentlyTotaling
 }).nullable();
 
-export type AudienceListServiceAdvancedSegmentsAudienceList = z.infer<typeof AudienceListServiceAdvancedSegmentsAudienceList>;
+export type AudienceListServiceAdvancedSegmentsAudienceList = z.infer<typeof audienceListServiceAdvancedSegmentsAudienceList>;

@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { StatsServicePlacementCategoryType } from './StatsServicePlacementCategoryType';
+import { statsServicePlacementCategoryType } from './StatsServicePlacementCategoryType';
 
-export const StatsServicePlacementCategoryDetailTarget = z.object({
+export const statsServicePlacementCategoryDetailTarget = z.object({
   placementCategoryNameJa: z.string().nullable(),
   placementCategoryNameEn: z.string().nullable(),
-  placementCategoryType: StatsServicePlacementCategoryType
+  placementCategoryType: statsServicePlacementCategoryType
 }).nullable();
 
-export type StatsServicePlacementCategoryDetailTarget = z.infer<typeof StatsServicePlacementCategoryDetailTarget>;
+export type StatsServicePlacementCategoryDetailTarget = z.infer<typeof statsServicePlacementCategoryDetailTarget>;

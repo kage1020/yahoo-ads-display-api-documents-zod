@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const FeedFtpRequest = z.object({
+export const feedFtpRequest = z.object({
   feedId: z.number().int().nullable()
 }).nullable();
 
-export type FeedFtpRequest = z.infer<typeof FeedFtpRequest>;
+export type FeedFtpRequest = z.infer<typeof feedFtpRequest>;

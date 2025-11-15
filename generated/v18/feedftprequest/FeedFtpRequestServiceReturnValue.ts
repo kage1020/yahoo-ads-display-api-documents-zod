@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { FeedFtpRequestServiceValue } from './FeedFtpRequestServiceValue';
+import { feedFtpRequestServiceValue } from './FeedFtpRequestServiceValue';
 
-export const FeedFtpRequestServiceReturnValue = z.object({
-  values: z.array(FeedFtpRequestServiceValue).nullable()
+export const feedFtpRequestServiceReturnValue = z.object({
+  values: z.array(feedFtpRequestServiceValue).nullable()
 }).nullable();
 
-export type FeedFtpRequestServiceReturnValue = z.infer<typeof FeedFtpRequestServiceReturnValue>;
+export type FeedFtpRequestServiceReturnValue = z.infer<typeof feedFtpRequestServiceReturnValue>;

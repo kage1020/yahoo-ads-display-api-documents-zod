@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { CampaignServiceOptimizerTrainingStatus } from './CampaignServiceOptimizerTrainingStatus';
+import { campaignServiceOptimizerTrainingStatus } from './CampaignServiceOptimizerTrainingStatus';
 
-export const CampaignServiceOptimizer = z.object({
-  optimizerTrainingStatus: CampaignServiceOptimizerTrainingStatus
+export const campaignServiceOptimizer = z.object({
+  optimizerTrainingStatus: campaignServiceOptimizerTrainingStatus
 }).nullable();
 
-export type CampaignServiceOptimizer = z.infer<typeof CampaignServiceOptimizer>;
+export type CampaignServiceOptimizer = z.infer<typeof campaignServiceOptimizer>;

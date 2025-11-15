@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { VideoServiceUserStatus } from './VideoServiceUserStatus';
+import { videoServiceUserStatus } from './VideoServiceUserStatus';
 
-export const VideoServiceUploadData = z.object({
+export const videoServiceUploadData = z.object({
   accountId: z.number().int().nullable(),
   mediaId: z.number().int().nullable(),
   videoName: z.string().nullable(),
   videoTitle: z.string().nullable(),
-  userStatus: VideoServiceUserStatus
+  userStatus: videoServiceUserStatus
 }).nullable();
 
-export type VideoServiceUploadData = z.infer<typeof VideoServiceUploadData>;
+export type VideoServiceUploadData = z.infer<typeof videoServiceUploadData>;

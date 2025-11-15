@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ContentsKeywordIdeaServiceSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
+export const contentsKeywordIdeaServiceSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
 
-export type ContentsKeywordIdeaServiceSortType = z.infer<typeof ContentsKeywordIdeaServiceSortType>;
+export type ContentsKeywordIdeaServiceSortType = z.infer<typeof contentsKeywordIdeaServiceSortType>;

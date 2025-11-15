@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceSharedAudienceListInfo } from './DictionaryServiceSharedAudienceListInfo';
+import { error } from '../../common/Error';
+import { dictionaryServiceSharedAudienceListInfo } from './DictionaryServiceSharedAudienceListInfo';
 
-export const DictionaryServiceSharedAudienceListInfoValue = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceSharedAudienceListInfoValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  sharedAudienceList: DictionaryServiceSharedAudienceListInfo
+  sharedAudienceList: dictionaryServiceSharedAudienceListInfo
 }).nullable();
 
-export type DictionaryServiceSharedAudienceListInfoValue = z.infer<typeof DictionaryServiceSharedAudienceListInfoValue>;
+export type DictionaryServiceSharedAudienceListInfoValue = z.infer<typeof dictionaryServiceSharedAudienceListInfoValue>;

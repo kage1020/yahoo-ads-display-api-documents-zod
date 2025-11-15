@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceIsRemoveFlg } from './GuaranteedAdGroupAdServiceIsRemoveFlg';
-import { GuaranteedAdGroupAdServiceCustomParameter } from './GuaranteedAdGroupAdServiceCustomParameter';
+import { guaranteedAdGroupAdServiceIsRemoveFlg } from './GuaranteedAdGroupAdServiceIsRemoveFlg';
+import { guaranteedAdGroupAdServiceCustomParameter } from './GuaranteedAdGroupAdServiceCustomParameter';
 
-export const GuaranteedAdGroupAdServiceCustomParameters = z.object({
-  isRemove: GuaranteedAdGroupAdServiceIsRemoveFlg,
-  parameters: z.array(GuaranteedAdGroupAdServiceCustomParameter).nullable()
+export const guaranteedAdGroupAdServiceCustomParameters = z.object({
+  isRemove: guaranteedAdGroupAdServiceIsRemoveFlg,
+  parameters: z.array(guaranteedAdGroupAdServiceCustomParameter).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceCustomParameters = z.infer<typeof GuaranteedAdGroupAdServiceCustomParameters>;
+export type GuaranteedAdGroupAdServiceCustomParameters = z.infer<typeof guaranteedAdGroupAdServiceCustomParameters>;

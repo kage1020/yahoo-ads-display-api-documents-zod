@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceLang } from './ReportDefinitionServiceLang';
-import { ReportDefinitionServiceReportType } from './ReportDefinitionServiceReportType';
+import { reportDefinitionServiceLang } from './ReportDefinitionServiceLang';
+import { reportDefinitionServiceReportType } from './ReportDefinitionServiceReportType';
 
-export const ReportDefinitionServiceGetReportFields = z.object({
-  lang: ReportDefinitionServiceLang,
-  reportType: ReportDefinitionServiceReportType
+export const reportDefinitionServiceGetReportFields = z.object({
+  lang: reportDefinitionServiceLang,
+  reportType: reportDefinitionServiceReportType
 }).nullable();
 
-export type ReportDefinitionServiceGetReportFields = z.infer<typeof ReportDefinitionServiceGetReportFields>;
+export type ReportDefinitionServiceGetReportFields = z.infer<typeof reportDefinitionServiceGetReportFields>;

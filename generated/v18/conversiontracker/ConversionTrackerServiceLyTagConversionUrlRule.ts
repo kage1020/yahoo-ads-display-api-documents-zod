@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceLyTagConversionCompareOperator } from './ConversionTrackerServiceLyTagConversionCompareOperator';
+import { conversionTrackerServiceLyTagConversionCompareOperator } from './ConversionTrackerServiceLyTagConversionCompareOperator';
 
-export const ConversionTrackerServiceLyTagConversionUrlRule = z.object({
-  compareOperator: ConversionTrackerServiceLyTagConversionCompareOperator,
+export const conversionTrackerServiceLyTagConversionUrlRule = z.object({
+  compareOperator: conversionTrackerServiceLyTagConversionCompareOperator,
   url: z.string().nullable()
 }).nullable();
 
-export type ConversionTrackerServiceLyTagConversionUrlRule = z.infer<typeof ConversionTrackerServiceLyTagConversionUrlRule>;
+export type ConversionTrackerServiceLyTagConversionUrlRule = z.infer<typeof conversionTrackerServiceLyTagConversionUrlRule>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const BiddingStrategyServiceIsRemoveCampaignBudgetFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const biddingStrategyServiceIsRemoveCampaignBudgetFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type BiddingStrategyServiceIsRemoveCampaignBudgetFlg = z.infer<typeof BiddingStrategyServiceIsRemoveCampaignBudgetFlg>;
+export type BiddingStrategyServiceIsRemoveCampaignBudgetFlg = z.infer<typeof biddingStrategyServiceIsRemoveCampaignBudgetFlg>;

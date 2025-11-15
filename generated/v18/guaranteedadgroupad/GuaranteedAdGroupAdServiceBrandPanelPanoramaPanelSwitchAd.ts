@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch } from './GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch } from './GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
 
-export const GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd = z.object({
+export const guaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd = z.object({
   adShrinkMainMediaId: z.number().int().nullable(),
-  panels: z.array(GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch).nullable(),
+  panels: z.array(guaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch).nullable(),
   finalUrl: z.string().nullable(),
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
   trackingUrl: z.string().nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd = z.infer<typeof GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd>;
+export type GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd = z.infer<typeof guaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd>;

@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { AudienceListServiceAdActionRules } from './AudienceListServiceAdActionRules';
-import { AudienceListServiceAdActionDataSource } from './AudienceListServiceAdActionDataSource';
-import { AudienceListServiceEligibleFlg } from './AudienceListServiceEligibleFlg';
+import { audienceListServiceAdActionRules } from './AudienceListServiceAdActionRules';
+import { audienceListServiceAdActionDataSource } from './AudienceListServiceAdActionDataSource';
+import { audienceListServiceEligibleFlg } from './AudienceListServiceEligibleFlg';
 
-export const AudienceListServiceAdActionUsersAudienceList = z.object({
-  adActionRules: AudienceListServiceAdActionRules,
-  adActionDataSource: AudienceListServiceAdActionDataSource,
+export const audienceListServiceAdActionUsersAudienceList = z.object({
+  adActionRules: audienceListServiceAdActionRules,
+  adActionDataSource: audienceListServiceAdActionDataSource,
   dataDuration: z.number().int().nullable(),
-  eligibleFlg: AudienceListServiceEligibleFlg
+  eligibleFlg: audienceListServiceEligibleFlg
 }).nullable();
 
-export type AudienceListServiceAdActionUsersAudienceList = z.infer<typeof AudienceListServiceAdActionUsersAudienceList>;
+export type AudienceListServiceAdActionUsersAudienceList = z.infer<typeof audienceListServiceAdActionUsersAudienceList>;

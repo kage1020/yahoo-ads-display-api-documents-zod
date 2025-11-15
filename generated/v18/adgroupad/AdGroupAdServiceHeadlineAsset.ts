@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
+import { adGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
 
-export const AdGroupAdServiceHeadlineAsset = z.object({
+export const adGroupAdServiceHeadlineAsset = z.object({
   text: z.string().nullable(),
-  approvalStatus: AdGroupAdServiceApprovalStatus,
+  approvalStatus: adGroupAdServiceApprovalStatus,
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupAdServiceHeadlineAsset = z.infer<typeof AdGroupAdServiceHeadlineAsset>;
+export type AdGroupAdServiceHeadlineAsset = z.infer<typeof adGroupAdServiceHeadlineAsset>;

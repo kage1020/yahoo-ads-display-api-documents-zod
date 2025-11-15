@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { StatsServicePeriod } from './StatsServicePeriod';
-import { StatsServiceValue } from './StatsServiceValue';
+import { statsServicePeriod } from './StatsServicePeriod';
+import { statsServiceValue } from './StatsServiceValue';
 
-export const StatsServicePage = z.object({
-  period: StatsServicePeriod,
+export const statsServicePage = z.object({
+  period: statsServicePeriod,
   totalNumEntries: z.number().int(),
-  values: z.array(StatsServiceValue).nullable()
+  values: z.array(statsServiceValue).nullable()
 }).nullable();
 
-export type StatsServicePage = z.infer<typeof StatsServicePage>;
+export type StatsServicePage = z.infer<typeof statsServicePage>;

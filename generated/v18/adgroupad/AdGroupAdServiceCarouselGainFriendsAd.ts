@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceButtonText } from './AdGroupAdServiceButtonText';
-import { AdGroupAdServiceCarouselGainFriends } from './AdGroupAdServiceCarouselGainFriends';
+import { adGroupAdServiceButtonText } from './AdGroupAdServiceButtonText';
+import { adGroupAdServiceCarouselGainFriends } from './AdGroupAdServiceCarouselGainFriends';
 
-export const AdGroupAdServiceCarouselGainFriendsAd = z.object({
-  buttonText: AdGroupAdServiceButtonText,
-  carousels: z.array(AdGroupAdServiceCarouselGainFriends).nullable()
+export const adGroupAdServiceCarouselGainFriendsAd = z.object({
+  buttonText: adGroupAdServiceButtonText,
+  carousels: z.array(adGroupAdServiceCarouselGainFriends).nullable()
 }).nullable();
 
-export type AdGroupAdServiceCarouselGainFriendsAd = z.infer<typeof AdGroupAdServiceCarouselGainFriendsAd>;
+export type AdGroupAdServiceCarouselGainFriendsAd = z.infer<typeof adGroupAdServiceCarouselGainFriendsAd>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignServiceEnhancedCpcEnabled = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const campaignServiceEnhancedCpcEnabled = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type CampaignServiceEnhancedCpcEnabled = z.infer<typeof CampaignServiceEnhancedCpcEnabled>;
+export type CampaignServiceEnhancedCpcEnabled = z.infer<typeof campaignServiceEnhancedCpcEnabled>;

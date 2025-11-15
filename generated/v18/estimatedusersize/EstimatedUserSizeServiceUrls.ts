@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { EstimatedUserSizeServiceUnavailableUrl } from './EstimatedUserSizeServiceUnavailableUrl';
+import { estimatedUserSizeServiceUnavailableUrl } from './EstimatedUserSizeServiceUnavailableUrl';
 
-export const EstimatedUserSizeServiceUrls = z.object({
+export const estimatedUserSizeServiceUrls = z.object({
   url: z.string().nullable(),
-  unavailableUrl: EstimatedUserSizeServiceUnavailableUrl
+  unavailableUrl: estimatedUserSizeServiceUnavailableUrl
 }).nullable();
 
-export type EstimatedUserSizeServiceUrls = z.infer<typeof EstimatedUserSizeServiceUrls>;
+export type EstimatedUserSizeServiceUrls = z.infer<typeof estimatedUserSizeServiceUrls>;

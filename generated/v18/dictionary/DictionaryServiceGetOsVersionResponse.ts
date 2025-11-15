@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceOsVersionPage } from './DictionaryServiceOsVersionPage';
+import { error } from '../../common/Error';
+import { dictionaryServiceOsVersionPage } from './DictionaryServiceOsVersionPage';
 
-export const DictionaryServiceGetOsVersionResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceGetOsVersionResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: DictionaryServiceOsVersionPage
+  rval: dictionaryServiceOsVersionPage
 }).nullable();
 
-export type DictionaryServiceGetOsVersionResponse = z.infer<typeof DictionaryServiceGetOsVersionResponse>;
+export type DictionaryServiceGetOsVersionResponse = z.infer<typeof dictionaryServiceGetOsVersionResponse>;

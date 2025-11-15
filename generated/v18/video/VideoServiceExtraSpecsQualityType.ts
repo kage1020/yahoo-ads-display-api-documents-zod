@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const VideoServiceExtraSpecsQualityType = z.enum(["FULLHD", "HD", "UNKNOWN"]).nullable();
+export const videoServiceExtraSpecsQualityType = z.enum(["FULLHD", "HD", "UNKNOWN"]).nullable();
 
-export type VideoServiceExtraSpecsQualityType = z.infer<typeof VideoServiceExtraSpecsQualityType>;
+export type VideoServiceExtraSpecsQualityType = z.infer<typeof videoServiceExtraSpecsQualityType>;

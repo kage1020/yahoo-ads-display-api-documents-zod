@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { FeedSetServiceConditionSet } from './FeedSetServiceConditionSet';
+import { feedSetServiceConditionSet } from './FeedSetServiceConditionSet';
 
-export const FeedSet = z.object({
+export const feedSet = z.object({
   accountId: z.number().int().nullable(),
-  conditionSets: z.array(FeedSetServiceConditionSet).nullable(),
+  conditionSets: z.array(feedSetServiceConditionSet).nullable(),
   feedId: z.number().int().nullable(),
   feedSetId: z.number().int().nullable(),
   feedSetName: z.string().nullable(),
@@ -12,4 +12,4 @@ export const FeedSet = z.object({
   itemCount: z.number().int().nullable()
 }).nullable();
 
-export type FeedSet = z.infer<typeof FeedSet>;
+export type FeedSet = z.infer<typeof feedSet>;

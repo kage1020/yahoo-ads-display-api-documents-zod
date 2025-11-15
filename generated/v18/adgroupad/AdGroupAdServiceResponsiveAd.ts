@@ -1,25 +1,25 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceButtonText } from './AdGroupAdServiceButtonText';
-import { AdGroupAdServiceAsset } from './AdGroupAdServiceAsset';
-import { AdGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
+import { adGroupAdServiceButtonText } from './AdGroupAdServiceButtonText';
+import { adGroupAdServiceAsset } from './AdGroupAdServiceAsset';
+import { adGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
 
-export const AdGroupAdServiceResponsiveAd = z.object({
-  buttonText: AdGroupAdServiceButtonText,
+export const adGroupAdServiceResponsiveAd = z.object({
+  buttonText: adGroupAdServiceButtonText,
   description: z.string().nullable(),
   headline: z.string().nullable(),
   logoMediaId: z.number().int().nullable(),
   principal: z.string().nullable(),
-  asset: AdGroupAdServiceAsset,
+  asset: adGroupAdServiceAsset,
   thumbnailMediaId: z.number().int().nullable(),
-  isRemoveLogoMediaId: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo10SecBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo25PercentBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo3SecBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo50PercentBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo75PercentBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideoCompleteBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideoStartBeaconUrls: AdGroupAdServiceIsRemoveFlg,
+  isRemoveLogoMediaId: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo10SecBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo25PercentBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo3SecBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo50PercentBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo75PercentBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideoCompleteBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideoStartBeaconUrls: adGroupAdServiceIsRemoveFlg,
   video10SecBeaconUrls: z.array(z.string().nullable()).nullable(),
   video25PercentBeaconUrls: z.array(z.string().nullable()).nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -29,4 +29,4 @@ export const AdGroupAdServiceResponsiveAd = z.object({
   videoStartBeaconUrls: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupAdServiceResponsiveAd = z.infer<typeof AdGroupAdServiceResponsiveAd>;
+export type AdGroupAdServiceResponsiveAd = z.infer<typeof adGroupAdServiceResponsiveAd>;

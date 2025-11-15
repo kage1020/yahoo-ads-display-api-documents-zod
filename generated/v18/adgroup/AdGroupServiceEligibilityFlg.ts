@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupServiceEligibilityFlg = z.enum(["ENABLE", "DISABLE", "UNKNOWN"]).nullable();
+export const adGroupServiceEligibilityFlg = z.enum(["ENABLE", "DISABLE", "UNKNOWN"]).nullable();
 
-export type AdGroupServiceEligibilityFlg = z.infer<typeof AdGroupServiceEligibilityFlg>;
+export type AdGroupServiceEligibilityFlg = z.infer<typeof adGroupServiceEligibilityFlg>;

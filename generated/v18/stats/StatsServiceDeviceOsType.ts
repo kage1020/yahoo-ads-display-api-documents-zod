@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const StatsServiceDeviceOsType = z.enum(["IOS", "ANDROID", "UNKNOWN"]).nullable();
+export const statsServiceDeviceOsType = z.enum(["IOS", "ANDROID", "UNKNOWN"]).nullable();
 
-export type StatsServiceDeviceOsType = z.infer<typeof StatsServiceDeviceOsType>;
+export type StatsServiceDeviceOsType = z.infer<typeof statsServiceDeviceOsType>;

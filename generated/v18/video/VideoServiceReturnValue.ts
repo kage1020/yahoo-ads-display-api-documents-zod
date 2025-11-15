@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { VideoServiceValue } from './VideoServiceValue';
+import { videoServiceValue } from './VideoServiceValue';
 
-export const VideoServiceReturnValue = z.object({
-  values: z.array(VideoServiceValue).nullable()
+export const videoServiceReturnValue = z.object({
+  values: z.array(videoServiceValue).nullable()
 }).nullable();
 
-export type VideoServiceReturnValue = z.infer<typeof VideoServiceReturnValue>;
+export type VideoServiceReturnValue = z.infer<typeof videoServiceReturnValue>;

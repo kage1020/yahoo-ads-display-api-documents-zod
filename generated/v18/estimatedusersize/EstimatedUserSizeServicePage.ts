@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { EstimatedUserSizeServiceValue } from './EstimatedUserSizeServiceValue';
+import { estimatedUserSizeServiceValue } from './EstimatedUserSizeServiceValue';
 
-export const EstimatedUserSizeServicePage = z.object({
+export const estimatedUserSizeServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(EstimatedUserSizeServiceValue).nullable()
+  values: z.array(estimatedUserSizeServiceValue).nullable()
 }).nullable();
 
-export type EstimatedUserSizeServicePage = z.infer<typeof EstimatedUserSizeServicePage>;
+export type EstimatedUserSizeServicePage = z.infer<typeof estimatedUserSizeServicePage>;

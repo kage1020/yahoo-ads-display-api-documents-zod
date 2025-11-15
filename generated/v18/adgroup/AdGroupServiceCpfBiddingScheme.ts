@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
+import { adGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
 
-export const AdGroupServiceCpfBiddingScheme = z.object({
+export const adGroupServiceCpfBiddingScheme = z.object({
   cpf: z.number().int().nullable(),
-  isRemoveCpf: AdGroupServiceIsRemoveFlg
+  isRemoveCpf: adGroupServiceIsRemoveFlg
 }).nullable();
 
-export type AdGroupServiceCpfBiddingScheme = z.infer<typeof AdGroupServiceCpfBiddingScheme>;
+export type AdGroupServiceCpfBiddingScheme = z.infer<typeof adGroupServiceCpfBiddingScheme>;

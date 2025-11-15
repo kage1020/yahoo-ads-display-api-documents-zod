@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceWebConversionSnippet } from './ConversionTrackerServiceWebConversionSnippet';
+import { conversionTrackerServiceWebConversionSnippet } from './ConversionTrackerServiceWebConversionSnippet';
 
-export const ConversionTrackerServiceWebConversion = z.object({
-  snippet: z.array(ConversionTrackerServiceWebConversionSnippet).nullable()
+export const conversionTrackerServiceWebConversion = z.object({
+  snippet: z.array(conversionTrackerServiceWebConversionSnippet).nullable()
 }).nullable();
 
-export type ConversionTrackerServiceWebConversion = z.infer<typeof ConversionTrackerServiceWebConversion>;
+export type ConversionTrackerServiceWebConversion = z.infer<typeof conversionTrackerServiceWebConversion>;

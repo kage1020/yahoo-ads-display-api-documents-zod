@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { GuaranteedCampaignServiceCampaignBiddingStrategyType } from './GuaranteedCampaignServiceCampaignBiddingStrategyType';
+import { guaranteedCampaignServiceCampaignBiddingStrategyType } from './GuaranteedCampaignServiceCampaignBiddingStrategyType';
 
-export const GuaranteedCampaignServiceCampaignBiddingStrategy = z.object({
-  campaignBiddingStrategyType: GuaranteedCampaignServiceCampaignBiddingStrategyType,
+export const guaranteedCampaignServiceCampaignBiddingStrategy = z.object({
+  campaignBiddingStrategyType: guaranteedCampaignServiceCampaignBiddingStrategyType,
   vcpmBidValue: z.number().int().nullable(),
   sovRate: z.number().int().nullable()
 }).nullable();
 
-export type GuaranteedCampaignServiceCampaignBiddingStrategy = z.infer<typeof GuaranteedCampaignServiceCampaignBiddingStrategy>;
+export type GuaranteedCampaignServiceCampaignBiddingStrategy = z.infer<typeof guaranteedCampaignServiceCampaignBiddingStrategy>;

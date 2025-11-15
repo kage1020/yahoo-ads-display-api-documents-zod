@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { FeedFtp } from './FeedFtp';
+import { error } from '../../common/Error';
+import { feedFtp } from './FeedFtp';
 
-export const FeedFtpServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  feedFtp: FeedFtp,
+export const feedFtpServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  feedFtp: feedFtp,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type FeedFtpServiceValue = z.infer<typeof FeedFtpServiceValue>;
+export type FeedFtpServiceValue = z.infer<typeof feedFtpServiceValue>;

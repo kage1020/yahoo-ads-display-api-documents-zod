@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { BrandLiftServiceGoal } from './BrandLiftServiceGoal';
+import { brandLiftServiceGoal } from './BrandLiftServiceGoal';
 
-export const BrandLiftServiceQuestion = z.object({
+export const brandLiftServiceQuestion = z.object({
   questionId: z.number().int().nullable(),
-  goal: BrandLiftServiceGoal,
+  goal: brandLiftServiceGoal,
   preApproveId: z.string().nullable(),
   question: z.string().nullable(),
   answerOption1: z.string().nullable(),
@@ -14,4 +14,4 @@ export const BrandLiftServiceQuestion = z.object({
   answerOption5: z.string().nullable()
 }).nullable();
 
-export type BrandLiftServiceQuestion = z.infer<typeof BrandLiftServiceQuestion>;
+export type BrandLiftServiceQuestion = z.infer<typeof brandLiftServiceQuestion>;

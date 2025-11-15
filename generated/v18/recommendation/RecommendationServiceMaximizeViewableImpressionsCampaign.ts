@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const RecommendationServiceMaximizeViewableImpressionsCampaign = z.object({
+export const recommendationServiceMaximizeViewableImpressionsCampaign = z.object({
   recommendationId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
@@ -10,4 +10,4 @@ export const RecommendationServiceMaximizeViewableImpressionsCampaign = z.object
   recommendedCampaignBiddingStrategyType: z.string().nullable()
 }).nullable();
 
-export type RecommendationServiceMaximizeViewableImpressionsCampaign = z.infer<typeof RecommendationServiceMaximizeViewableImpressionsCampaign>;
+export type RecommendationServiceMaximizeViewableImpressionsCampaign = z.infer<typeof recommendationServiceMaximizeViewableImpressionsCampaign>;

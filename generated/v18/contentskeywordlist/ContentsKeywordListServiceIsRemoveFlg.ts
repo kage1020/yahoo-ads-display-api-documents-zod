@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ContentsKeywordListServiceIsRemoveFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const contentsKeywordListServiceIsRemoveFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type ContentsKeywordListServiceIsRemoveFlg = z.infer<typeof ContentsKeywordListServiceIsRemoveFlg>;
+export type ContentsKeywordListServiceIsRemoveFlg = z.infer<typeof contentsKeywordListServiceIsRemoveFlg>;

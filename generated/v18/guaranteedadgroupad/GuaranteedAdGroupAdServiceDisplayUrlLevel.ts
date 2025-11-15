@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const GuaranteedAdGroupAdServiceDisplayUrlLevel = z.enum(["DOMAIN", "FIRST_LEVEL", "UNKNOWN"]).nullable();
+export const guaranteedAdGroupAdServiceDisplayUrlLevel = z.enum(["DOMAIN", "FIRST_LEVEL", "UNKNOWN"]).nullable();
 
-export type GuaranteedAdGroupAdServiceDisplayUrlLevel = z.infer<typeof GuaranteedAdGroupAdServiceDisplayUrlLevel>;
+export type GuaranteedAdGroupAdServiceDisplayUrlLevel = z.infer<typeof guaranteedAdGroupAdServiceDisplayUrlLevel>;

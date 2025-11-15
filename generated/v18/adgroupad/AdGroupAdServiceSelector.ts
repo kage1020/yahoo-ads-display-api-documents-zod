@@ -1,28 +1,28 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
-import { AdGroupAdServiceAdType } from './AdGroupAdServiceAdType';
-import { AdGroupAdServiceMainMediaFormat } from './AdGroupAdServiceMainMediaFormat';
-import { AdGroupAdServiceUserStatus } from './AdGroupAdServiceUserStatus';
-import { AdGroupAdServiceCreatedDateRange } from './AdGroupAdServiceCreatedDateRange';
-import { AdGroupAdServiceUpdatedDateRange } from './AdGroupAdServiceUpdatedDateRange';
+import { adGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
+import { adGroupAdServiceAdType } from './AdGroupAdServiceAdType';
+import { adGroupAdServiceMainMediaFormat } from './AdGroupAdServiceMainMediaFormat';
+import { adGroupAdServiceUserStatus } from './AdGroupAdServiceUserStatus';
+import { adGroupAdServiceCreatedDateRange } from './AdGroupAdServiceCreatedDateRange';
+import { adGroupAdServiceUpdatedDateRange } from './AdGroupAdServiceUpdatedDateRange';
 
-export const AdGroupAdServiceSelector = z.object({
+export const adGroupAdServiceSelector = z.object({
   accountId: z.number().int(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
   adIds: z.array(z.number().int().nullable()).nullable(),
-  approvalStatuses: z.array(AdGroupAdServiceApprovalStatus).nullable(),
+  approvalStatuses: z.array(adGroupAdServiceApprovalStatus).nullable(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
   containsLabel: z.boolean().nullable(),
   labelIds: z.array(z.number().int().nullable()).nullable(),
   mediaIds: z.array(z.number().int().nullable()).nullable(),
-  adTypes: z.array(AdGroupAdServiceAdType).nullable(),
-  mainMediaFormats: z.array(AdGroupAdServiceMainMediaFormat).nullable(),
+  adTypes: z.array(adGroupAdServiceAdType).nullable(),
+  mainMediaFormats: z.array(adGroupAdServiceMainMediaFormat).nullable(),
   numberResults: z.number().int().min(1).max(10000).nullable(),
   startIndex: z.number().int().min(1).nullable(),
-  userStatuses: z.array(AdGroupAdServiceUserStatus).nullable(),
-  createdDateRange: AdGroupAdServiceCreatedDateRange,
-  updatedDateRange: AdGroupAdServiceUpdatedDateRange
+  userStatuses: z.array(adGroupAdServiceUserStatus).nullable(),
+  createdDateRange: adGroupAdServiceCreatedDateRange,
+  updatedDateRange: adGroupAdServiceUpdatedDateRange
 }).nullable();
 
-export type AdGroupAdServiceSelector = z.infer<typeof AdGroupAdServiceSelector>;
+export type AdGroupAdServiceSelector = z.infer<typeof adGroupAdServiceSelector>;

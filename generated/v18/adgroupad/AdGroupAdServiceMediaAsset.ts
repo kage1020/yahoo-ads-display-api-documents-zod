@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceMediaAsset = z.object({
+export const adGroupAdServiceMediaAsset = z.object({
   mediaId: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupAdServiceMediaAsset = z.infer<typeof AdGroupAdServiceMediaAsset>;
+export type AdGroupAdServiceMediaAsset = z.infer<typeof adGroupAdServiceMediaAsset>;

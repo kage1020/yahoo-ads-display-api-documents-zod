@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { BrandLiftServiceQuestion } from './BrandLiftServiceQuestion';
-import { BrandLiftServiceApprovalStatus } from './BrandLiftServiceApprovalStatus';
+import { brandLiftServiceQuestion } from './BrandLiftServiceQuestion';
+import { brandLiftServiceApprovalStatus } from './BrandLiftServiceApprovalStatus';
 
-export const BrandLift = z.object({
+export const brandLift = z.object({
   accountId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   brandLiftId: z.number().int().nullable(),
-  questions: z.array(BrandLiftServiceQuestion).nullable(),
-  approvalStatus: BrandLiftServiceApprovalStatus,
+  questions: z.array(brandLiftServiceQuestion).nullable(),
+  approvalStatus: brandLiftServiceApprovalStatus,
   disapprovalReason: z.string().nullable(),
   reviewCompleteDate: z.string().nullable(),
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
@@ -18,4 +18,4 @@ export const BrandLift = z.object({
   notificationBusinessIds: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type BrandLift = z.infer<typeof BrandLift>;
+export type BrandLift = z.infer<typeof brandLift>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceCreateResponsiveDisplayAdsList } from './RecommendationServiceCreateResponsiveDisplayAdsList';
+import { recommendationServiceCreateResponsiveDisplayAdsList } from './RecommendationServiceCreateResponsiveDisplayAdsList';
 
-export const RecommendationServiceCreateResponsiveDisplayAds = z.object({
-  createResponsiveDisplayAdsList: z.array(RecommendationServiceCreateResponsiveDisplayAdsList).nullable()
+export const recommendationServiceCreateResponsiveDisplayAds = z.object({
+  createResponsiveDisplayAdsList: z.array(recommendationServiceCreateResponsiveDisplayAdsList).nullable()
 }).nullable();
 
-export type RecommendationServiceCreateResponsiveDisplayAds = z.infer<typeof RecommendationServiceCreateResponsiveDisplayAds>;
+export type RecommendationServiceCreateResponsiveDisplayAds = z.infer<typeof recommendationServiceCreateResponsiveDisplayAds>;

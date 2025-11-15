@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { EstimatedUserSizeServiceKeywords } from './EstimatedUserSizeServiceKeywords';
-import { EstimatedUserSizeServiceUrls } from './EstimatedUserSizeServiceUrls';
+import { estimatedUserSizeServiceKeywords } from './EstimatedUserSizeServiceKeywords';
+import { estimatedUserSizeServiceUrls } from './EstimatedUserSizeServiceUrls';
 
-export const EstimatedUserSize = z.object({
+export const estimatedUserSize = z.object({
   estimatedUserSize: z.string().nullable(),
-  keywords: z.array(EstimatedUserSizeServiceKeywords).nullable(),
-  urls: z.array(EstimatedUserSizeServiceUrls).nullable()
+  keywords: z.array(estimatedUserSizeServiceKeywords).nullable(),
+  urls: z.array(estimatedUserSizeServiceUrls).nullable()
 }).nullable();
 
-export type EstimatedUserSize = z.infer<typeof EstimatedUserSize>;
+export type EstimatedUserSize = z.infer<typeof estimatedUserSize>;

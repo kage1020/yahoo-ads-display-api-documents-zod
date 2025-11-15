@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceFieldAttribute = z.object({
+export const reportDefinitionServiceFieldAttribute = z.object({
   displayFieldName: z.string().nullable(),
   fieldName: z.string().nullable(),
   fieldType: z.string().nullable(),
@@ -9,4 +9,4 @@ export const ReportDefinitionServiceFieldAttribute = z.object({
   xmlAttributeName: z.string().nullable()
 }).nullable();
 
-export type ReportDefinitionServiceFieldAttribute = z.infer<typeof ReportDefinitionServiceFieldAttribute>;
+export type ReportDefinitionServiceFieldAttribute = z.infer<typeof reportDefinitionServiceFieldAttribute>;

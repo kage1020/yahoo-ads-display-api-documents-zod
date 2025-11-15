@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { MediaServiceValue } from './MediaServiceValue';
+import { mediaServiceValue } from './MediaServiceValue';
 
-export const MediaServicePage = z.object({
+export const mediaServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(MediaServiceValue).nullable()
+  values: z.array(mediaServiceValue).nullable()
 }).nullable();
 
-export type MediaServicePage = z.infer<typeof MediaServicePage>;
+export type MediaServicePage = z.infer<typeof mediaServicePage>;

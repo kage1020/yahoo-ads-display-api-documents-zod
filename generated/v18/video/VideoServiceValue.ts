@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { Video } from './Video';
+import { error } from '../../common/Error';
+import { video } from './Video';
 
-export const VideoServiceValue = z.object({
-  errors: z.array(Error).nullable(),
+export const videoServiceValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  video: Video
+  video: video
 }).nullable();
 
-export type VideoServiceValue = z.infer<typeof VideoServiceValue>;
+export type VideoServiceValue = z.infer<typeof videoServiceValue>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AudienceListServiceRuleCondition } from './AudienceListServiceRuleCondition';
+import { audienceListServiceRuleCondition } from './AudienceListServiceRuleCondition';
 
-export const AudienceListServiceRule = z.object({
-  ruleConditions: z.array(AudienceListServiceRuleCondition).nullable()
+export const audienceListServiceRule = z.object({
+  ruleConditions: z.array(audienceListServiceRuleCondition).nullable()
 }).nullable();
 
-export type AudienceListServiceRule = z.infer<typeof AudienceListServiceRule>;
+export type AudienceListServiceRule = z.infer<typeof audienceListServiceRule>;

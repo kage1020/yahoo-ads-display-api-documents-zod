@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceCreateAdList } from './RecommendationServiceCreateAdList';
+import { recommendationServiceCreateAdList } from './RecommendationServiceCreateAdList';
 
-export const RecommendationServiceCreateAd = z.object({
-  createAdList: z.array(RecommendationServiceCreateAdList).nullable()
+export const recommendationServiceCreateAd = z.object({
+  createAdList: z.array(recommendationServiceCreateAdList).nullable()
 }).nullable();
 
-export type RecommendationServiceCreateAd = z.infer<typeof RecommendationServiceCreateAd>;
+export type RecommendationServiceCreateAd = z.infer<typeof recommendationServiceCreateAd>;

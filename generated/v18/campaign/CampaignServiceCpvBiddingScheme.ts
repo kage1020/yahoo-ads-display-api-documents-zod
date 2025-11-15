@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const CampaignServiceCpvBiddingScheme = z.object({
+export const campaignServiceCpvBiddingScheme = z.object({
   cpv: z.number().int().nullable()
 }).nullable();
 
-export type CampaignServiceCpvBiddingScheme = z.infer<typeof CampaignServiceCpvBiddingScheme>;
+export type CampaignServiceCpvBiddingScheme = z.infer<typeof campaignServiceCpvBiddingScheme>;

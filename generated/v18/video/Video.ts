@@ -1,22 +1,22 @@
 import { z } from 'zod';
 
-import { VideoServiceApprovalStatus } from './VideoServiceApprovalStatus';
-import { VideoServiceProcessStatus } from './VideoServiceProcessStatus';
-import { VideoServiceUserStatus } from './VideoServiceUserStatus';
-import { VideoServiceSetting } from './VideoServiceSetting';
+import { videoServiceApprovalStatus } from './VideoServiceApprovalStatus';
+import { videoServiceProcessStatus } from './VideoServiceProcessStatus';
+import { videoServiceUserStatus } from './VideoServiceUserStatus';
+import { videoServiceSetting } from './VideoServiceSetting';
 
-export const Video = z.object({
+export const video = z.object({
   accountId: z.number().int().nullable(),
-  approvalStatus: VideoServiceApprovalStatus,
+  approvalStatus: videoServiceApprovalStatus,
   reviewApplicationDate: z.string().nullable(),
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
   mediaId: z.number().int().nullable(),
-  processStatus: VideoServiceProcessStatus,
-  userStatus: VideoServiceUserStatus,
+  processStatus: videoServiceProcessStatus,
+  userStatus: videoServiceUserStatus,
   videoName: z.string().nullable(),
-  videoSetting: VideoServiceSetting,
+  videoSetting: videoServiceSetting,
   videoTitle: z.string().nullable(),
   createdDate: z.string().nullable()
 }).nullable();
 
-export type Video = z.infer<typeof Video>;
+export type Video = z.infer<typeof video>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceMaximizeConversionsCampaign } from './RecommendationServiceMaximizeConversionsCampaign';
+import { recommendationServiceMaximizeConversionsCampaign } from './RecommendationServiceMaximizeConversionsCampaign';
 
-export const RecommendationServiceMaximizeConversions = z.object({
-  maximizeConversionsCampaignList: z.array(RecommendationServiceMaximizeConversionsCampaign).nullable()
+export const recommendationServiceMaximizeConversions = z.object({
+  maximizeConversionsCampaignList: z.array(recommendationServiceMaximizeConversionsCampaign).nullable()
 }).nullable();
 
-export type RecommendationServiceMaximizeConversions = z.infer<typeof RecommendationServiceMaximizeConversions>;
+export type RecommendationServiceMaximizeConversions = z.infer<typeof recommendationServiceMaximizeConversions>;

@@ -1,17 +1,17 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceConversionPathReportCondition } from './ReportDefinitionServiceConversionPathReportCondition';
-import { ReportDefinitionServiceCrossCampaignReachesReportCondition } from './ReportDefinitionServiceCrossCampaignReachesReportCondition';
-import { ReportDefinitionServiceReachReportCondition } from './ReportDefinitionServiceReachReportCondition';
-import { ReportDefinitionServiceModelComparisonReportCondition } from './ReportDefinitionServiceModelComparisonReportCondition';
-import { ReportDefinitionServiceReportType } from './ReportDefinitionServiceReportType';
+import { reportDefinitionServiceConversionPathReportCondition } from './ReportDefinitionServiceConversionPathReportCondition';
+import { reportDefinitionServiceCrossCampaignReachesReportCondition } from './ReportDefinitionServiceCrossCampaignReachesReportCondition';
+import { reportDefinitionServiceReachReportCondition } from './ReportDefinitionServiceReachReportCondition';
+import { reportDefinitionServiceModelComparisonReportCondition } from './ReportDefinitionServiceModelComparisonReportCondition';
+import { reportDefinitionServiceReportType } from './ReportDefinitionServiceReportType';
 
-export const ReportDefinitionServiceReportTypeCondition = z.object({
-  conversionPathReportCondition: ReportDefinitionServiceConversionPathReportCondition,
-  crossCampaignReachesReportCondition: ReportDefinitionServiceCrossCampaignReachesReportCondition,
-  reachReportCondition: ReportDefinitionServiceReachReportCondition,
-  modelComparisonReportCondition: ReportDefinitionServiceModelComparisonReportCondition,
-  reportType: ReportDefinitionServiceReportType
+export const reportDefinitionServiceReportTypeCondition = z.object({
+  conversionPathReportCondition: reportDefinitionServiceConversionPathReportCondition,
+  crossCampaignReachesReportCondition: reportDefinitionServiceCrossCampaignReachesReportCondition,
+  reachReportCondition: reportDefinitionServiceReachReportCondition,
+  modelComparisonReportCondition: reportDefinitionServiceModelComparisonReportCondition,
+  reportType: reportDefinitionServiceReportType
 }).nullable();
 
-export type ReportDefinitionServiceReportTypeCondition = z.infer<typeof ReportDefinitionServiceReportTypeCondition>;
+export type ReportDefinitionServiceReportTypeCondition = z.infer<typeof reportDefinitionServiceReportTypeCondition>;

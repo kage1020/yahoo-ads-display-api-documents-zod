@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServicePlacementCategoryType } from './AdGroupTargetServicePlacementCategoryType';
+import { adGroupTargetServicePlacementCategoryType } from './AdGroupTargetServicePlacementCategoryType';
 
-export const AdGroupTargetServicePlacementCategoryDetailTarget = z.object({
+export const adGroupTargetServicePlacementCategoryDetailTarget = z.object({
   placementCategoryNameJa: z.string().nullable(),
   placementCategoryNameEn: z.string().nullable(),
-  placementCategoryType: AdGroupTargetServicePlacementCategoryType
+  placementCategoryType: adGroupTargetServicePlacementCategoryType
 }).nullable();
 
-export type AdGroupTargetServicePlacementCategoryDetailTarget = z.infer<typeof AdGroupTargetServicePlacementCategoryDetailTarget>;
+export type AdGroupTargetServicePlacementCategoryDetailTarget = z.infer<typeof adGroupTargetServicePlacementCategoryDetailTarget>;

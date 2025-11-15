@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const DictionaryServiceGeographicLocationType = z.enum(["TARGETING", "FEED", "UNKNOWN"]).nullable();
+export const dictionaryServiceGeographicLocationType = z.enum(["TARGETING", "FEED", "UNKNOWN"]).nullable();
 
-export type DictionaryServiceGeographicLocationType = z.infer<typeof DictionaryServiceGeographicLocationType>;
+export type DictionaryServiceGeographicLocationType = z.infer<typeof dictionaryServiceGeographicLocationType>;

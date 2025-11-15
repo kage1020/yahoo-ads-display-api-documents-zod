@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupTargetServiceDayOfWeek = z.enum(["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY", "UNKNOWN"]).nullable();
+export const adGroupTargetServiceDayOfWeek = z.enum(["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY", "UNKNOWN"]).nullable();
 
-export type AdGroupTargetServiceDayOfWeek = z.infer<typeof AdGroupTargetServiceDayOfWeek>;
+export type AdGroupTargetServiceDayOfWeek = z.infer<typeof adGroupTargetServiceDayOfWeek>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AudienceListServiceSize } from './AudienceListServiceSize';
+import { audienceListServiceSize } from './AudienceListServiceSize';
 
-export const AudienceListServiceSizeReaches = z.object({
+export const audienceListServiceSizeReaches = z.object({
   reach: z.number().int().nullable(),
-  audienceListSize: AudienceListServiceSize
+  audienceListSize: audienceListServiceSize
 }).nullable();
 
-export type AudienceListServiceSizeReaches = z.infer<typeof AudienceListServiceSizeReaches>;
+export type AudienceListServiceSizeReaches = z.infer<typeof audienceListServiceSizeReaches>;

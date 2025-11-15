@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const MediaServiceThumbnailFlg = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
+export const mediaServiceThumbnailFlg = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
 
-export type MediaServiceThumbnailFlg = z.infer<typeof MediaServiceThumbnailFlg>;
+export type MediaServiceThumbnailFlg = z.infer<typeof mediaServiceThumbnailFlg>;

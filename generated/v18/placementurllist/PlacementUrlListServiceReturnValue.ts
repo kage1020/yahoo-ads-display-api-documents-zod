@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { PlacementUrlListServiceValue } from './PlacementUrlListServiceValue';
+import { placementUrlListServiceValue } from './PlacementUrlListServiceValue';
 
-export const PlacementUrlListServiceReturnValue = z.object({
-  values: z.array(PlacementUrlListServiceValue).nullable()
+export const placementUrlListServiceReturnValue = z.object({
+  values: z.array(placementUrlListServiceValue).nullable()
 }).nullable();
 
-export type PlacementUrlListServiceReturnValue = z.infer<typeof PlacementUrlListServiceReturnValue>;
+export type PlacementUrlListServiceReturnValue = z.infer<typeof placementUrlListServiceReturnValue>;

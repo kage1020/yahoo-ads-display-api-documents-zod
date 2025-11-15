@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { OfflineConversionServiceUploadSourceType } from './OfflineConversionServiceUploadSourceType';
-import { OfflineConversionServiceProcessStatus } from './OfflineConversionServiceProcessStatus';
+import { offlineConversionServiceUploadSourceType } from './OfflineConversionServiceUploadSourceType';
+import { offlineConversionServiceProcessStatus } from './OfflineConversionServiceProcessStatus';
 
-export const OfflineConversionFile = z.object({
+export const offlineConversionFile = z.object({
   accountId: z.number().int().nullable(),
   uploadId: z.number().int().nullable(),
   uploadFileName: z.string().nullable(),
   uploadedDate: z.string().nullable(),
-  uploadSourceType: OfflineConversionServiceUploadSourceType,
-  processStatus: OfflineConversionServiceProcessStatus
+  uploadSourceType: offlineConversionServiceUploadSourceType,
+  processStatus: offlineConversionServiceProcessStatus
 }).nullable();
 
-export type OfflineConversionFile = z.infer<typeof OfflineConversionFile>;
+export type OfflineConversionFile = z.infer<typeof offlineConversionFile>;

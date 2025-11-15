@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-export const FeedSetServiceSelector = z.object({
+export const feedSetServiceSelector = z.object({
   accountId: z.number().int(),
   feedId: z.number().int(),
   feedSetIds: z.array(z.number().int().nullable()).nullable(),
   includeItemCount: z.boolean().nullable()
 }).nullable();
 
-export type FeedSetServiceSelector = z.infer<typeof FeedSetServiceSelector>;
+export type FeedSetServiceSelector = z.infer<typeof feedSetServiceSelector>;

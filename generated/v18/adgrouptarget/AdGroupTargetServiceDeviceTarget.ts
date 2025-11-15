@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServiceDeviceType } from './AdGroupTargetServiceDeviceType';
+import { adGroupTargetServiceDeviceType } from './AdGroupTargetServiceDeviceType';
 
-export const AdGroupTargetServiceDeviceTarget = z.object({
-  deviceType: AdGroupTargetServiceDeviceType
+export const adGroupTargetServiceDeviceTarget = z.object({
+  deviceType: adGroupTargetServiceDeviceType
 }).nullable();
 
-export type AdGroupTargetServiceDeviceTarget = z.infer<typeof AdGroupTargetServiceDeviceTarget>;
+export type AdGroupTargetServiceDeviceTarget = z.infer<typeof adGroupTargetServiceDeviceTarget>;

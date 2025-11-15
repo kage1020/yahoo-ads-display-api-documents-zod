@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const GuaranteedCampaignServiceSelector = z.object({
+export const guaranteedCampaignServiceSelector = z.object({
   accountId: z.number().int(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
   containsLabelIdFlg: z.boolean().nullable(),
@@ -11,4 +11,4 @@ export const GuaranteedCampaignServiceSelector = z.object({
   conversionTrackerIds: z.array(z.number().int().nullable()).nullable()
 }).nullable();
 
-export type GuaranteedCampaignServiceSelector = z.infer<typeof GuaranteedCampaignServiceSelector>;
+export type GuaranteedCampaignServiceSelector = z.infer<typeof guaranteedCampaignServiceSelector>;

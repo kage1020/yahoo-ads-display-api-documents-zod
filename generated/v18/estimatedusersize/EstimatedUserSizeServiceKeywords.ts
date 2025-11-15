@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { EstimatedUserSizeServiceUnavailableKeyword } from './EstimatedUserSizeServiceUnavailableKeyword';
+import { estimatedUserSizeServiceUnavailableKeyword } from './EstimatedUserSizeServiceUnavailableKeyword';
 
-export const EstimatedUserSizeServiceKeywords = z.object({
+export const estimatedUserSizeServiceKeywords = z.object({
   keyword: z.string().nullable(),
-  unavailableKeyword: EstimatedUserSizeServiceUnavailableKeyword
+  unavailableKeyword: estimatedUserSizeServiceUnavailableKeyword
 }).nullable();
 
-export type EstimatedUserSizeServiceKeywords = z.infer<typeof EstimatedUserSizeServiceKeywords>;
+export type EstimatedUserSizeServiceKeywords = z.infer<typeof estimatedUserSizeServiceKeywords>;

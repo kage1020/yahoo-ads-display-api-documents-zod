@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignServiceCampaignGoalSubtype = z.enum(["STANDARD", "INSTALL", "UNKNOWN"]).nullable();
+export const campaignServiceCampaignGoalSubtype = z.enum(["STANDARD", "INSTALL", "UNKNOWN"]).nullable();
 
-export type CampaignServiceCampaignGoalSubtype = z.infer<typeof CampaignServiceCampaignGoalSubtype>;
+export type CampaignServiceCampaignGoalSubtype = z.infer<typeof campaignServiceCampaignGoalSubtype>;

@@ -1,30 +1,30 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceAppConversionPlatform } from './ConversionTrackerServiceAppConversionPlatform';
-import { ConversionTrackerServiceCategory } from './ConversionTrackerServiceCategory';
-import { ConversionTrackerServiceType } from './ConversionTrackerServiceType';
-import { ConversionTrackerServiceCountingType } from './ConversionTrackerServiceCountingType';
-import { ConversionTrackerServiceExcludeFromBidding } from './ConversionTrackerServiceExcludeFromBidding';
-import { ConversionTrackerServiceExcludePreviousConversion } from './ConversionTrackerServiceExcludePreviousConversion';
-import { ConversionTrackerServiceStatsPeriod } from './ConversionTrackerServiceStatsPeriod';
-import { ConversionTrackerServiceStatsPeriodCustomDate } from './ConversionTrackerServiceStatsPeriodCustomDate';
-import { ConversionTrackerServiceStatus } from './ConversionTrackerServiceStatus';
+import { conversionTrackerServiceAppConversionPlatform } from './ConversionTrackerServiceAppConversionPlatform';
+import { conversionTrackerServiceCategory } from './ConversionTrackerServiceCategory';
+import { conversionTrackerServiceType } from './ConversionTrackerServiceType';
+import { conversionTrackerServiceCountingType } from './ConversionTrackerServiceCountingType';
+import { conversionTrackerServiceExcludeFromBidding } from './ConversionTrackerServiceExcludeFromBidding';
+import { conversionTrackerServiceExcludePreviousConversion } from './ConversionTrackerServiceExcludePreviousConversion';
+import { conversionTrackerServiceStatsPeriod } from './ConversionTrackerServiceStatsPeriod';
+import { conversionTrackerServiceStatsPeriodCustomDate } from './ConversionTrackerServiceStatsPeriodCustomDate';
+import { conversionTrackerServiceStatus } from './ConversionTrackerServiceStatus';
 
-export const ConversionTrackerServiceSelector = z.object({
+export const conversionTrackerServiceSelector = z.object({
   accountId: z.number().int(),
-  appConversionPlatform: ConversionTrackerServiceAppConversionPlatform,
+  appConversionPlatform: conversionTrackerServiceAppConversionPlatform,
   appIds: z.array(z.string().nullable()).nullable(),
-  categories: z.array(ConversionTrackerServiceCategory).nullable(),
+  categories: z.array(conversionTrackerServiceCategory).nullable(),
   conversionTrackerIds: z.array(z.number().int().nullable()).nullable(),
-  conversionTrackerTypes: z.array(ConversionTrackerServiceType).nullable(),
-  countingType: ConversionTrackerServiceCountingType,
-  excludeFromBidding: ConversionTrackerServiceExcludeFromBidding,
-  excludePreviousConversion: ConversionTrackerServiceExcludePreviousConversion,
+  conversionTrackerTypes: z.array(conversionTrackerServiceType).nullable(),
+  countingType: conversionTrackerServiceCountingType,
+  excludeFromBidding: conversionTrackerServiceExcludeFromBidding,
+  excludePreviousConversion: conversionTrackerServiceExcludePreviousConversion,
   numberResults: z.number().int().min(1).max(1000).nullable(),
   startIndex: z.number().int().min(1).nullable(),
-  statsPeriod: ConversionTrackerServiceStatsPeriod,
-  statsPeriodCustomDate: ConversionTrackerServiceStatsPeriodCustomDate,
-  statuses: z.array(ConversionTrackerServiceStatus).nullable()
+  statsPeriod: conversionTrackerServiceStatsPeriod,
+  statsPeriodCustomDate: conversionTrackerServiceStatsPeriodCustomDate,
+  statuses: z.array(conversionTrackerServiceStatus).nullable()
 }).nullable();
 
-export type ConversionTrackerServiceSelector = z.infer<typeof ConversionTrackerServiceSelector>;
+export type ConversionTrackerServiceSelector = z.infer<typeof conversionTrackerServiceSelector>;

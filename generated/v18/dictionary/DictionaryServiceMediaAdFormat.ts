@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const DictionaryServiceMediaAdFormat = z.object({
+export const dictionaryServiceMediaAdFormat = z.object({
   adFormat: z.string().nullable(),
   aspect: z.boolean().nullable(),
   aspectHeight: z.number().int().nullable(),
@@ -20,4 +20,4 @@ export const DictionaryServiceMediaAdFormat = z.object({
   richFormat: z.boolean().nullable()
 }).nullable();
 
-export type DictionaryServiceMediaAdFormat = z.infer<typeof DictionaryServiceMediaAdFormat>;
+export type DictionaryServiceMediaAdFormat = z.infer<typeof dictionaryServiceMediaAdFormat>;

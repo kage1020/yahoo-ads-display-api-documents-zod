@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { FeedSetServiceConditionType } from './FeedSetServiceConditionType';
-import { FeedSetServiceCondition } from './FeedSetServiceCondition';
+import { feedSetServiceConditionType } from './FeedSetServiceConditionType';
+import { feedSetServiceCondition } from './FeedSetServiceCondition';
 
-export const FeedSetServiceConditionSet = z.object({
-  conditionType: FeedSetServiceConditionType,
-  orConditions: z.array(FeedSetServiceCondition).nullable()
+export const feedSetServiceConditionSet = z.object({
+  conditionType: feedSetServiceConditionType,
+  orConditions: z.array(feedSetServiceCondition).nullable()
 }).nullable();
 
-export type FeedSetServiceConditionSet = z.infer<typeof FeedSetServiceConditionSet>;
+export type FeedSetServiceConditionSet = z.infer<typeof feedSetServiceConditionSet>;

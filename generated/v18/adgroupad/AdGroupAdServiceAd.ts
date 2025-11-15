@@ -1,38 +1,38 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceAdType } from './AdGroupAdServiceAdType';
-import { AdGroupAdServiceMainMediaFormat } from './AdGroupAdServiceMainMediaFormat';
-import { AdGroupAdServiceBannerAd } from './AdGroupAdServiceBannerAd';
-import { AdGroupAdServiceCarouselAd } from './AdGroupAdServiceCarouselAd';
-import { AdGroupAdServiceDynamicDisplayAd } from './AdGroupAdServiceDynamicDisplayAd';
-import { AdGroupAdServiceResponsiveAd } from './AdGroupAdServiceResponsiveAd';
-import { AdGroupAdServiceTextAd } from './AdGroupAdServiceTextAd';
-import { AdGroupAdServiceResponsiveGainFriendsAd } from './AdGroupAdServiceResponsiveGainFriendsAd';
-import { AdGroupAdServiceCarouselGainFriendsAd } from './AdGroupAdServiceCarouselGainFriendsAd';
-import { AdGroupAdServiceInstreamAd } from './AdGroupAdServiceInstreamAd';
-import { AdGroupAdServiceCustomParameters } from './AdGroupAdServiceCustomParameters';
-import { AdGroupAdServiceDisplayUrlLevel } from './AdGroupAdServiceDisplayUrlLevel';
-import { AdGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
+import { adGroupAdServiceAdType } from './AdGroupAdServiceAdType';
+import { adGroupAdServiceMainMediaFormat } from './AdGroupAdServiceMainMediaFormat';
+import { adGroupAdServiceBannerAd } from './AdGroupAdServiceBannerAd';
+import { adGroupAdServiceCarouselAd } from './AdGroupAdServiceCarouselAd';
+import { adGroupAdServiceDynamicDisplayAd } from './AdGroupAdServiceDynamicDisplayAd';
+import { adGroupAdServiceResponsiveAd } from './AdGroupAdServiceResponsiveAd';
+import { adGroupAdServiceTextAd } from './AdGroupAdServiceTextAd';
+import { adGroupAdServiceResponsiveGainFriendsAd } from './AdGroupAdServiceResponsiveGainFriendsAd';
+import { adGroupAdServiceCarouselGainFriendsAd } from './AdGroupAdServiceCarouselGainFriendsAd';
+import { adGroupAdServiceInstreamAd } from './AdGroupAdServiceInstreamAd';
+import { adGroupAdServiceCustomParameters } from './AdGroupAdServiceCustomParameters';
+import { adGroupAdServiceDisplayUrlLevel } from './AdGroupAdServiceDisplayUrlLevel';
+import { adGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
 
-export const AdGroupAdServiceAd = z.object({
-  adType: AdGroupAdServiceAdType,
-  mainMediaFormat: AdGroupAdServiceMainMediaFormat,
-  bannerAd: AdGroupAdServiceBannerAd,
-  carouselAd: AdGroupAdServiceCarouselAd,
-  dynamicDisplayAd: AdGroupAdServiceDynamicDisplayAd,
-  responsiveAd: AdGroupAdServiceResponsiveAd,
-  textAd: AdGroupAdServiceTextAd,
-  responsiveGainFriendsAd: AdGroupAdServiceResponsiveGainFriendsAd,
-  carouselGainFriendsAd: AdGroupAdServiceCarouselGainFriendsAd,
-  instreamAd: AdGroupAdServiceInstreamAd,
-  customParameters: AdGroupAdServiceCustomParameters,
+export const adGroupAdServiceAd = z.object({
+  adType: adGroupAdServiceAdType,
+  mainMediaFormat: adGroupAdServiceMainMediaFormat,
+  bannerAd: adGroupAdServiceBannerAd,
+  carouselAd: adGroupAdServiceCarouselAd,
+  dynamicDisplayAd: adGroupAdServiceDynamicDisplayAd,
+  responsiveAd: adGroupAdServiceResponsiveAd,
+  textAd: adGroupAdServiceTextAd,
+  responsiveGainFriendsAd: adGroupAdServiceResponsiveGainFriendsAd,
+  carouselGainFriendsAd: adGroupAdServiceCarouselGainFriendsAd,
+  instreamAd: adGroupAdServiceInstreamAd,
+  customParameters: adGroupAdServiceCustomParameters,
   displayUrl: z.string().nullable(),
-  displayUrlLevel: AdGroupAdServiceDisplayUrlLevel,
+  displayUrlLevel: adGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   smartphoneFinalUrl: z.string().nullable(),
-  isRemoveSmartphoneFinalUrl: AdGroupAdServiceIsRemoveFlg,
+  isRemoveSmartphoneFinalUrl: adGroupAdServiceIsRemoveFlg,
   trackingUrl: z.string().nullable(),
-  isRemoveTrackingUrl: AdGroupAdServiceIsRemoveFlg
+  isRemoveTrackingUrl: adGroupAdServiceIsRemoveFlg
 }).nullable();
 
-export type AdGroupAdServiceAd = z.infer<typeof AdGroupAdServiceAd>;
+export type AdGroupAdServiceAd = z.infer<typeof adGroupAdServiceAd>;

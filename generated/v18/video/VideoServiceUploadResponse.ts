@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { VideoServiceUploadReturnValue } from './VideoServiceUploadReturnValue';
+import { error } from '../../common/Error';
+import { videoServiceUploadReturnValue } from './VideoServiceUploadReturnValue';
 
-export const VideoServiceUploadResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const videoServiceUploadResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: VideoServiceUploadReturnValue
+  rval: videoServiceUploadReturnValue
 }).nullable();
 
-export type VideoServiceUploadResponse = z.infer<typeof VideoServiceUploadResponse>;
+export type VideoServiceUploadResponse = z.infer<typeof videoServiceUploadResponse>;

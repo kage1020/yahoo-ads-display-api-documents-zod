@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServicePlacementUrlListType } from './AdGroupTargetServicePlacementUrlListType';
+import { adGroupTargetServicePlacementUrlListType } from './AdGroupTargetServicePlacementUrlListType';
 
-export const AdGroupTargetServicePlacementTarget = z.object({
+export const adGroupTargetServicePlacementTarget = z.object({
   placementUrlListName: z.string().nullable(),
-  placementUrlListType: AdGroupTargetServicePlacementUrlListType
+  placementUrlListType: adGroupTargetServicePlacementUrlListType
 }).nullable();
 
-export type AdGroupTargetServicePlacementTarget = z.infer<typeof AdGroupTargetServicePlacementTarget>;
+export type AdGroupTargetServicePlacementTarget = z.infer<typeof adGroupTargetServicePlacementTarget>;

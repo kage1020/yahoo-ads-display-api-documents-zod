@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { VideoServiceExtraSpecs } from './VideoServiceExtraSpecs';
-import { VideoServiceFileType } from './VideoServiceFileType';
+import { videoServiceExtraSpecs } from './VideoServiceExtraSpecs';
+import { videoServiceFileType } from './VideoServiceFileType';
 
-export const VideoServiceSetting = z.object({
-  extraSpecs: z.array(VideoServiceExtraSpecs).nullable(),
+export const videoServiceSetting = z.object({
+  extraSpecs: z.array(videoServiceExtraSpecs).nullable(),
   fileSize: z.number().int().nullable(),
-  fileType: VideoServiceFileType,
+  fileType: videoServiceFileType,
   height: z.number().int().nullable(),
   playbackTime: z.number().int().nullable(),
   videoAdFormat: z.string().nullable(),
@@ -14,4 +14,4 @@ export const VideoServiceSetting = z.object({
   width: z.number().int().nullable()
 }).nullable();
 
-export type VideoServiceSetting = z.infer<typeof VideoServiceSetting>;
+export type VideoServiceSetting = z.infer<typeof videoServiceSetting>;

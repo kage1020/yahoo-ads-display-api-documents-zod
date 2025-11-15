@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const Stats = z.object({
+export const stats = z.object({
   imps: z.number().int().nullable(),
   clicks: z.number().int().nullable(),
   clickRate: z.number().nullable(),
@@ -59,4 +59,4 @@ export const Stats = z.object({
   skanCostPerInstallViaClick: z.number().nullable()
 }).nullable();
 
-export type Stats = z.infer<typeof Stats>;
+export type Stats = z.infer<typeof stats>;

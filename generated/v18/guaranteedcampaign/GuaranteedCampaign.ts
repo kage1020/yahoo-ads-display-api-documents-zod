@@ -1,36 +1,36 @@
 import { z } from 'zod';
 
-import { GuaranteedCampaignServiceLifetimeBudget } from './GuaranteedCampaignServiceLifetimeBudget';
-import { GuaranteedCampaignServiceCampaignBiddingStrategy } from './GuaranteedCampaignServiceCampaignBiddingStrategy';
-import { GuaranteedCampaignServiceLabel } from './GuaranteedCampaignServiceLabel';
-import { GuaranteedCampaignServiceServingStatus } from './GuaranteedCampaignServiceServingStatus';
-import { GuaranteedCampaignServiceUserStatus } from './GuaranteedCampaignServiceUserStatus';
-import { GuaranteedCampaignServiceViewableFrequencyCap } from './GuaranteedCampaignServiceViewableFrequencyCap';
-import { GuaranteedCampaignServiceAdCategoryStatus } from './GuaranteedCampaignServiceAdCategoryStatus';
-import { GuaranteedCampaignServicePackage } from './GuaranteedCampaignServicePackage';
-import { GuaranteedCampaignServiceConversionTracker } from './GuaranteedCampaignServiceConversionTracker';
+import { guaranteedCampaignServiceLifetimeBudget } from './GuaranteedCampaignServiceLifetimeBudget';
+import { guaranteedCampaignServiceCampaignBiddingStrategy } from './GuaranteedCampaignServiceCampaignBiddingStrategy';
+import { guaranteedCampaignServiceLabel } from './GuaranteedCampaignServiceLabel';
+import { guaranteedCampaignServiceServingStatus } from './GuaranteedCampaignServiceServingStatus';
+import { guaranteedCampaignServiceUserStatus } from './GuaranteedCampaignServiceUserStatus';
+import { guaranteedCampaignServiceViewableFrequencyCap } from './GuaranteedCampaignServiceViewableFrequencyCap';
+import { guaranteedCampaignServiceAdCategoryStatus } from './GuaranteedCampaignServiceAdCategoryStatus';
+import { guaranteedCampaignServicePackage } from './GuaranteedCampaignServicePackage';
+import { guaranteedCampaignServiceConversionTracker } from './GuaranteedCampaignServiceConversionTracker';
 
-export const GuaranteedCampaign = z.object({
+export const guaranteedCampaign = z.object({
   accountId: z.number().int().nullable(),
-  lifetimeBudget: GuaranteedCampaignServiceLifetimeBudget,
-  campaignBiddingStrategy: GuaranteedCampaignServiceCampaignBiddingStrategy,
+  lifetimeBudget: guaranteedCampaignServiceLifetimeBudget,
+  campaignBiddingStrategy: guaranteedCampaignServiceCampaignBiddingStrategy,
   campaignGoal: z.string().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
   endDate: z.string().nullable(),
   endTime: z.string().nullable(),
-  labels: z.array(GuaranteedCampaignServiceLabel).nullable(),
-  servingStatus: GuaranteedCampaignServiceServingStatus,
+  labels: z.array(guaranteedCampaignServiceLabel).nullable(),
+  servingStatus: guaranteedCampaignServiceServingStatus,
   startDate: z.string().nullable(),
   startTime: z.string().nullable(),
-  userStatus: GuaranteedCampaignServiceUserStatus,
-  viewableFrequencyCap: GuaranteedCampaignServiceViewableFrequencyCap,
+  userStatus: guaranteedCampaignServiceUserStatus,
+  viewableFrequencyCap: guaranteedCampaignServiceViewableFrequencyCap,
   guaranteedSimulationId: z.number().int().nullable(),
   notificationEmailAddress: z.array(z.string().nullable()).nullable(),
-  adCategoryStatus: GuaranteedCampaignServiceAdCategoryStatus,
+  adCategoryStatus: guaranteedCampaignServiceAdCategoryStatus,
   campaignCanceledDate: z.string().nullable(),
-  package: GuaranteedCampaignServicePackage,
-  conversionTracker: GuaranteedCampaignServiceConversionTracker
+  package: guaranteedCampaignServicePackage,
+  conversionTracker: guaranteedCampaignServiceConversionTracker
 }).nullable();
 
-export type GuaranteedCampaign = z.infer<typeof GuaranteedCampaign>;
+export type GuaranteedCampaign = z.infer<typeof guaranteedCampaign>;

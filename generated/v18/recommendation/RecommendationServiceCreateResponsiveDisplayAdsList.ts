@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const RecommendationServiceCreateResponsiveDisplayAdsList = z.object({
+export const recommendationServiceCreateResponsiveDisplayAdsList = z.object({
   recommendationId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
@@ -8,4 +8,4 @@ export const RecommendationServiceCreateResponsiveDisplayAdsList = z.object({
   adGroupName: z.string().nullable()
 }).nullable();
 
-export type RecommendationServiceCreateResponsiveDisplayAdsList = z.infer<typeof RecommendationServiceCreateResponsiveDisplayAdsList>;
+export type RecommendationServiceCreateResponsiveDisplayAdsList = z.infer<typeof recommendationServiceCreateResponsiveDisplayAdsList>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceDailyBudgetOverCampaign } from './RecommendationServiceDailyBudgetOverCampaign';
+import { recommendationServiceDailyBudgetOverCampaign } from './RecommendationServiceDailyBudgetOverCampaign';
 
-export const RecommendationServiceDailyBudgetOver = z.object({
-  dailyBudgetOverCampaignList: z.array(RecommendationServiceDailyBudgetOverCampaign).nullable()
+export const recommendationServiceDailyBudgetOver = z.object({
+  dailyBudgetOverCampaignList: z.array(recommendationServiceDailyBudgetOverCampaign).nullable()
 }).nullable();
 
-export type RecommendationServiceDailyBudgetOver = z.infer<typeof RecommendationServiceDailyBudgetOver>;
+export type RecommendationServiceDailyBudgetOver = z.infer<typeof recommendationServiceDailyBudgetOver>;

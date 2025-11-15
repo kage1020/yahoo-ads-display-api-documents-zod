@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { PlacementUrlIdeaServiceValue } from './PlacementUrlIdeaServiceValue';
+import { placementUrlIdeaServiceValue } from './PlacementUrlIdeaServiceValue';
 
-export const PlacementUrlIdeaServicePage = z.object({
+export const placementUrlIdeaServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(PlacementUrlIdeaServiceValue).nullable()
+  values: z.array(placementUrlIdeaServiceValue).nullable()
 }).nullable();
 
-export type PlacementUrlIdeaServicePage = z.infer<typeof PlacementUrlIdeaServicePage>;
+export type PlacementUrlIdeaServicePage = z.infer<typeof placementUrlIdeaServicePage>;

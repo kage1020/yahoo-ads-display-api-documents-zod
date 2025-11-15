@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { BrandLiftServiceValue } from './BrandLiftServiceValue';
+import { brandLiftServiceValue } from './BrandLiftServiceValue';
 
-export const BrandLiftServicePage = z.object({
+export const brandLiftServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(BrandLiftServiceValue).nullable()
+  values: z.array(brandLiftServiceValue).nullable()
 }).nullable();
 
-export type BrandLiftServicePage = z.infer<typeof BrandLiftServicePage>;
+export type BrandLiftServicePage = z.infer<typeof brandLiftServicePage>;

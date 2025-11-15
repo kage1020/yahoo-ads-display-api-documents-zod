@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const CampaignServiceMaximizeConversionValueBiddingScheme = z.object({
+export const campaignServiceMaximizeConversionValueBiddingScheme = z.object({
   targetRoas: z.number().nullable()
 }).nullable();
 
-export type CampaignServiceMaximizeConversionValueBiddingScheme = z.infer<typeof CampaignServiceMaximizeConversionValueBiddingScheme>;
+export type CampaignServiceMaximizeConversionValueBiddingScheme = z.infer<typeof campaignServiceMaximizeConversionValueBiddingScheme>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const MediaServiceCampaignBannerFlg = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
+export const mediaServiceCampaignBannerFlg = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
 
-export type MediaServiceCampaignBannerFlg = z.infer<typeof MediaServiceCampaignBannerFlg>;
+export type MediaServiceCampaignBannerFlg = z.infer<typeof mediaServiceCampaignBannerFlg>;

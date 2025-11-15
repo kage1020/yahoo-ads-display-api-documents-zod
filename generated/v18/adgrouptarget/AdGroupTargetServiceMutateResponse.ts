@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AdGroupTargetReturnValue } from './AdGroupTargetReturnValue';
+import { error } from '../../common/Error';
+import { adGroupTargetReturnValue } from './AdGroupTargetReturnValue';
 
-export const AdGroupTargetServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const adGroupTargetServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AdGroupTargetReturnValue
+  rval: adGroupTargetReturnValue
 }).nullable();
 
-export type AdGroupTargetServiceMutateResponse = z.infer<typeof AdGroupTargetServiceMutateResponse>;
+export type AdGroupTargetServiceMutateResponse = z.infer<typeof adGroupTargetServiceMutateResponse>;

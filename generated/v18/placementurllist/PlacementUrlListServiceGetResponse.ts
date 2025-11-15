@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { PlacementUrlListServicePage } from './PlacementUrlListServicePage';
+import { error } from '../../common/Error';
+import { placementUrlListServicePage } from './PlacementUrlListServicePage';
 
-export const PlacementUrlListServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const placementUrlListServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: PlacementUrlListServicePage
+  rval: placementUrlListServicePage
 }).nullable();
 
-export type PlacementUrlListServiceGetResponse = z.infer<typeof PlacementUrlListServiceGetResponse>;
+export type PlacementUrlListServiceGetResponse = z.infer<typeof placementUrlListServiceGetResponse>;

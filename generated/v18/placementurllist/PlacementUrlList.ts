@@ -1,18 +1,18 @@
 import { z } from 'zod';
 
-import { PlacementUrlListServiceIsRemoveFlg } from './PlacementUrlListServiceIsRemoveFlg';
-import { PlacementUrlListServiceUnknownDomainFlg } from './PlacementUrlListServiceUnknownDomainFlg';
-import { PlacementUrlListServiceUrlList } from './PlacementUrlListServiceUrlList';
+import { placementUrlListServiceIsRemoveFlg } from './PlacementUrlListServiceIsRemoveFlg';
+import { placementUrlListServiceUnknownDomainFlg } from './PlacementUrlListServiceUnknownDomainFlg';
+import { placementUrlListServiceUrlList } from './PlacementUrlListServiceUrlList';
 
-export const PlacementUrlList = z.object({
+export const placementUrlList = z.object({
   accountId: z.number().int(),
   description: z.string().nullable(),
-  isRemoveDescription: PlacementUrlListServiceIsRemoveFlg,
-  unknownDomainFlg: PlacementUrlListServiceUnknownDomainFlg,
+  isRemoveDescription: placementUrlListServiceIsRemoveFlg,
+  unknownDomainFlg: placementUrlListServiceUnknownDomainFlg,
   urlListId: z.number().int().nullable(),
   urlListName: z.string().nullable(),
   brandSafetyDenyListFlg: z.boolean().nullable(),
-  urls: z.array(PlacementUrlListServiceUrlList).nullable()
+  urls: z.array(placementUrlListServiceUrlList).nullable()
 }).nullable();
 
-export type PlacementUrlList = z.infer<typeof PlacementUrlList>;
+export type PlacementUrlList = z.infer<typeof placementUrlList>;

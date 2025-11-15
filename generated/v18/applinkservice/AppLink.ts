@@ -1,18 +1,18 @@
 import { z } from 'zod';
 
-import { AppLinkServiceCategoryType } from './AppLinkServiceCategoryType';
-import { AppLinkServiceAppPlatform } from './AppLinkServiceAppPlatform';
-import { AppLinkServiceAppVendor } from './AppLinkServiceAppVendor';
-import { AppLinkServiceAppLinkStatus } from './AppLinkServiceAppLinkStatus';
+import { appLinkServiceCategoryType } from './AppLinkServiceCategoryType';
+import { appLinkServiceAppPlatform } from './AppLinkServiceAppPlatform';
+import { appLinkServiceAppVendor } from './AppLinkServiceAppVendor';
+import { appLinkServiceAppLinkStatus } from './AppLinkServiceAppLinkStatus';
 
-export const AppLink = z.object({
+export const appLink = z.object({
   accountId: z.number().int().nullable(),
-  categoryType: AppLinkServiceCategoryType,
+  categoryType: appLinkServiceCategoryType,
   linkId: z.string().nullable(),
-  appPlatform: AppLinkServiceAppPlatform,
+  appPlatform: appLinkServiceAppPlatform,
   appId: z.string().nullable(),
-  appVendor: AppLinkServiceAppVendor,
-  appLinkStatus: AppLinkServiceAppLinkStatus
+  appVendor: appLinkServiceAppVendor,
+  appLinkStatus: appLinkServiceAppLinkStatus
 }).nullable();
 
-export type AppLink = z.infer<typeof AppLink>;
+export type AppLink = z.infer<typeof appLink>;

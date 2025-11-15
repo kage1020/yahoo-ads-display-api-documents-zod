@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { AudienceListServiceIsOpen } from './AudienceListServiceIsOpen';
-import { AudienceListServiceIsPreset } from './AudienceListServiceIsPreset';
-import { AudienceListServiceRule } from './AudienceListServiceRule';
-import { AudienceListServiceAppLink } from './AudienceListServiceAppLink';
+import { audienceListServiceIsOpen } from './AudienceListServiceIsOpen';
+import { audienceListServiceIsPreset } from './AudienceListServiceIsPreset';
+import { audienceListServiceRule } from './AudienceListServiceRule';
+import { audienceListServiceAppLink } from './AudienceListServiceAppLink';
 
-export const AudienceListServiceAppUserAudienceList = z.object({
-  isOpen: AudienceListServiceIsOpen,
-  isPreset: AudienceListServiceIsPreset,
+export const audienceListServiceAppUserAudienceList = z.object({
+  isOpen: audienceListServiceIsOpen,
+  isPreset: audienceListServiceIsPreset,
   dataDuration: z.number().int().nullable(),
-  rules: z.array(AudienceListServiceRule).nullable(),
-  appLink: AudienceListServiceAppLink
+  rules: z.array(audienceListServiceRule).nullable(),
+  appLink: audienceListServiceAppLink
 }).nullable();
 
-export type AudienceListServiceAppUserAudienceList = z.infer<typeof AudienceListServiceAppUserAudienceList>;
+export type AudienceListServiceAppUserAudienceList = z.infer<typeof audienceListServiceAppUserAudienceList>;

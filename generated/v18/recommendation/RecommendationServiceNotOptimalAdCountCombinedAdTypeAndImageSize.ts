@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup } from './RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup';
+import { recommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup } from './RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup';
 
-export const RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize = z.object({
-  notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList: z.array(RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup).nullable()
+export const recommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize = z.object({
+  notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList: z.array(recommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup).nullable()
 }).nullable();
 
-export type RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize = z.infer<typeof RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize>;
+export type RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize = z.infer<typeof recommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize>;

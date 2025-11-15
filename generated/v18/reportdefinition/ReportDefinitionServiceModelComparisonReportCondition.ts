@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceIncludeViewInteractionFlg } from './ReportDefinitionServiceIncludeViewInteractionFlg';
-import { ReportDefinitionServiceIncludeVideoInteractionFlg } from './ReportDefinitionServiceIncludeVideoInteractionFlg';
-import { ReportDefinitionServiceAttributionModel } from './ReportDefinitionServiceAttributionModel';
+import { reportDefinitionServiceIncludeViewInteractionFlg } from './ReportDefinitionServiceIncludeViewInteractionFlg';
+import { reportDefinitionServiceIncludeVideoInteractionFlg } from './ReportDefinitionServiceIncludeVideoInteractionFlg';
+import { reportDefinitionServiceAttributionModel } from './ReportDefinitionServiceAttributionModel';
 
-export const ReportDefinitionServiceModelComparisonReportCondition = z.object({
+export const reportDefinitionServiceModelComparisonReportCondition = z.object({
   lookbackWindow: z.number().int().nullable(),
-  includeViewInteraction: ReportDefinitionServiceIncludeViewInteractionFlg,
-  includeVideoInteraction: ReportDefinitionServiceIncludeVideoInteractionFlg,
-  baseModel: ReportDefinitionServiceAttributionModel,
-  comparativeModel: ReportDefinitionServiceAttributionModel
+  includeViewInteraction: reportDefinitionServiceIncludeViewInteractionFlg,
+  includeVideoInteraction: reportDefinitionServiceIncludeVideoInteractionFlg,
+  baseModel: reportDefinitionServiceAttributionModel,
+  comparativeModel: reportDefinitionServiceAttributionModel
 }).nullable();
 
-export type ReportDefinitionServiceModelComparisonReportCondition = z.infer<typeof ReportDefinitionServiceModelComparisonReportCondition>;
+export type ReportDefinitionServiceModelComparisonReportCondition = z.infer<typeof reportDefinitionServiceModelComparisonReportCondition>;

@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceType } from './ConversionTrackerServiceType';
-import { ConversionTrackerServiceStatus } from './ConversionTrackerServiceStatus';
+import { conversionTrackerServiceType } from '../conversiontracker/ConversionTrackerServiceType';
+import { conversionTrackerServiceStatus } from '../conversiontracker/ConversionTrackerServiceStatus';
 
-export const ConversionGroupServiceConversion = z.object({
+export const conversionGroupServiceConversion = z.object({
   conversionTrackerId: z.number().int().nullable(),
-  conversionTrackerType: ConversionTrackerServiceType,
+  conversionTrackerType: conversionTrackerServiceType,
   conversionTagId: z.number().int().nullable(),
   conversionTagName: z.string().nullable(),
-  status: ConversionTrackerServiceStatus
+  status: conversionTrackerServiceStatus
 }).nullable();
 
-export type ConversionGroupServiceConversion = z.infer<typeof ConversionGroupServiceConversion>;
+export type ConversionGroupServiceConversion = z.infer<typeof conversionGroupServiceConversion>;

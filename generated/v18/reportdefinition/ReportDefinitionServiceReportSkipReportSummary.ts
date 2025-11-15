@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceReportSkipReportSummary = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
+export const reportDefinitionServiceReportSkipReportSummary = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
 
-export type ReportDefinitionServiceReportSkipReportSummary = z.infer<typeof ReportDefinitionServiceReportSkipReportSummary>;
+export type ReportDefinitionServiceReportSkipReportSummary = z.infer<typeof reportDefinitionServiceReportSkipReportSummary>;

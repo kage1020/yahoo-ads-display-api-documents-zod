@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-export const DictionaryServiceThirdPartyTrackingDomain = z.object({
+export const dictionaryServiceThirdPartyTrackingDomain = z.object({
   domain: z.string().nullable(),
   vendor: z.string().nullable(),
   vendorName: z.string().nullable()
 }).nullable();
 
-export type DictionaryServiceThirdPartyTrackingDomain = z.infer<typeof DictionaryServiceThirdPartyTrackingDomain>;
+export type DictionaryServiceThirdPartyTrackingDomain = z.infer<typeof dictionaryServiceThirdPartyTrackingDomain>;

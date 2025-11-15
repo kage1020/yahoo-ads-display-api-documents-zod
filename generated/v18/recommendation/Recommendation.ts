@@ -1,66 +1,66 @@
 import { z } from 'zod';
 
-import { RecommendationServiceType } from './RecommendationServiceType';
-import { RecommendationServiceCampaignBiddingStrategyToTargetCpa } from './RecommendationServiceCampaignBiddingStrategyToTargetCpa';
-import { RecommendationServiceDailyBudgetOver } from './RecommendationServiceDailyBudgetOver';
-import { RecommendationServiceImpsShareBudgetLossOver } from './RecommendationServiceImpsShareBudgetLossOver';
-import { RecommendationServiceMaximizeConversions } from './RecommendationServiceMaximizeConversions';
-import { RecommendationServiceMaximizeClicks } from './RecommendationServiceMaximizeClicks';
-import { RecommendationServiceMaximizeVideoViews } from './RecommendationServiceMaximizeVideoViews';
-import { RecommendationServiceMaximizeViewableImpressions } from './RecommendationServiceMaximizeViewableImpressions';
-import { RecommendationServiceEnhancedCpc } from './RecommendationServiceEnhancedCpc';
-import { RecommendationServiceUpdateAdCreative } from './RecommendationServiceUpdateAdCreative';
-import { RecommendationServiceDuplicateTargetingSettings } from './RecommendationServiceDuplicateTargetingSettings';
-import { RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize } from './RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize';
-import { RecommendationServiceAdGroupsForAddingAds } from './RecommendationServiceAdGroupsForAddingAds';
-import { RecommendationServiceDailyBudgetSmall } from './RecommendationServiceDailyBudgetSmall';
-import { RecommendationServiceInsufficientTargeting } from './RecommendationServiceInsufficientTargeting';
-import { RecommendationServiceInsufficientAdScheduleTargeting } from './RecommendationServiceInsufficientAdScheduleTargeting';
-import { RecommendationServiceInsufficientConversions } from './RecommendationServiceInsufficientConversions';
-import { RecommendationServiceInsufficientClicks } from './RecommendationServiceInsufficientClicks';
-import { RecommendationServiceInsufficientVideoViews } from './RecommendationServiceInsufficientVideoViews';
-import { RecommendationServiceCreateCampaign } from './RecommendationServiceCreateCampaign';
-import { RecommendationServiceCreateAdGroup } from './RecommendationServiceCreateAdGroup';
-import { RecommendationServiceCreateAd } from './RecommendationServiceCreateAd';
-import { RecommendationServiceCreateResponsiveDisplayAds } from './RecommendationServiceCreateResponsiveDisplayAds';
-import { RecommendationServiceTurnYourAccountOn } from './RecommendationServiceTurnYourAccountOn';
-import { RecommendationServiceTurnYourAdOn } from './RecommendationServiceTurnYourAdOn';
-import { RecommendationServiceInsufficientAccountBalance } from './RecommendationServiceInsufficientAccountBalance';
-import { RecommendationServiceMissingPaymentSettings } from './RecommendationServiceMissingPaymentSettings';
-import { RecommendationServiceAudienceListNotAccumulated } from './RecommendationServiceAudienceListNotAccumulated';
-import { RecommendationServiceNotTargetingProperAudienceListAdGroup } from './RecommendationServiceNotTargetingProperAudienceListAdGroup';
+import { recommendationServiceType } from './RecommendationServiceType';
+import { recommendationServiceCampaignBiddingStrategyToTargetCpa } from './RecommendationServiceCampaignBiddingStrategyToTargetCpa';
+import { recommendationServiceDailyBudgetOver } from './RecommendationServiceDailyBudgetOver';
+import { recommendationServiceImpsShareBudgetLossOver } from './RecommendationServiceImpsShareBudgetLossOver';
+import { recommendationServiceMaximizeConversions } from './RecommendationServiceMaximizeConversions';
+import { recommendationServiceMaximizeClicks } from './RecommendationServiceMaximizeClicks';
+import { recommendationServiceMaximizeVideoViews } from './RecommendationServiceMaximizeVideoViews';
+import { recommendationServiceMaximizeViewableImpressions } from './RecommendationServiceMaximizeViewableImpressions';
+import { recommendationServiceEnhancedCpc } from './RecommendationServiceEnhancedCpc';
+import { recommendationServiceUpdateAdCreative } from './RecommendationServiceUpdateAdCreative';
+import { recommendationServiceDuplicateTargetingSettings } from './RecommendationServiceDuplicateTargetingSettings';
+import { recommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize } from './RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize';
+import { recommendationServiceAdGroupsForAddingAds } from './RecommendationServiceAdGroupsForAddingAds';
+import { recommendationServiceDailyBudgetSmall } from './RecommendationServiceDailyBudgetSmall';
+import { recommendationServiceInsufficientTargeting } from './RecommendationServiceInsufficientTargeting';
+import { recommendationServiceInsufficientAdScheduleTargeting } from './RecommendationServiceInsufficientAdScheduleTargeting';
+import { recommendationServiceInsufficientConversions } from './RecommendationServiceInsufficientConversions';
+import { recommendationServiceInsufficientClicks } from './RecommendationServiceInsufficientClicks';
+import { recommendationServiceInsufficientVideoViews } from './RecommendationServiceInsufficientVideoViews';
+import { recommendationServiceCreateCampaign } from './RecommendationServiceCreateCampaign';
+import { recommendationServiceCreateAdGroup } from './RecommendationServiceCreateAdGroup';
+import { recommendationServiceCreateAd } from './RecommendationServiceCreateAd';
+import { recommendationServiceCreateResponsiveDisplayAds } from './RecommendationServiceCreateResponsiveDisplayAds';
+import { recommendationServiceTurnYourAccountOn } from './RecommendationServiceTurnYourAccountOn';
+import { recommendationServiceTurnYourAdOn } from './RecommendationServiceTurnYourAdOn';
+import { recommendationServiceInsufficientAccountBalance } from './RecommendationServiceInsufficientAccountBalance';
+import { recommendationServiceMissingPaymentSettings } from './RecommendationServiceMissingPaymentSettings';
+import { recommendationServiceAudienceListNotAccumulated } from './RecommendationServiceAudienceListNotAccumulated';
+import { recommendationServiceNotTargetingProperAudienceListAdGroup } from './RecommendationServiceNotTargetingProperAudienceListAdGroup';
 
-export const Recommendation = z.object({
-  type: RecommendationServiceType,
+export const recommendation = z.object({
+  type: recommendationServiceType,
   optimizationScoreLift: z.number().nullable(),
-  campaignBiddingStrategyToTargetCpa: RecommendationServiceCampaignBiddingStrategyToTargetCpa,
-  dailyBudgetOver: RecommendationServiceDailyBudgetOver,
-  impsShareBudgetLossOver: RecommendationServiceImpsShareBudgetLossOver,
-  maximizeConversions: RecommendationServiceMaximizeConversions,
-  maximizeClicks: RecommendationServiceMaximizeClicks,
-  maximizeVideoViews: RecommendationServiceMaximizeVideoViews,
-  maximizeViewableImpressions: RecommendationServiceMaximizeViewableImpressions,
-  enhancedCpc: RecommendationServiceEnhancedCpc,
-  updateAdCreative: RecommendationServiceUpdateAdCreative,
-  duplicateTargetingSettings: RecommendationServiceDuplicateTargetingSettings,
-  notOptimalAdCountCombinedAdTypeAndImageSize: RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize,
-  adGroupsForAddingAds: RecommendationServiceAdGroupsForAddingAds,
-  dailyBudgetSmall: RecommendationServiceDailyBudgetSmall,
-  insufficientTargeting: RecommendationServiceInsufficientTargeting,
-  insufficientAdScheduleTargeting: RecommendationServiceInsufficientAdScheduleTargeting,
-  insufficientConversions: RecommendationServiceInsufficientConversions,
-  insufficientClicks: RecommendationServiceInsufficientClicks,
-  insufficientVideoViews: RecommendationServiceInsufficientVideoViews,
-  createCampaign: RecommendationServiceCreateCampaign,
-  createAdGroup: RecommendationServiceCreateAdGroup,
-  createAd: RecommendationServiceCreateAd,
-  createResponsiveDisplayAds: RecommendationServiceCreateResponsiveDisplayAds,
-  turnYourAccountOn: RecommendationServiceTurnYourAccountOn,
-  turnYourAdOn: RecommendationServiceTurnYourAdOn,
-  insufficientAccountBalance: RecommendationServiceInsufficientAccountBalance,
-  missingPaymentSettings: RecommendationServiceMissingPaymentSettings,
-  audienceListNotAccumulated: RecommendationServiceAudienceListNotAccumulated,
-  notTargetingProperAudienceList: RecommendationServiceNotTargetingProperAudienceListAdGroup
+  campaignBiddingStrategyToTargetCpa: recommendationServiceCampaignBiddingStrategyToTargetCpa,
+  dailyBudgetOver: recommendationServiceDailyBudgetOver,
+  impsShareBudgetLossOver: recommendationServiceImpsShareBudgetLossOver,
+  maximizeConversions: recommendationServiceMaximizeConversions,
+  maximizeClicks: recommendationServiceMaximizeClicks,
+  maximizeVideoViews: recommendationServiceMaximizeVideoViews,
+  maximizeViewableImpressions: recommendationServiceMaximizeViewableImpressions,
+  enhancedCpc: recommendationServiceEnhancedCpc,
+  updateAdCreative: recommendationServiceUpdateAdCreative,
+  duplicateTargetingSettings: recommendationServiceDuplicateTargetingSettings,
+  notOptimalAdCountCombinedAdTypeAndImageSize: recommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize,
+  adGroupsForAddingAds: recommendationServiceAdGroupsForAddingAds,
+  dailyBudgetSmall: recommendationServiceDailyBudgetSmall,
+  insufficientTargeting: recommendationServiceInsufficientTargeting,
+  insufficientAdScheduleTargeting: recommendationServiceInsufficientAdScheduleTargeting,
+  insufficientConversions: recommendationServiceInsufficientConversions,
+  insufficientClicks: recommendationServiceInsufficientClicks,
+  insufficientVideoViews: recommendationServiceInsufficientVideoViews,
+  createCampaign: recommendationServiceCreateCampaign,
+  createAdGroup: recommendationServiceCreateAdGroup,
+  createAd: recommendationServiceCreateAd,
+  createResponsiveDisplayAds: recommendationServiceCreateResponsiveDisplayAds,
+  turnYourAccountOn: recommendationServiceTurnYourAccountOn,
+  turnYourAdOn: recommendationServiceTurnYourAdOn,
+  insufficientAccountBalance: recommendationServiceInsufficientAccountBalance,
+  missingPaymentSettings: recommendationServiceMissingPaymentSettings,
+  audienceListNotAccumulated: recommendationServiceAudienceListNotAccumulated,
+  notTargetingProperAudienceList: recommendationServiceNotTargetingProperAudienceListAdGroup
 }).nullable();
 
-export type Recommendation = z.infer<typeof Recommendation>;
+export type Recommendation = z.infer<typeof recommendation>;

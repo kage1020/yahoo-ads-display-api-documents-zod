@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroup } from './GuaranteedAdGroup';
+import { guaranteedAdGroup } from './GuaranteedAdGroup';
 
-export const GuaranteedAdGroupServiceOperation = z.object({
+export const guaranteedAdGroupServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(GuaranteedAdGroup)
+  operand: z.array(guaranteedAdGroup)
 }).nullable();
 
-export type GuaranteedAdGroupServiceOperation = z.infer<typeof GuaranteedAdGroupServiceOperation>;
+export type GuaranteedAdGroupServiceOperation = z.infer<typeof guaranteedAdGroupServiceOperation>;

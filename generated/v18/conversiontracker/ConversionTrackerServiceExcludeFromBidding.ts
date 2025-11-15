@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ConversionTrackerServiceExcludeFromBidding = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
+export const conversionTrackerServiceExcludeFromBidding = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
 
-export type ConversionTrackerServiceExcludeFromBidding = z.infer<typeof ConversionTrackerServiceExcludeFromBidding>;
+export type ConversionTrackerServiceExcludeFromBidding = z.infer<typeof conversionTrackerServiceExcludeFromBidding>;

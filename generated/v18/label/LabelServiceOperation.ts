@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { Label } from './Label';
+import { label } from './Label';
 
-export const LabelServiceOperation = z.object({
+export const labelServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(Label)
+  operand: z.array(label)
 }).nullable();
 
-export type LabelServiceOperation = z.infer<typeof LabelServiceOperation>;
+export type LabelServiceOperation = z.infer<typeof labelServiceOperation>;

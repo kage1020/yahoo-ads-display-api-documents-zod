@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { MediaServiceRecord } from './MediaServiceRecord';
+import { mediaServiceRecord } from './MediaServiceRecord';
 
-export const MediaServiceOperation = z.object({
+export const mediaServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(MediaServiceRecord)
+  operand: z.array(mediaServiceRecord)
 }).nullable();
 
-export type MediaServiceOperation = z.infer<typeof MediaServiceOperation>;
+export type MediaServiceOperation = z.infer<typeof mediaServiceOperation>;

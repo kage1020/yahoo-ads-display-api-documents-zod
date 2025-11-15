@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignServiceSkanTcpaTargetType } from './CampaignServiceSkanTcpaTargetType';
+import { campaignServiceSkanTcpaTargetType } from './CampaignServiceSkanTcpaTargetType';
 
-export const CampaignServiceMaximizeConversionsBiddingScheme = z.object({
+export const campaignServiceMaximizeConversionsBiddingScheme = z.object({
   targetCpa: z.number().int().nullable(),
-  skanTcpaTargetType: CampaignServiceSkanTcpaTargetType
+  skanTcpaTargetType: campaignServiceSkanTcpaTargetType
 }).nullable();
 
-export type CampaignServiceMaximizeConversionsBiddingScheme = z.infer<typeof CampaignServiceMaximizeConversionsBiddingScheme>;
+export type CampaignServiceMaximizeConversionsBiddingScheme = z.infer<typeof campaignServiceMaximizeConversionsBiddingScheme>;

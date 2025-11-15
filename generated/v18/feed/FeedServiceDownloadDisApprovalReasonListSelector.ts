@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { FeedServiceEncoding } from './FeedServiceEncoding';
+import { feedServiceEncoding } from './FeedServiceEncoding';
 
-export const FeedServiceDownloadDisApprovalReasonListSelector = z.object({
+export const feedServiceDownloadDisApprovalReasonListSelector = z.object({
   accountId: z.number().int(),
   feedId: z.number().int(),
-  encoding: FeedServiceEncoding
+  encoding: feedServiceEncoding
 }).nullable();
 
-export type FeedServiceDownloadDisApprovalReasonListSelector = z.infer<typeof FeedServiceDownloadDisApprovalReasonListSelector>;
+export type FeedServiceDownloadDisApprovalReasonListSelector = z.infer<typeof feedServiceDownloadDisApprovalReasonListSelector>;

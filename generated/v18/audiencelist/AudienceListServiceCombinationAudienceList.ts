@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AudienceListServiceCombination } from './AudienceListServiceCombination';
-import { AudienceListServiceContainUnavailableAdActionUserListFlg } from './AudienceListServiceContainUnavailableAdActionUserListFlg';
-import { AudienceListServiceContainDataConnectionStopped } from './AudienceListServiceContainDataConnectionStopped';
+import { audienceListServiceCombination } from './AudienceListServiceCombination';
+import { audienceListServiceContainUnavailableAdActionUserListFlg } from './AudienceListServiceContainUnavailableAdActionUserListFlg';
+import { audienceListServiceContainDataConnectionStopped } from './AudienceListServiceContainDataConnectionStopped';
 
-export const AudienceListServiceCombinationAudienceList = z.object({
-  combinations: z.array(AudienceListServiceCombination).nullable(),
-  containUnavailableAdActionUserListFlg: AudienceListServiceContainUnavailableAdActionUserListFlg,
-  containDataConnectionStopped: AudienceListServiceContainDataConnectionStopped
+export const audienceListServiceCombinationAudienceList = z.object({
+  combinations: z.array(audienceListServiceCombination).nullable(),
+  containUnavailableAdActionUserListFlg: audienceListServiceContainUnavailableAdActionUserListFlg,
+  containDataConnectionStopped: audienceListServiceContainDataConnectionStopped
 }).nullable();
 
-export type AudienceListServiceCombinationAudienceList = z.infer<typeof AudienceListServiceCombinationAudienceList>;
+export type AudienceListServiceCombinationAudienceList = z.infer<typeof audienceListServiceCombinationAudienceList>;

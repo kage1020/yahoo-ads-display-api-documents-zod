@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceImpsShareBudgetLossOverCampaign } from './RecommendationServiceImpsShareBudgetLossOverCampaign';
+import { recommendationServiceImpsShareBudgetLossOverCampaign } from './RecommendationServiceImpsShareBudgetLossOverCampaign';
 
-export const RecommendationServiceImpsShareBudgetLossOver = z.object({
-  impsShareBudgetLossOverCampaignList: z.array(RecommendationServiceImpsShareBudgetLossOverCampaign).nullable()
+export const recommendationServiceImpsShareBudgetLossOver = z.object({
+  impsShareBudgetLossOverCampaignList: z.array(recommendationServiceImpsShareBudgetLossOverCampaign).nullable()
 }).nullable();
 
-export type RecommendationServiceImpsShareBudgetLossOver = z.infer<typeof RecommendationServiceImpsShareBudgetLossOver>;
+export type RecommendationServiceImpsShareBudgetLossOver = z.infer<typeof recommendationServiceImpsShareBudgetLossOver>;

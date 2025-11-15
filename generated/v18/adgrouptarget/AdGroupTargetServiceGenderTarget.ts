@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupTargetServiceGender } from './AdGroupTargetServiceGender';
+import { adGroupTargetServiceGender } from './AdGroupTargetServiceGender';
 
-export const AdGroupTargetServiceGenderTarget = z.object({
-  gender: AdGroupTargetServiceGender
+export const adGroupTargetServiceGenderTarget = z.object({
+  gender: adGroupTargetServiceGender
 }).nullable();
 
-export type AdGroupTargetServiceGenderTarget = z.infer<typeof AdGroupTargetServiceGenderTarget>;
+export type AdGroupTargetServiceGenderTarget = z.infer<typeof adGroupTargetServiceGenderTarget>;

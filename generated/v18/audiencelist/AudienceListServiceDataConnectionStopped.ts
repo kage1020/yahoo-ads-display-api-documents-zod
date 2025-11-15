@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceDataConnectionStopped = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const audienceListServiceDataConnectionStopped = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type AudienceListServiceDataConnectionStopped = z.infer<typeof AudienceListServiceDataConnectionStopped>;
+export type AudienceListServiceDataConnectionStopped = z.infer<typeof audienceListServiceDataConnectionStopped>;

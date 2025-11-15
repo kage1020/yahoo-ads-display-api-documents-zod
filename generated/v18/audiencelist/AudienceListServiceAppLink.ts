@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AudienceListServiceAppVendor } from './AudienceListServiceAppVendor';
-import { AudienceListServiceAppPlatform } from './AudienceListServiceAppPlatform';
+import { audienceListServiceAppVendor } from './AudienceListServiceAppVendor';
+import { audienceListServiceAppPlatform } from './AudienceListServiceAppPlatform';
 
-export const AudienceListServiceAppLink = z.object({
+export const audienceListServiceAppLink = z.object({
   appId: z.string().nullable(),
-  appVendor: AudienceListServiceAppVendor,
+  appVendor: audienceListServiceAppVendor,
   linkId: z.string().nullable(),
-  appPlatform: AudienceListServiceAppPlatform
+  appPlatform: audienceListServiceAppPlatform
 }).nullable();
 
-export type AudienceListServiceAppLink = z.infer<typeof AudienceListServiceAppLink>;
+export type AudienceListServiceAppLink = z.infer<typeof audienceListServiceAppLink>;

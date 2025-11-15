@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { AudienceListServiceSize } from './AudienceListServiceSize';
-import { AudienceListServiceSizeReaches } from './AudienceListServiceSizeReaches';
-import { AudienceListServiceContainUnavailableAdActionUserListFlg } from './AudienceListServiceContainUnavailableAdActionUserListFlg';
-import { AudienceListServiceContainDataConnectionStopped } from './AudienceListServiceContainDataConnectionStopped';
+import { audienceListServiceSize } from './AudienceListServiceSize';
+import { audienceListServiceSizeReaches } from './AudienceListServiceSizeReaches';
+import { audienceListServiceContainUnavailableAdActionUserListFlg } from './AudienceListServiceContainUnavailableAdActionUserListFlg';
+import { audienceListServiceContainDataConnectionStopped } from './AudienceListServiceContainDataConnectionStopped';
 
-export const AudienceListServiceSimilarityAudienceList = z.object({
+export const audienceListServiceSimilarityAudienceList = z.object({
   audienceListId: z.number().int().nullable(),
-  audienceListSize: AudienceListServiceSize,
-  audienceListSizeReaches: z.array(AudienceListServiceSizeReaches).nullable(),
-  containUnavailableAdActionUserListFlg: AudienceListServiceContainUnavailableAdActionUserListFlg,
-  containDataConnectionStopped: AudienceListServiceContainDataConnectionStopped
+  audienceListSize: audienceListServiceSize,
+  audienceListSizeReaches: z.array(audienceListServiceSizeReaches).nullable(),
+  containUnavailableAdActionUserListFlg: audienceListServiceContainUnavailableAdActionUserListFlg,
+  containDataConnectionStopped: audienceListServiceContainDataConnectionStopped
 }).nullable();
 
-export type AudienceListServiceSimilarityAudienceList = z.infer<typeof AudienceListServiceSimilarityAudienceList>;
+export type AudienceListServiceSimilarityAudienceList = z.infer<typeof audienceListServiceSimilarityAudienceList>;

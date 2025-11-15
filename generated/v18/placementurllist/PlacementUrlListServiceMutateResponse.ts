@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { PlacementUrlListServiceReturnValue } from './PlacementUrlListServiceReturnValue';
+import { error } from '../../common/Error';
+import { placementUrlListServiceReturnValue } from './PlacementUrlListServiceReturnValue';
 
-export const PlacementUrlListServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const placementUrlListServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: PlacementUrlListServiceReturnValue
+  rval: placementUrlListServiceReturnValue
 }).nullable();
 
-export type PlacementUrlListServiceMutateResponse = z.infer<typeof PlacementUrlListServiceMutateResponse>;
+export type PlacementUrlListServiceMutateResponse = z.infer<typeof placementUrlListServiceMutateResponse>;

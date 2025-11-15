@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const DictionaryServiceDeviceOsType = z.enum(["ANDROID", "IOS", "UNKNOWN"]).nullable();
+export const dictionaryServiceDeviceOsType = z.enum(["ANDROID", "IOS", "UNKNOWN"]).nullable();
 
-export type DictionaryServiceDeviceOsType = z.infer<typeof DictionaryServiceDeviceOsType>;
+export type DictionaryServiceDeviceOsType = z.infer<typeof dictionaryServiceDeviceOsType>;

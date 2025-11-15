@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { DictionaryServiceSharedAudienceListType } from './DictionaryServiceSharedAudienceListType';
+import { dictionaryServiceSharedAudienceListType } from './DictionaryServiceSharedAudienceListType';
 
-export const DictionaryServiceSharedAudienceListInfo = z.object({
+export const dictionaryServiceSharedAudienceListInfo = z.object({
   audienceListId: z.number().int().nullable(),
   audienceListNameJa: z.string().nullable(),
   audienceListNameEn: z.string().nullable(),
-  audienceListType: DictionaryServiceSharedAudienceListType,
+  audienceListType: dictionaryServiceSharedAudienceListType,
   reach: z.number().int().nullable()
 }).nullable();
 
-export type DictionaryServiceSharedAudienceListInfo = z.infer<typeof DictionaryServiceSharedAudienceListInfo>;
+export type DictionaryServiceSharedAudienceListInfo = z.infer<typeof dictionaryServiceSharedAudienceListInfo>;

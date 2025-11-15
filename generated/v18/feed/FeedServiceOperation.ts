@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { Feed } from './Feed';
+import { feed } from './Feed';
 
-export const FeedServiceOperation = z.object({
+export const feedServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(Feed)
+  operand: z.array(feed)
 }).nullable();
 
-export type FeedServiceOperation = z.infer<typeof FeedServiceOperation>;
+export type FeedServiceOperation = z.infer<typeof feedServiceOperation>;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const GuaranteedAdGroupAdServiceCarousel = z.object({
+export const guaranteedAdGroupAdServiceCarousel = z.object({
   displayOrder: z.number().int().nullable(),
   mediaId: z.number().int().nullable(),
   headline: z.string().nullable(),
@@ -10,4 +10,4 @@ export const GuaranteedAdGroupAdServiceCarousel = z.object({
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceCarousel = z.infer<typeof GuaranteedAdGroupAdServiceCarousel>;
+export type GuaranteedAdGroupAdServiceCarousel = z.infer<typeof guaranteedAdGroupAdServiceCarousel>;

@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AudienceListServiceLogicalOperator } from './AudienceListServiceLogicalOperator';
-import { AudienceListServiceData } from './AudienceListServiceData';
+import { audienceListServiceLogicalOperator } from './AudienceListServiceLogicalOperator';
+import { audienceListServiceData } from './AudienceListServiceData';
 
-export const AudienceListServiceCombination = z.object({
-  logicalOperator: AudienceListServiceLogicalOperator,
-  audienceLists: z.array(AudienceListServiceData).nullable()
+export const audienceListServiceCombination = z.object({
+  logicalOperator: audienceListServiceLogicalOperator,
+  audienceLists: z.array(audienceListServiceData).nullable()
 }).nullable();
 
-export type AudienceListServiceCombination = z.infer<typeof AudienceListServiceCombination>;
+export type AudienceListServiceCombination = z.infer<typeof audienceListServiceCombination>;

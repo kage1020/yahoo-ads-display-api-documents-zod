@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const AdGroupTargetServicePlacementCategoryTarget = z.object({
+export const adGroupTargetServicePlacementCategoryTarget = z.object({
   placementCategoryListName: z.string().nullable()
 }).nullable();
 
-export type AdGroupTargetServicePlacementCategoryTarget = z.infer<typeof AdGroupTargetServicePlacementCategoryTarget>;
+export type AdGroupTargetServicePlacementCategoryTarget = z.infer<typeof adGroupTargetServicePlacementCategoryTarget>;

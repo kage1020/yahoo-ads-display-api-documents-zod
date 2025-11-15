@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ContentsKeywordListServiceValue } from './ContentsKeywordListServiceValue';
+import { contentsKeywordListServiceValue } from './ContentsKeywordListServiceValue';
 
-export const ContentsKeywordListServicePage = z.object({
+export const contentsKeywordListServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(ContentsKeywordListServiceValue).nullable()
+  values: z.array(contentsKeywordListServiceValue).nullable()
 }).nullable();
 
-export type ContentsKeywordListServicePage = z.infer<typeof ContentsKeywordListServicePage>;
+export type ContentsKeywordListServicePage = z.infer<typeof contentsKeywordListServicePage>;

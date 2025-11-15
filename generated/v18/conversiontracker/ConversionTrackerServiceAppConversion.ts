@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceAppConversionPlatform } from './ConversionTrackerServiceAppConversionPlatform';
+import { conversionTrackerServiceAppConversionPlatform } from './ConversionTrackerServiceAppConversionPlatform';
 
-export const ConversionTrackerServiceAppConversion = z.object({
-  appConversionPlatform: ConversionTrackerServiceAppConversionPlatform,
+export const conversionTrackerServiceAppConversion = z.object({
+  appConversionPlatform: conversionTrackerServiceAppConversionPlatform,
   appId: z.string().nullable()
 }).nullable();
 
-export type ConversionTrackerServiceAppConversion = z.infer<typeof ConversionTrackerServiceAppConversion>;
+export type ConversionTrackerServiceAppConversion = z.infer<typeof conversionTrackerServiceAppConversion>;

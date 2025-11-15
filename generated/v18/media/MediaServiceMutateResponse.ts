@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { MediaServiceReturnValue } from './MediaServiceReturnValue';
+import { error } from '../../common/Error';
+import { mediaServiceReturnValue } from './MediaServiceReturnValue';
 
-export const MediaServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const mediaServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: MediaServiceReturnValue
+  rval: mediaServiceReturnValue
 }).nullable();
 
-export type MediaServiceMutateResponse = z.infer<typeof MediaServiceMutateResponse>;
+export type MediaServiceMutateResponse = z.infer<typeof mediaServiceMutateResponse>;

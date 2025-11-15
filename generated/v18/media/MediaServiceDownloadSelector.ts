@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const MediaServiceDownloadSelector = z.object({
+export const mediaServiceDownloadSelector = z.object({
   accountId: z.number().int(),
   mediaId: z.number().int()
 }).nullable();
 
-export type MediaServiceDownloadSelector = z.infer<typeof MediaServiceDownloadSelector>;
+export type MediaServiceDownloadSelector = z.infer<typeof mediaServiceDownloadSelector>;

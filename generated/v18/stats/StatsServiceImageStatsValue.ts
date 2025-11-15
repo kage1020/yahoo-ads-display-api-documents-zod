@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Stats } from './Stats';
+import { stats } from './Stats';
 
-export const StatsServiceImageStatsValue = z.object({
+export const statsServiceImageStatsValue = z.object({
   mediaId: z.number().int().nullable(),
   mediaName: z.string().nullable(),
   mediaTitle: z.string().nullable(),
-  stats: Stats
+  stats: stats
 }).nullable();
 
-export type StatsServiceImageStatsValue = z.infer<typeof StatsServiceImageStatsValue>;
+export type StatsServiceImageStatsValue = z.infer<typeof statsServiceImageStatsValue>;

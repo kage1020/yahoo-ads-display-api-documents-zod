@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const StatsServicePlacementCategoryType = z.enum(["PAGE", "STATION", "UNKNOWN"]).nullable();
+export const statsServicePlacementCategoryType = z.enum(["PAGE", "STATION", "UNKNOWN"]).nullable();
 
-export type StatsServicePlacementCategoryType = z.infer<typeof StatsServicePlacementCategoryType>;
+export type StatsServicePlacementCategoryType = z.infer<typeof statsServicePlacementCategoryType>;

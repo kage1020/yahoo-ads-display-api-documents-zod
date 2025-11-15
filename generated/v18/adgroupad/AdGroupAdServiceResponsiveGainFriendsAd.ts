@@ -1,20 +1,20 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceButtonText } from './AdGroupAdServiceButtonText';
-import { AdGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
+import { adGroupAdServiceButtonText } from './AdGroupAdServiceButtonText';
+import { adGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
 
-export const AdGroupAdServiceResponsiveGainFriendsAd = z.object({
-  buttonText: AdGroupAdServiceButtonText,
+export const adGroupAdServiceResponsiveGainFriendsAd = z.object({
+  buttonText: adGroupAdServiceButtonText,
   description: z.string().nullable(),
   headline: z.string().nullable(),
   thumbnailMediaId: z.number().int().nullable(),
-  isRemoveVideo10SecBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo25PercentBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo3SecBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo50PercentBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideo75PercentBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideoCompleteBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveVideoStartBeaconUrls: AdGroupAdServiceIsRemoveFlg,
+  isRemoveVideo10SecBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo25PercentBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo3SecBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo50PercentBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideo75PercentBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideoCompleteBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveVideoStartBeaconUrls: adGroupAdServiceIsRemoveFlg,
   video10SecBeaconUrls: z.array(z.string().nullable()).nullable(),
   video25PercentBeaconUrls: z.array(z.string().nullable()).nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -24,4 +24,4 @@ export const AdGroupAdServiceResponsiveGainFriendsAd = z.object({
   videoStartBeaconUrls: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupAdServiceResponsiveGainFriendsAd = z.infer<typeof AdGroupAdServiceResponsiveGainFriendsAd>;
+export type AdGroupAdServiceResponsiveGainFriendsAd = z.infer<typeof adGroupAdServiceResponsiveGainFriendsAd>;

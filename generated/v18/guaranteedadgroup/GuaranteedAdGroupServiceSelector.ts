@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const GuaranteedAdGroupServiceSelector = z.object({
+export const guaranteedAdGroupServiceSelector = z.object({
   accountId: z.number().int(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
@@ -10,4 +10,4 @@ export const GuaranteedAdGroupServiceSelector = z.object({
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupServiceSelector = z.infer<typeof GuaranteedAdGroupServiceSelector>;
+export type GuaranteedAdGroupServiceSelector = z.infer<typeof guaranteedAdGroupServiceSelector>;

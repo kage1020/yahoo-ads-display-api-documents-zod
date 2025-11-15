@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceValue } from './GuaranteedAdGroupAdServiceValue';
+import { guaranteedAdGroupAdServiceValue } from './GuaranteedAdGroupAdServiceValue';
 
-export const GuaranteedAdGroupAdServicePage = z.object({
+export const guaranteedAdGroupAdServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(GuaranteedAdGroupAdServiceValue).nullable()
+  values: z.array(guaranteedAdGroupAdServiceValue).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServicePage = z.infer<typeof GuaranteedAdGroupAdServicePage>;
+export type GuaranteedAdGroupAdServicePage = z.infer<typeof guaranteedAdGroupAdServicePage>;

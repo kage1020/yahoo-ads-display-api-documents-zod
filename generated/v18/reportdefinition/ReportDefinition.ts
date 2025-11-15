@@ -1,42 +1,42 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceDateRange } from './ReportDefinitionServiceDateRange';
-import { ReportDefinitionServiceFilter } from './ReportDefinitionServiceFilter';
-import { ReportDefinitionServiceReportCompressType } from './ReportDefinitionServiceReportCompressType';
-import { ReportDefinitionServiceReportDateRangeType } from './ReportDefinitionServiceReportDateRangeType';
-import { ReportDefinitionServiceReportDownloadEncode } from './ReportDefinitionServiceReportDownloadEncode';
-import { ReportDefinitionServiceReportDownloadFormat } from './ReportDefinitionServiceReportDownloadFormat';
-import { ReportDefinitionServiceReportIncludeDeleted } from './ReportDefinitionServiceReportIncludeDeleted';
-import { ReportDefinitionServiceReportJobStatus } from './ReportDefinitionServiceReportJobStatus';
-import { ReportDefinitionServiceReportLanguage } from './ReportDefinitionServiceReportLanguage';
-import { ReportDefinitionServiceReportSkipColumnHeader } from './ReportDefinitionServiceReportSkipColumnHeader';
-import { ReportDefinitionServiceReportSkipReportSummary } from './ReportDefinitionServiceReportSkipReportSummary';
-import { ReportDefinitionServiceReportDecimalPartDisplayType } from './ReportDefinitionServiceReportDecimalPartDisplayType';
-import { ReportDefinitionServiceReportTypeCondition } from './ReportDefinitionServiceReportTypeCondition';
-import { ReportDefinitionServiceReportSortField } from './ReportDefinitionServiceReportSortField';
+import { reportDefinitionServiceDateRange } from './ReportDefinitionServiceDateRange';
+import { reportDefinitionServiceFilter } from './ReportDefinitionServiceFilter';
+import { reportDefinitionServiceReportCompressType } from './ReportDefinitionServiceReportCompressType';
+import { reportDefinitionServiceReportDateRangeType } from './ReportDefinitionServiceReportDateRangeType';
+import { reportDefinitionServiceReportDownloadEncode } from './ReportDefinitionServiceReportDownloadEncode';
+import { reportDefinitionServiceReportDownloadFormat } from './ReportDefinitionServiceReportDownloadFormat';
+import { reportDefinitionServiceReportIncludeDeleted } from './ReportDefinitionServiceReportIncludeDeleted';
+import { reportDefinitionServiceReportJobStatus } from './ReportDefinitionServiceReportJobStatus';
+import { reportDefinitionServiceReportLanguage } from './ReportDefinitionServiceReportLanguage';
+import { reportDefinitionServiceReportSkipColumnHeader } from './ReportDefinitionServiceReportSkipColumnHeader';
+import { reportDefinitionServiceReportSkipReportSummary } from './ReportDefinitionServiceReportSkipReportSummary';
+import { reportDefinitionServiceReportDecimalPartDisplayType } from './ReportDefinitionServiceReportDecimalPartDisplayType';
+import { reportDefinitionServiceReportTypeCondition } from './ReportDefinitionServiceReportTypeCondition';
+import { reportDefinitionServiceReportSortField } from './ReportDefinitionServiceReportSortField';
 
-export const ReportDefinition = z.object({
+export const reportDefinition = z.object({
   accountId: z.number().int().nullable(),
   completeTime: z.string().nullable(),
-  dateRange: ReportDefinitionServiceDateRange,
+  dateRange: reportDefinitionServiceDateRange,
   fields: z.array(z.string().nullable()).nullable(),
-  filters: z.array(ReportDefinitionServiceFilter).nullable(),
-  reportCompressType: ReportDefinitionServiceReportCompressType,
-  reportDateRangeType: ReportDefinitionServiceReportDateRangeType,
-  reportDownloadEncode: ReportDefinitionServiceReportDownloadEncode,
-  reportDownloadFormat: ReportDefinitionServiceReportDownloadFormat,
-  reportIncludeDeleted: ReportDefinitionServiceReportIncludeDeleted,
-  reportJobStatus: ReportDefinitionServiceReportJobStatus,
+  filters: z.array(reportDefinitionServiceFilter).nullable(),
+  reportCompressType: reportDefinitionServiceReportCompressType,
+  reportDateRangeType: reportDefinitionServiceReportDateRangeType,
+  reportDownloadEncode: reportDefinitionServiceReportDownloadEncode,
+  reportDownloadFormat: reportDefinitionServiceReportDownloadFormat,
+  reportIncludeDeleted: reportDefinitionServiceReportIncludeDeleted,
+  reportJobStatus: reportDefinitionServiceReportJobStatus,
   reportJobErrorDetail: z.string().nullable(),
   reportJobId: z.number().int().nullable(),
-  reportLanguage: ReportDefinitionServiceReportLanguage,
+  reportLanguage: reportDefinitionServiceReportLanguage,
   reportName: z.string().nullable(),
   requestTime: z.string().nullable(),
-  reportSkipColumnHeader: ReportDefinitionServiceReportSkipColumnHeader,
-  reportSkipReportSummary: ReportDefinitionServiceReportSkipReportSummary,
-  reportDecimalPartDisplayType: ReportDefinitionServiceReportDecimalPartDisplayType,
-  reportTypeCondition: ReportDefinitionServiceReportTypeCondition,
-  sortFields: z.array(ReportDefinitionServiceReportSortField).nullable()
+  reportSkipColumnHeader: reportDefinitionServiceReportSkipColumnHeader,
+  reportSkipReportSummary: reportDefinitionServiceReportSkipReportSummary,
+  reportDecimalPartDisplayType: reportDefinitionServiceReportDecimalPartDisplayType,
+  reportTypeCondition: reportDefinitionServiceReportTypeCondition,
+  sortFields: z.array(reportDefinitionServiceReportSortField).nullable()
 }).nullable();
 
-export type ReportDefinition = z.infer<typeof ReportDefinition>;
+export type ReportDefinition = z.infer<typeof reportDefinition>;

@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { StatsServiceAge } from './StatsServiceAge';
-import { StatsServiceEstimateFlg } from './StatsServiceEstimateFlg';
+import { statsServiceAge } from './StatsServiceAge';
+import { statsServiceEstimateFlg } from './StatsServiceEstimateFlg';
 
-export const StatsServiceAgeTarget = z.object({
-  age: StatsServiceAge,
-  estimateFlg: StatsServiceEstimateFlg
+export const statsServiceAgeTarget = z.object({
+  age: statsServiceAge,
+  estimateFlg: statsServiceEstimateFlg
 }).nullable();
 
-export type StatsServiceAgeTarget = z.infer<typeof StatsServiceAgeTarget>;
+export type StatsServiceAgeTarget = z.infer<typeof statsServiceAgeTarget>;

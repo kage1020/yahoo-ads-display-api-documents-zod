@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { GuaranteedCampaign } from './GuaranteedCampaign';
-import { Error } from './Error';
+import { guaranteedCampaign } from './GuaranteedCampaign';
+import { error } from '../../common/Error';
 
-export const GuaranteedCampaignServiceValue = z.object({
-  campaign: GuaranteedCampaign,
-  errors: z.array(Error).nullable(),
+export const guaranteedCampaignServiceValue = z.object({
+  campaign: guaranteedCampaign,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type GuaranteedCampaignServiceValue = z.infer<typeof GuaranteedCampaignServiceValue>;
+export type GuaranteedCampaignServiceValue = z.infer<typeof guaranteedCampaignServiceValue>;

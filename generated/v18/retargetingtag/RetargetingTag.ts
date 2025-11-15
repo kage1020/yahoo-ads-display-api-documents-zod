@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { RetargetingTagServiceApprovalStatus } from './RetargetingTagServiceApprovalStatus';
+import { retargetingTagServiceApprovalStatus } from './RetargetingTagServiceApprovalStatus';
 
-export const RetargetingTag = z.object({
+export const retargetingTag = z.object({
   accountId: z.number().int().nullable(),
-  approvalStatus: RetargetingTagServiceApprovalStatus,
+  approvalStatus: retargetingTagServiceApprovalStatus,
   retargetingTagId: z.string().nullable(),
   advancedTag: z.string().nullable()
 }).nullable();
 
-export type RetargetingTag = z.infer<typeof RetargetingTag>;
+export type RetargetingTag = z.infer<typeof retargetingTag>;

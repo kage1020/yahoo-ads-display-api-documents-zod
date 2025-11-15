@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RetargetingTagServiceOperation = z.object({
+export const retargetingTagServiceOperation = z.object({
   accountId: z.number().int()
 }).nullable();
 
-export type RetargetingTagServiceOperation = z.infer<typeof RetargetingTagServiceOperation>;
+export type RetargetingTagServiceOperation = z.infer<typeof retargetingTagServiceOperation>;

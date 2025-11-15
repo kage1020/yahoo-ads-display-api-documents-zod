@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AudienceListServiceUploadUserListValue } from './AudienceListServiceUploadUserListValue';
+import { audienceListServiceUploadUserListValue } from './AudienceListServiceUploadUserListValue';
 
-export const AudienceListServiceUploadUserListReturnValue = z.object({
-  values: z.array(AudienceListServiceUploadUserListValue).nullable()
+export const audienceListServiceUploadUserListReturnValue = z.object({
+  values: z.array(audienceListServiceUploadUserListValue).nullable()
 }).nullable();
 
-export type AudienceListServiceUploadUserListReturnValue = z.infer<typeof AudienceListServiceUploadUserListReturnValue>;
+export type AudienceListServiceUploadUserListReturnValue = z.infer<typeof audienceListServiceUploadUserListReturnValue>;

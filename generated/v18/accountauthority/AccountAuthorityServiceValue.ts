@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AccountAuthority } from './AccountAuthority';
-import { Error } from './Error';
+import { accountAuthority } from './AccountAuthority';
+import { error } from '../../common/Error';
 
-export const AccountAuthorityServiceValue = z.object({
-  accountAuthority: AccountAuthority,
-  errors: z.array(Error).nullable(),
+export const accountAuthorityServiceValue = z.object({
+  accountAuthority: accountAuthority,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AccountAuthorityServiceValue = z.infer<typeof AccountAuthorityServiceValue>;
+export type AccountAuthorityServiceValue = z.infer<typeof accountAuthorityServiceValue>;

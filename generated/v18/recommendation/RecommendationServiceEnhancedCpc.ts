@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RecommendationServiceEnhancedCpcCampaign } from './RecommendationServiceEnhancedCpcCampaign';
+import { recommendationServiceEnhancedCpcCampaign } from './RecommendationServiceEnhancedCpcCampaign';
 
-export const RecommendationServiceEnhancedCpc = z.object({
-  enhancedCpcCampaignList: z.array(RecommendationServiceEnhancedCpcCampaign).nullable()
+export const recommendationServiceEnhancedCpc = z.object({
+  enhancedCpcCampaignList: z.array(recommendationServiceEnhancedCpcCampaign).nullable()
 }).nullable();
 
-export type RecommendationServiceEnhancedCpc = z.infer<typeof RecommendationServiceEnhancedCpc>;
+export type RecommendationServiceEnhancedCpc = z.infer<typeof recommendationServiceEnhancedCpc>;

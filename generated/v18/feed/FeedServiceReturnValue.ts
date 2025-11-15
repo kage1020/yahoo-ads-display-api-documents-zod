@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { FeedServiceValue } from './FeedServiceValue';
+import { feedServiceValue } from './FeedServiceValue';
 
-export const FeedServiceReturnValue = z.object({
-  values: z.array(FeedServiceValue).nullable()
+export const feedServiceReturnValue = z.object({
+  values: z.array(feedServiceValue).nullable()
 }).nullable();
 
-export type FeedServiceReturnValue = z.infer<typeof FeedServiceReturnValue>;
+export type FeedServiceReturnValue = z.infer<typeof feedServiceReturnValue>;

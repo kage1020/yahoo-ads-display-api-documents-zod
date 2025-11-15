@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { RecommendationServiceType } from './RecommendationServiceType';
+import { recommendationServiceType } from './RecommendationServiceType';
 
-export const RecommendationServiceSelector = z.object({
+export const recommendationServiceSelector = z.object({
   accountId: z.number().int(),
-  types: z.array(RecommendationServiceType)
+  types: z.array(recommendationServiceType)
 }).nullable();
 
-export type RecommendationServiceSelector = z.infer<typeof RecommendationServiceSelector>;
+export type RecommendationServiceSelector = z.infer<typeof recommendationServiceSelector>;

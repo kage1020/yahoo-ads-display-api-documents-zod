@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceMediaAdFormatValue } from './DictionaryServiceMediaAdFormatValue';
+import { dictionaryServiceMediaAdFormatValue } from './DictionaryServiceMediaAdFormatValue';
 
-export const DictionaryServiceMediaAdFormatPage = z.object({
+export const dictionaryServiceMediaAdFormatPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceMediaAdFormatValue).nullable()
+  values: z.array(dictionaryServiceMediaAdFormatValue).nullable()
 }).nullable();
 
-export type DictionaryServiceMediaAdFormatPage = z.infer<typeof DictionaryServiceMediaAdFormatPage>;
+export type DictionaryServiceMediaAdFormatPage = z.infer<typeof dictionaryServiceMediaAdFormatPage>;

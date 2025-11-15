@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignServiceBiddingOption = z.enum(["VCPM", "CPC", "CPV", "UNKNOWN"]).nullable();
+export const campaignServiceBiddingOption = z.enum(["VCPM", "CPC", "CPV", "UNKNOWN"]).nullable();
 
-export type CampaignServiceBiddingOption = z.infer<typeof CampaignServiceBiddingOption>;
+export type CampaignServiceBiddingOption = z.infer<typeof campaignServiceBiddingOption>;

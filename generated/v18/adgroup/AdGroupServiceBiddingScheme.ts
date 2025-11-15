@@ -1,23 +1,23 @@
 import { z } from 'zod';
 
-import { AdGroupServiceCampaignBiddingStrategyType } from './AdGroupServiceCampaignBiddingStrategyType';
-import { AdGroupServiceCpcBiddingScheme } from './AdGroupServiceCpcBiddingScheme';
-import { AdGroupServiceCpvBiddingScheme } from './AdGroupServiceCpvBiddingScheme';
-import { AdGroupServiceCpfBiddingScheme } from './AdGroupServiceCpfBiddingScheme';
-import { AdGroupServiceVcpmBiddingScheme } from './AdGroupServiceVcpmBiddingScheme';
-import { AdGroupServiceMaximizeConversionsBiddingScheme } from './AdGroupServiceMaximizeConversionsBiddingScheme';
-import { AdGroupServiceMaximizeGainingFriendsBiddingScheme } from './AdGroupServiceMaximizeGainingFriendsBiddingScheme';
-import { AdGroupServiceMaximizeConversionValueBiddingScheme } from './AdGroupServiceMaximizeConversionValueBiddingScheme';
+import { adGroupServiceCampaignBiddingStrategyType } from './AdGroupServiceCampaignBiddingStrategyType';
+import { adGroupServiceCpcBiddingScheme } from './AdGroupServiceCpcBiddingScheme';
+import { adGroupServiceCpvBiddingScheme } from './AdGroupServiceCpvBiddingScheme';
+import { adGroupServiceCpfBiddingScheme } from './AdGroupServiceCpfBiddingScheme';
+import { adGroupServiceVcpmBiddingScheme } from './AdGroupServiceVcpmBiddingScheme';
+import { adGroupServiceMaximizeConversionsBiddingScheme } from './AdGroupServiceMaximizeConversionsBiddingScheme';
+import { adGroupServiceMaximizeGainingFriendsBiddingScheme } from './AdGroupServiceMaximizeGainingFriendsBiddingScheme';
+import { adGroupServiceMaximizeConversionValueBiddingScheme } from './AdGroupServiceMaximizeConversionValueBiddingScheme';
 
-export const AdGroupServiceBiddingScheme = z.object({
-  campaignBiddingStrategyType: AdGroupServiceCampaignBiddingStrategyType,
-  cpcBiddingScheme: AdGroupServiceCpcBiddingScheme,
-  cpvBiddingScheme: AdGroupServiceCpvBiddingScheme,
-  cpfBiddingScheme: AdGroupServiceCpfBiddingScheme,
-  vcpmBiddingScheme: AdGroupServiceVcpmBiddingScheme,
-  maximizeConversionsBiddingScheme: AdGroupServiceMaximizeConversionsBiddingScheme,
-  maximizeGainingFriendsBiddingScheme: AdGroupServiceMaximizeGainingFriendsBiddingScheme,
-  maximizeConversionValueBiddingScheme: AdGroupServiceMaximizeConversionValueBiddingScheme
+export const adGroupServiceBiddingScheme = z.object({
+  campaignBiddingStrategyType: adGroupServiceCampaignBiddingStrategyType,
+  cpcBiddingScheme: adGroupServiceCpcBiddingScheme,
+  cpvBiddingScheme: adGroupServiceCpvBiddingScheme,
+  cpfBiddingScheme: adGroupServiceCpfBiddingScheme,
+  vcpmBiddingScheme: adGroupServiceVcpmBiddingScheme,
+  maximizeConversionsBiddingScheme: adGroupServiceMaximizeConversionsBiddingScheme,
+  maximizeGainingFriendsBiddingScheme: adGroupServiceMaximizeGainingFriendsBiddingScheme,
+  maximizeConversionValueBiddingScheme: adGroupServiceMaximizeConversionValueBiddingScheme
 }).nullable();
 
-export type AdGroupServiceBiddingScheme = z.infer<typeof AdGroupServiceBiddingScheme>;
+export type AdGroupServiceBiddingScheme = z.infer<typeof adGroupServiceBiddingScheme>;

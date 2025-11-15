@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AudienceListServiceValue } from './AudienceListServiceValue';
+import { audienceListServiceValue } from './AudienceListServiceValue';
 
-export const AudienceListServiceReturnValue = z.object({
-  values: z.array(AudienceListServiceValue).nullable()
+export const audienceListServiceReturnValue = z.object({
+  values: z.array(audienceListServiceValue).nullable()
 }).nullable();
 
-export type AudienceListServiceReturnValue = z.infer<typeof AudienceListServiceReturnValue>;
+export type AudienceListServiceReturnValue = z.infer<typeof audienceListServiceReturnValue>;

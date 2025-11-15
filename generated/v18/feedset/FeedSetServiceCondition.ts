@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { FeedSetServiceCompareOperator } from './FeedSetServiceCompareOperator';
+import { feedSetServiceCompareOperator } from './FeedSetServiceCompareOperator';
 
-export const FeedSetServiceCondition = z.object({
-  compareOperator: FeedSetServiceCompareOperator,
+export const feedSetServiceCondition = z.object({
+  compareOperator: feedSetServiceCompareOperator,
   value: z.string().nullable()
 }).nullable();
 
-export type FeedSetServiceCondition = z.infer<typeof FeedSetServiceCondition>;
+export type FeedSetServiceCondition = z.infer<typeof feedSetServiceCondition>;

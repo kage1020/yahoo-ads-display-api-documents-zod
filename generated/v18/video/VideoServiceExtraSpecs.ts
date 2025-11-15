@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { VideoServiceExtraSpecsQualityType } from './VideoServiceExtraSpecsQualityType';
+import { videoServiceExtraSpecsQualityType } from './VideoServiceExtraSpecsQualityType';
 
-export const VideoServiceExtraSpecs = z.object({
-  qualityType: VideoServiceExtraSpecsQualityType
+export const videoServiceExtraSpecs = z.object({
+  qualityType: videoServiceExtraSpecsQualityType
 }).nullable();
 
-export type VideoServiceExtraSpecs = z.infer<typeof VideoServiceExtraSpecs>;
+export type VideoServiceExtraSpecs = z.infer<typeof videoServiceExtraSpecs>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceUploadUserListCompressType = z.enum(["NONE", "ZIP", "GZIP", "UNKNOWN"]).nullable();
+export const audienceListServiceUploadUserListCompressType = z.enum(["NONE", "ZIP", "GZIP", "UNKNOWN"]).nullable();
 
-export type AudienceListServiceUploadUserListCompressType = z.infer<typeof AudienceListServiceUploadUserListCompressType>;
+export type AudienceListServiceUploadUserListCompressType = z.infer<typeof audienceListServiceUploadUserListCompressType>;

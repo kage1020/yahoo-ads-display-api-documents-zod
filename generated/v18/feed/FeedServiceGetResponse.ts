@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { FeedServicePage } from './FeedServicePage';
+import { error } from '../../common/Error';
+import { feedServicePage } from './FeedServicePage';
 
-export const FeedServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const feedServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: FeedServicePage
+  rval: feedServicePage
 }).nullable();
 
-export type FeedServiceGetResponse = z.infer<typeof FeedServiceGetResponse>;
+export type FeedServiceGetResponse = z.infer<typeof feedServiceGetResponse>;

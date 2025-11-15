@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { StatsServiceDeliverType } from './StatsServiceDeliverType';
+import { statsServiceDeliverType } from './StatsServiceDeliverType';
 
-export const StatsServiceAudienceListTarget = z.object({
-  deliverType: StatsServiceDeliverType,
+export const statsServiceAudienceListTarget = z.object({
+  deliverType: statsServiceDeliverType,
   audienceListName: z.string().nullable()
 }).nullable();
 
-export type StatsServiceAudienceListTarget = z.infer<typeof StatsServiceAudienceListTarget>;
+export type StatsServiceAudienceListTarget = z.infer<typeof statsServiceAudienceListTarget>;

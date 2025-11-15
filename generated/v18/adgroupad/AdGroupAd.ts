@@ -1,35 +1,35 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceAd } from './AdGroupAdServiceAd';
-import { AdGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
-import { AdGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
-import { AdGroupAdServiceLabel } from './AdGroupAdServiceLabel';
-import { AdGroupAdServiceUserStatus } from './AdGroupAdServiceUserStatus';
+import { adGroupAdServiceAd } from './AdGroupAdServiceAd';
+import { adGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
+import { adGroupAdServiceIsRemoveFlg } from './AdGroupAdServiceIsRemoveFlg';
+import { adGroupAdServiceLabel } from './AdGroupAdServiceLabel';
+import { adGroupAdServiceUserStatus } from './AdGroupAdServiceUserStatus';
 
-export const AdGroupAd = z.object({
+export const adGroupAd = z.object({
   accountId: z.number().int().nullable(),
-  ad: AdGroupAdServiceAd,
+  ad: adGroupAdServiceAd,
   adGroupId: z.number().int().nullable(),
   adGroupName: z.string().nullable(),
   adId: z.number().int().nullable(),
   adName: z.string().nullable(),
-  approvalStatus: AdGroupAdServiceApprovalStatus,
+  approvalStatus: adGroupAdServiceApprovalStatus,
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
   disapprovalReasonDescription: z.string().nullable(),
   impressionBeaconUrls: z.array(z.string().nullable()).nullable(),
   viewableImpressionBeaconUrls: z.array(z.string().nullable()).nullable(),
-  isRemoveImpressionBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveViewableImpressionBeaconUrls: AdGroupAdServiceIsRemoveFlg,
-  isRemoveThirdPartyTrackingScriptUrl: AdGroupAdServiceIsRemoveFlg,
-  labels: z.array(AdGroupAdServiceLabel).nullable(),
+  isRemoveImpressionBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveViewableImpressionBeaconUrls: adGroupAdServiceIsRemoveFlg,
+  isRemoveThirdPartyTrackingScriptUrl: adGroupAdServiceIsRemoveFlg,
+  labels: z.array(adGroupAdServiceLabel).nullable(),
   mediaId: z.number().int().nullable(),
   thirdPartyTrackingScriptUrl: z.string().nullable(),
   thirdPartyTrackingVendor: z.string().nullable(),
-  userStatus: AdGroupAdServiceUserStatus,
+  userStatus: adGroupAdServiceUserStatus,
   createdDate: z.string().nullable(),
   updatedDate: z.string().nullable()
 }).nullable();
 
-export type AdGroupAd = z.infer<typeof AdGroupAd>;
+export type AdGroupAd = z.infer<typeof adGroupAd>;

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const StatsServiceOsVersionTarget = z.object({
+export const statsServiceOsVersionTarget = z.object({
   osVersion: z.string().nullable()
 }).nullable();
 
-export type StatsServiceOsVersionTarget = z.infer<typeof StatsServiceOsVersionTarget>;
+export type StatsServiceOsVersionTarget = z.infer<typeof statsServiceOsVersionTarget>;

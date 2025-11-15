@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceTopImpactTheater = z.object({
+export const guaranteedAdGroupAdServiceTopImpactTheater = z.object({
   displayUrl: z.string().nullable(),
   thumbnailMediaId: z.number().int().nullable(),
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   trackingUrl: z.string().nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -23,4 +23,4 @@ export const GuaranteedAdGroupAdServiceTopImpactTheater = z.object({
   videoScreenshot: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceTopImpactTheater = z.infer<typeof GuaranteedAdGroupAdServiceTopImpactTheater>;
+export type GuaranteedAdGroupAdServiceTopImpactTheater = z.infer<typeof guaranteedAdGroupAdServiceTopImpactTheater>;

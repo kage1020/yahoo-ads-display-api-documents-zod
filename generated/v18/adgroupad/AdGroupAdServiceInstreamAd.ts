@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceInstreamAd = z.object({
+export const adGroupAdServiceInstreamAd = z.object({
   video10SecBeaconUrls: z.array(z.string().nullable()).nullable(),
   video25PercentBeaconUrls: z.array(z.string().nullable()).nullable(),
   video3SecBeaconUrls: z.array(z.string().nullable()).nullable(),
@@ -10,4 +10,4 @@ export const AdGroupAdServiceInstreamAd = z.object({
   videoStartBeaconUrls: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupAdServiceInstreamAd = z.infer<typeof AdGroupAdServiceInstreamAd>;
+export type AdGroupAdServiceInstreamAd = z.infer<typeof adGroupAdServiceInstreamAd>;

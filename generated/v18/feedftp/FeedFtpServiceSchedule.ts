@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { FeedFtpServiceScheduleDaily } from './FeedFtpServiceScheduleDaily';
-import { FeedFtpServiceScheduleHourly } from './FeedFtpServiceScheduleHourly';
-import { FeedFtpServiceScheduleType } from './FeedFtpServiceScheduleType';
-import { FeedFtpServiceScheduleWeekly } from './FeedFtpServiceScheduleWeekly';
+import { feedFtpServiceScheduleDaily } from './FeedFtpServiceScheduleDaily';
+import { feedFtpServiceScheduleHourly } from './FeedFtpServiceScheduleHourly';
+import { feedFtpServiceScheduleType } from './FeedFtpServiceScheduleType';
+import { feedFtpServiceScheduleWeekly } from './FeedFtpServiceScheduleWeekly';
 
-export const FeedFtpServiceSchedule = z.object({
-  scheduleDaily: FeedFtpServiceScheduleDaily,
-  scheduleHourly: FeedFtpServiceScheduleHourly,
-  scheduleType: FeedFtpServiceScheduleType,
-  scheduleWeekly: FeedFtpServiceScheduleWeekly
+export const feedFtpServiceSchedule = z.object({
+  scheduleDaily: feedFtpServiceScheduleDaily,
+  scheduleHourly: feedFtpServiceScheduleHourly,
+  scheduleType: feedFtpServiceScheduleType,
+  scheduleWeekly: feedFtpServiceScheduleWeekly
 }).nullable();
 
-export type FeedFtpServiceSchedule = z.infer<typeof FeedFtpServiceSchedule>;
+export type FeedFtpServiceSchedule = z.infer<typeof feedFtpServiceSchedule>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { EstimatedUserSize } from './EstimatedUserSize';
+import { error } from '../../common/Error';
+import { estimatedUserSize } from './EstimatedUserSize';
 
-export const EstimatedUserSizeServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  estimatedUserSize: EstimatedUserSize,
+export const estimatedUserSizeServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  estimatedUserSize: estimatedUserSize,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type EstimatedUserSizeServiceValue = z.infer<typeof EstimatedUserSizeServiceValue>;
+export type EstimatedUserSizeServiceValue = z.infer<typeof estimatedUserSizeServiceValue>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AudienceListServiceUnavailableKeyword } from './AudienceListServiceUnavailableKeyword';
+import { audienceListServiceUnavailableKeyword } from './AudienceListServiceUnavailableKeyword';
 
-export const AudienceListServiceAdvancedSegmentsKeyword = z.object({
+export const audienceListServiceAdvancedSegmentsKeyword = z.object({
   keyword: z.string().nullable(),
-  unavailableKeyword: AudienceListServiceUnavailableKeyword
+  unavailableKeyword: audienceListServiceUnavailableKeyword
 }).nullable();
 
-export type AudienceListServiceAdvancedSegmentsKeyword = z.infer<typeof AudienceListServiceAdvancedSegmentsKeyword>;
+export type AudienceListServiceAdvancedSegmentsKeyword = z.infer<typeof audienceListServiceAdvancedSegmentsKeyword>;

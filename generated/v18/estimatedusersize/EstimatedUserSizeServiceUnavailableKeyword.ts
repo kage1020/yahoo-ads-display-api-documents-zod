@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const EstimatedUserSizeServiceUnavailableKeyword = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const estimatedUserSizeServiceUnavailableKeyword = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type EstimatedUserSizeServiceUnavailableKeyword = z.infer<typeof EstimatedUserSizeServiceUnavailableKeyword>;
+export type EstimatedUserSizeServiceUnavailableKeyword = z.infer<typeof estimatedUserSizeServiceUnavailableKeyword>;

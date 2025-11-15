@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { BrandLiftServicePage } from './BrandLiftServicePage';
+import { error } from '../../common/Error';
+import { brandLiftServicePage } from './BrandLiftServicePage';
 
-export const BrandLiftServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const brandLiftServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: BrandLiftServicePage
+  rval: brandLiftServicePage
 }).nullable();
 
-export type BrandLiftServiceGetResponse = z.infer<typeof BrandLiftServiceGetResponse>;
+export type BrandLiftServiceGetResponse = z.infer<typeof brandLiftServiceGetResponse>;

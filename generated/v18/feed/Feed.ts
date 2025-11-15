@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const Feed = z.object({
+export const feed = z.object({
   accountId: z.number().int().nullable(),
   feedId: z.number().int().nullable(),
   feedName: z.string().nullable(),
@@ -9,4 +9,4 @@ export const Feed = z.object({
   disApprovedItemCount: z.number().int().nullable()
 }).nullable();
 
-export type Feed = z.infer<typeof Feed>;
+export type Feed = z.infer<typeof feed>;

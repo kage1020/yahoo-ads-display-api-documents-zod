@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { FeedFtpServiceReturnValue } from './FeedFtpServiceReturnValue';
+import { error } from '../../common/Error';
+import { feedFtpServiceReturnValue } from './FeedFtpServiceReturnValue';
 
-export const FeedFtpServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const feedFtpServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: FeedFtpServiceReturnValue,
+  rval: feedFtpServiceReturnValue,
   timeTakenSeconds: z.number().nullable()
 }).nullable();
 
-export type FeedFtpServiceMutateResponse = z.infer<typeof FeedFtpServiceMutateResponse>;
+export type FeedFtpServiceMutateResponse = z.infer<typeof feedFtpServiceMutateResponse>;

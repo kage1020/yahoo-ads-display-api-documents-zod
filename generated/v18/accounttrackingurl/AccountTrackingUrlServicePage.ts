@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AccountTrackingUrlServiceValue } from './AccountTrackingUrlServiceValue';
+import { accountTrackingUrlServiceValue } from './AccountTrackingUrlServiceValue';
 
-export const AccountTrackingUrlServicePage = z.object({
+export const accountTrackingUrlServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: AccountTrackingUrlServiceValue
+  values: accountTrackingUrlServiceValue
 }).nullable();
 
-export type AccountTrackingUrlServicePage = z.infer<typeof AccountTrackingUrlServicePage>;
+export type AccountTrackingUrlServicePage = z.infer<typeof accountTrackingUrlServicePage>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceLyTagConversionRuleType } from './ConversionTrackerServiceLyTagConversionRuleType';
-import { ConversionTrackerServiceLyTagConversionUrlRule } from './ConversionTrackerServiceLyTagConversionUrlRule';
+import { conversionTrackerServiceLyTagConversionRuleType } from './ConversionTrackerServiceLyTagConversionRuleType';
+import { conversionTrackerServiceLyTagConversionUrlRule } from './ConversionTrackerServiceLyTagConversionUrlRule';
 
-export const ConversionTrackerServiceLyTagConversion = z.object({
+export const conversionTrackerServiceLyTagConversion = z.object({
   snippetId: z.string().nullable(),
-  ruleType: ConversionTrackerServiceLyTagConversionRuleType,
-  urlRule: ConversionTrackerServiceLyTagConversionUrlRule
+  ruleType: conversionTrackerServiceLyTagConversionRuleType,
+  urlRule: conversionTrackerServiceLyTagConversionUrlRule
 }).nullable();
 
-export type ConversionTrackerServiceLyTagConversion = z.infer<typeof ConversionTrackerServiceLyTagConversion>;
+export type ConversionTrackerServiceLyTagConversion = z.infer<typeof conversionTrackerServiceLyTagConversion>;

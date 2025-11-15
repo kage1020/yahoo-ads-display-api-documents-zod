@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { DictionaryServicePlacementCategory } from './DictionaryServicePlacementCategory';
+import { dictionaryServicePlacementCategory } from './DictionaryServicePlacementCategory';
 
-export const DictionaryServicePlacementCategoryList = z.object({
+export const dictionaryServicePlacementCategoryList = z.object({
   placementCategoryListId: z.number().int(),
   placementCategoryListName: z.string().nullable(),
-  placementCategories: z.array(DictionaryServicePlacementCategory).nullable()
+  placementCategories: z.array(dictionaryServicePlacementCategory).nullable()
 }).nullable();
 
-export type DictionaryServicePlacementCategoryList = z.infer<typeof DictionaryServicePlacementCategoryList>;
+export type DictionaryServicePlacementCategoryList = z.infer<typeof dictionaryServicePlacementCategoryList>;

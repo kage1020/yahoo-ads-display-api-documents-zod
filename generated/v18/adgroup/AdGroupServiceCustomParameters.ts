@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
-import { AdGroupServiceCustomParameter } from './AdGroupServiceCustomParameter';
+import { adGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
+import { adGroupServiceCustomParameter } from './AdGroupServiceCustomParameter';
 
-export const AdGroupServiceCustomParameters = z.object({
-  isRemove: AdGroupServiceIsRemoveFlg,
-  parameters: z.array(AdGroupServiceCustomParameter).nullable()
+export const adGroupServiceCustomParameters = z.object({
+  isRemove: adGroupServiceIsRemoveFlg,
+  parameters: z.array(adGroupServiceCustomParameter).nullable()
 }).nullable();
 
-export type AdGroupServiceCustomParameters = z.infer<typeof AdGroupServiceCustomParameters>;
+export type AdGroupServiceCustomParameters = z.infer<typeof adGroupServiceCustomParameters>;

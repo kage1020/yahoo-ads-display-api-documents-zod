@@ -1,28 +1,28 @@
 import { z } from 'zod';
 
-import { MediaServiceApprovalStatus } from './MediaServiceApprovalStatus';
-import { MediaServiceCampaignBannerFlg } from './MediaServiceCampaignBannerFlg';
-import { MediaServiceLogoFlg } from './MediaServiceLogoFlg';
-import { MediaServiceImageMedia } from './MediaServiceImageMedia';
-import { MediaServiceThumbnailFlg } from './MediaServiceThumbnailFlg';
-import { MediaServiceUserStatus } from './MediaServiceUserStatus';
-import { MediaServiceRichFormatFlg } from './MediaServiceRichFormatFlg';
+import { mediaServiceApprovalStatus } from './MediaServiceApprovalStatus';
+import { mediaServiceCampaignBannerFlg } from './MediaServiceCampaignBannerFlg';
+import { mediaServiceLogoFlg } from './MediaServiceLogoFlg';
+import { mediaServiceImageMedia } from './MediaServiceImageMedia';
+import { mediaServiceThumbnailFlg } from './MediaServiceThumbnailFlg';
+import { mediaServiceUserStatus } from './MediaServiceUserStatus';
+import { mediaServiceRichFormatFlg } from './MediaServiceRichFormatFlg';
 
-export const MediaServiceRecord = z.object({
+export const mediaServiceRecord = z.object({
   accountId: z.number().int().nullable(),
-  approvalStatus: MediaServiceApprovalStatus,
-  campaignBannerFlg: MediaServiceCampaignBannerFlg,
+  approvalStatus: mediaServiceApprovalStatus,
+  campaignBannerFlg: mediaServiceCampaignBannerFlg,
   reviewApplicationDate: z.string().nullable(),
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
-  logoFlg: MediaServiceLogoFlg,
-  imageMedia: MediaServiceImageMedia,
+  logoFlg: mediaServiceLogoFlg,
+  imageMedia: mediaServiceImageMedia,
   mediaId: z.number().int().nullable(),
   mediaName: z.string().nullable(),
   mediaTitle: z.string().nullable(),
-  thumbnailFlg: MediaServiceThumbnailFlg,
-  userStatus: MediaServiceUserStatus,
-  mediaRichFormatFlg: MediaServiceRichFormatFlg,
+  thumbnailFlg: mediaServiceThumbnailFlg,
+  userStatus: mediaServiceUserStatus,
+  mediaRichFormatFlg: mediaServiceRichFormatFlg,
   createdDate: z.string().nullable()
 }).nullable();
 
-export type MediaServiceRecord = z.infer<typeof MediaServiceRecord>;
+export type MediaServiceRecord = z.infer<typeof mediaServiceRecord>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceLang = z.enum(["JA", "EN", "UNKNOWN"]).nullable();
+export const reportDefinitionServiceLang = z.enum(["JA", "EN", "UNKNOWN"]).nullable();
 
-export type ReportDefinitionServiceLang = z.infer<typeof ReportDefinitionServiceLang>;
+export type ReportDefinitionServiceLang = z.infer<typeof reportDefinitionServiceLang>;

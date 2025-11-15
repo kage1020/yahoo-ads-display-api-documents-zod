@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AdGroupServiceEnhancedCpcEnabled } from './AdGroupServiceEnhancedCpcEnabled';
-import { AdGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
+import { adGroupServiceEnhancedCpcEnabled } from './AdGroupServiceEnhancedCpcEnabled';
+import { adGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
 
-export const AdGroupServiceCpcBiddingScheme = z.object({
+export const adGroupServiceCpcBiddingScheme = z.object({
   cpc: z.number().int().nullable(),
-  enhancedCpcEnabled: AdGroupServiceEnhancedCpcEnabled,
-  isRemoveCpc: AdGroupServiceIsRemoveFlg
+  enhancedCpcEnabled: adGroupServiceEnhancedCpcEnabled,
+  isRemoveCpc: adGroupServiceIsRemoveFlg
 }).nullable();
 
-export type AdGroupServiceCpcBiddingScheme = z.infer<typeof AdGroupServiceCpcBiddingScheme>;
+export type AdGroupServiceCpcBiddingScheme = z.infer<typeof adGroupServiceCpcBiddingScheme>;

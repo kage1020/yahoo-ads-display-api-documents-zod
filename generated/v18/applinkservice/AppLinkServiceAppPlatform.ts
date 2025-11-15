@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AppLinkServiceAppPlatform = z.enum(["IOS", "ANDROID", "UNKNOWN"]).nullable();
+export const appLinkServiceAppPlatform = z.enum(["IOS", "ANDROID", "UNKNOWN"]).nullable();
 
-export type AppLinkServiceAppPlatform = z.infer<typeof AppLinkServiceAppPlatform>;
+export type AppLinkServiceAppPlatform = z.infer<typeof appLinkServiceAppPlatform>;

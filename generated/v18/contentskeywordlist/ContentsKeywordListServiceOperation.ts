@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ContentsKeywordList } from './ContentsKeywordList';
+import { contentsKeywordList } from './ContentsKeywordList';
 
-export const ContentsKeywordListServiceOperation = z.object({
+export const contentsKeywordListServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(ContentsKeywordList)
+  operand: z.array(contentsKeywordList)
 }).nullable();
 
-export type ContentsKeywordListServiceOperation = z.infer<typeof ContentsKeywordListServiceOperation>;
+export type ContentsKeywordListServiceOperation = z.infer<typeof contentsKeywordListServiceOperation>;

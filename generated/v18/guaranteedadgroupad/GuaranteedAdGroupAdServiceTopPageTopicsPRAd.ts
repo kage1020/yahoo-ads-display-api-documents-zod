@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { GuaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
-import { GuaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
+import { guaranteedAdGroupAdServiceCustomParameters } from './GuaranteedAdGroupAdServiceCustomParameters';
+import { guaranteedAdGroupAdServiceDisplayUrlLevel } from './GuaranteedAdGroupAdServiceDisplayUrlLevel';
 
-export const GuaranteedAdGroupAdServiceTopPageTopicsPRAd = z.object({
-  customParameters: GuaranteedAdGroupAdServiceCustomParameters,
+export const guaranteedAdGroupAdServiceTopPageTopicsPRAd = z.object({
+  customParameters: guaranteedAdGroupAdServiceCustomParameters,
   displayUrl: z.string().nullable(),
-  displayUrlLevel: GuaranteedAdGroupAdServiceDisplayUrlLevel,
+  displayUrlLevel: guaranteedAdGroupAdServiceDisplayUrlLevel,
   finalUrl: z.string().nullable(),
   headline: z.string().nullable(),
   principal: z.string().nullable(),
@@ -14,4 +14,4 @@ export const GuaranteedAdGroupAdServiceTopPageTopicsPRAd = z.object({
   trackingUrl: z.string().nullable()
 }).nullable();
 
-export type GuaranteedAdGroupAdServiceTopPageTopicsPRAd = z.infer<typeof GuaranteedAdGroupAdServiceTopPageTopicsPRAd>;
+export type GuaranteedAdGroupAdServiceTopPageTopicsPRAd = z.infer<typeof guaranteedAdGroupAdServiceTopPageTopicsPRAd>;

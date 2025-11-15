@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const FeedDataServiceOutput = z.enum(["TSV", "CSV", "UNKNOWN"]).nullable();
+export const feedDataServiceOutput = z.enum(["TSV", "CSV", "UNKNOWN"]).nullable();
 
-export type FeedDataServiceOutput = z.infer<typeof FeedDataServiceOutput>;
+export type FeedDataServiceOutput = z.infer<typeof feedDataServiceOutput>;

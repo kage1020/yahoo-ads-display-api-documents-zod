@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const PlacementUrlIdea = z.object({
+export const placementUrlIdea = z.object({
   keyword: z.string().nullable(),
   searchUrl: z.string().nullable(),
   adPlaceName: z.string().nullable(),
@@ -14,4 +14,4 @@ export const PlacementUrlIdea = z.object({
   adRequests: z.number().int().nullable()
 }).nullable();
 
-export type PlacementUrlIdea = z.infer<typeof PlacementUrlIdea>;
+export type PlacementUrlIdea = z.infer<typeof placementUrlIdea>;

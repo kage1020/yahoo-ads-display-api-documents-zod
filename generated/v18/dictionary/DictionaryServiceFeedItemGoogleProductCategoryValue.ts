@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceFeedItemGoogleProductCategory } from './DictionaryServiceFeedItemGoogleProductCategory';
+import { error } from '../../common/Error';
+import { dictionaryServiceFeedItemGoogleProductCategory } from './DictionaryServiceFeedItemGoogleProductCategory';
 
-export const DictionaryServiceFeedItemGoogleProductCategoryValue = z.object({
-  errors: z.array(Error).nullable(),
-  feedItemGoogleProductCategory: DictionaryServiceFeedItemGoogleProductCategory,
+export const dictionaryServiceFeedItemGoogleProductCategoryValue = z.object({
+  errors: z.array(error).nullable(),
+  feedItemGoogleProductCategory: dictionaryServiceFeedItemGoogleProductCategory,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type DictionaryServiceFeedItemGoogleProductCategoryValue = z.infer<typeof DictionaryServiceFeedItemGoogleProductCategoryValue>;
+export type DictionaryServiceFeedItemGoogleProductCategoryValue = z.infer<typeof dictionaryServiceFeedItemGoogleProductCategoryValue>;

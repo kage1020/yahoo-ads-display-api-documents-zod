@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CampaignServiceIsRemoveFlg } from './CampaignServiceIsRemoveFlg';
+import { campaignServiceIsRemoveFlg } from './CampaignServiceIsRemoveFlg';
 
-export const CampaignServiceConversionTracker = z.object({
+export const campaignServiceConversionTracker = z.object({
   conversionGroupId: z.number().int().nullable(),
   conversionTrackerId: z.number().int().nullable(),
-  isRemoveConversionGroupId: CampaignServiceIsRemoveFlg,
-  isRemoveConversionTrackerId: CampaignServiceIsRemoveFlg
+  isRemoveConversionGroupId: campaignServiceIsRemoveFlg,
+  isRemoveConversionTrackerId: campaignServiceIsRemoveFlg
 }).nullable();
 
-export type CampaignServiceConversionTracker = z.infer<typeof CampaignServiceConversionTracker>;
+export type CampaignServiceConversionTracker = z.infer<typeof campaignServiceConversionTracker>;

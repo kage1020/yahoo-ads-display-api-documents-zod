@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceLineAudienceGroupOwnerType = z.string().nullable();
+export const audienceListServiceLineAudienceGroupOwnerType = z.string().nullable();
 
-export type AudienceListServiceLineAudienceGroupOwnerType = z.infer<typeof AudienceListServiceLineAudienceGroupOwnerType>;
+export type AudienceListServiceLineAudienceGroupOwnerType = z.infer<typeof audienceListServiceLineAudienceGroupOwnerType>;

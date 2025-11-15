@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { BiddingStrategyServiceBudget } from './BiddingStrategyServiceBudget';
-import { BiddingStrategyServiceBiddingScheme } from './BiddingStrategyServiceBiddingScheme';
-import { BiddingStrategyServiceBiddingOption } from './BiddingStrategyServiceBiddingOption';
+import { biddingStrategyServiceBudget } from './BiddingStrategyServiceBudget';
+import { biddingStrategyServiceBiddingScheme } from './BiddingStrategyServiceBiddingScheme';
+import { biddingStrategyServiceBiddingOption } from './BiddingStrategyServiceBiddingOption';
 
-export const BiddingStrategy = z.object({
+export const biddingStrategy = z.object({
   accountId: z.number().int().nullable(),
   portfolioBiddingId: z.number().int().nullable(),
   portfolioBiddingName: z.string().nullable(),
-  budget: BiddingStrategyServiceBudget,
-  biddingScheme: BiddingStrategyServiceBiddingScheme,
-  biddingOption: BiddingStrategyServiceBiddingOption
+  budget: biddingStrategyServiceBudget,
+  biddingScheme: biddingStrategyServiceBiddingScheme,
+  biddingOption: biddingStrategyServiceBiddingOption
 }).nullable();
 
-export type BiddingStrategy = z.infer<typeof BiddingStrategy>;
+export type BiddingStrategy = z.infer<typeof biddingStrategy>;

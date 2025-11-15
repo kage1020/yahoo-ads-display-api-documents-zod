@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AudienceListServiceDeliveryStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const audienceListServiceDeliveryStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type AudienceListServiceDeliveryStatus = z.infer<typeof AudienceListServiceDeliveryStatus>;
+export type AudienceListServiceDeliveryStatus = z.infer<typeof audienceListServiceDeliveryStatus>;

@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { CampaignServiceIsRemoveFlg } from './CampaignServiceIsRemoveFlg';
-import { CampaignServiceCustomParameter } from './CampaignServiceCustomParameter';
+import { campaignServiceIsRemoveFlg } from './CampaignServiceIsRemoveFlg';
+import { campaignServiceCustomParameter } from './CampaignServiceCustomParameter';
 
-export const CampaignServiceCustomParameters = z.object({
-  isRemove: CampaignServiceIsRemoveFlg,
-  parameters: z.array(CampaignServiceCustomParameter).nullable()
+export const campaignServiceCustomParameters = z.object({
+  isRemove: campaignServiceIsRemoveFlg,
+  parameters: z.array(campaignServiceCustomParameter).nullable()
 }).nullable();
 
-export type CampaignServiceCustomParameters = z.infer<typeof CampaignServiceCustomParameters>;
+export type CampaignServiceCustomParameters = z.infer<typeof campaignServiceCustomParameters>;

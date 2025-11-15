@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { FeedServiceSourceType } from './FeedServiceSourceType';
-import { FeedServiceControlType } from './FeedServiceControlType';
+import { feedServiceSourceType } from './FeedServiceSourceType';
+import { feedServiceControlType } from './FeedServiceControlType';
 
-export const FeedServiceUploadLimit = z.object({
-  sourceType: FeedServiceSourceType,
-  controlType: FeedServiceControlType,
+export const feedServiceUploadLimit = z.object({
+  sourceType: feedServiceSourceType,
+  controlType: feedServiceControlType,
   limitValue: z.number().int().nullable()
 }).nullable();
 
-export type FeedServiceUploadLimit = z.infer<typeof FeedServiceUploadLimit>;
+export type FeedServiceUploadLimit = z.infer<typeof feedServiceUploadLimit>;

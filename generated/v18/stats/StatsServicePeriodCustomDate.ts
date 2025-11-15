@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const StatsServicePeriodCustomDate = z.object({
+export const statsServicePeriodCustomDate = z.object({
   endDate: z.string().nullable(),
   startDate: z.string().nullable()
 }).nullable();
 
-export type StatsServicePeriodCustomDate = z.infer<typeof StatsServicePeriodCustomDate>;
+export type StatsServicePeriodCustomDate = z.infer<typeof statsServicePeriodCustomDate>;

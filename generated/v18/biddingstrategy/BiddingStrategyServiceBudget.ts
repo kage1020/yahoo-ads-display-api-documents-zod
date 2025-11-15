@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { BiddingStrategyServiceIsRemoveCampaignBudgetFlg } from './BiddingStrategyServiceIsRemoveCampaignBudgetFlg';
+import { biddingStrategyServiceIsRemoveCampaignBudgetFlg } from './BiddingStrategyServiceIsRemoveCampaignBudgetFlg';
 
-export const BiddingStrategyServiceBudget = z.object({
+export const biddingStrategyServiceBudget = z.object({
   campaignBudgetId: z.number().int().nullable(),
   campaignBudgetName: z.string().nullable(),
   amount: z.number().int().nullable(),
-  isRemoveCampaignBudget: BiddingStrategyServiceIsRemoveCampaignBudgetFlg
+  isRemoveCampaignBudget: biddingStrategyServiceIsRemoveCampaignBudgetFlg
 }).nullable();
 
-export type BiddingStrategyServiceBudget = z.infer<typeof BiddingStrategyServiceBudget>;
+export type BiddingStrategyServiceBudget = z.infer<typeof biddingStrategyServiceBudget>;

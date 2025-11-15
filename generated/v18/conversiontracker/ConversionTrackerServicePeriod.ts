@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServicePeriodDatetime } from './ConversionTrackerServicePeriodDatetime';
+import { conversionTrackerServicePeriodDatetime } from './ConversionTrackerServicePeriodDatetime';
 
-export const ConversionTrackerServicePeriod = z.object({
-  periodEndDate: ConversionTrackerServicePeriodDatetime,
-  periodStartDate: ConversionTrackerServicePeriodDatetime
+export const conversionTrackerServicePeriod = z.object({
+  periodEndDate: conversionTrackerServicePeriodDatetime,
+  periodStartDate: conversionTrackerServicePeriodDatetime
 }).nullable();
 
-export type ConversionTrackerServicePeriod = z.infer<typeof ConversionTrackerServicePeriod>;
+export type ConversionTrackerServicePeriod = z.infer<typeof conversionTrackerServicePeriod>;
